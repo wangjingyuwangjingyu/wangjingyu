@@ -1,0 +1,73 @@
+.bigbox{
+	display:block;
+}
+.row{
+	display:block;
+}
+.row:after,.bigbox:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+
+[class*=col-]{
+	float:left;
+}
+//阈值
+@qbc:768px;
+@xqc:1000px;
+@dqc:1200px;
+@bnm:30px;
+//内宽
+.pad{
+	padding-left:15px;
+	padding-right:15px;
+}
+//栅格数
+@sgnum:12;
+
+//栅格系统列部署
+.col(@type,@i:1)when( @i < = @sgnum ){
+	.col-@{type}-@{i}{
+		width:100 / @sgnum * @i * 1%;
+	}
+	.col(@type,@i+1);
+}
+//屏幕分辨率
+.gg(@w1,@w2){
+	@media screen and (min-width: @w1){
+		.bigbox{
+			width:@w1 - @bnm;
+		}
+		.col(@w2);
+	}
+}
+//手机时的栅格系统
+.col(sj);
+.gg(@qbc,qb);
+.gg(@xqc,xq);
+.gg(@dqc,dq);
+
+
+
+/*overform隐藏*/
+@media screen and (max-width:@qbc){
+	.hidden-sj{
+		display:none;
+	}
+}
+@media screen and (min-width:@qbc) and (max-width:@xqc){
+	.hidden-qb{
+		display:none;
+	}
+}
+@media screen and (min-width:@xqc) and (max-width:@dqc){
+	.hidden-xq{
+		display:none;
+	}
+}
+@media screen and (min-width:@dqc){
+	.hidden-dq{
+		display:none;
+	}
+}

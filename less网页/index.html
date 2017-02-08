@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name='renderer' content='webkit'/>
+	<meta http-equir='X-UA-Compatible' content='iE=Eedge'>
+	<meta  name='riewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'>
+
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="index1.css">
+
+
+	<style>
+	body{
+		margin: 0;
+		padding:0;
+	}
+	.bigbox,.h{
+		height: 500px;
+		/*overflow: hidden;*/
+	}
+	.k3{
+		width: 100%;
+		background-image: linear-gradient(to left,#565656 10%,#777,#565656 90%);
+		height: 250px;
+		padding-top: 250px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.bigbox{
+		background-image: radial-gradient(#fff 50%,#777 100%);
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 60px;
+	}
+	.h{
+		height:500px;
+		position: absolute;
+		background-color: red;
+		top: 0px;
+		left: 0px;
+		transition:all 2s;
+	}
+	h1{
+		font-size: 36px;
+		/*margin-top: 300px;*/
+		margin-bottom: 10px;
+		font-weight: 500;
+		line-height: 1.1;
+		text-align: center;
+		text-shadow:0 1px 2px rgba(0,0,0,.6);
+		color: #fff;
+	}
+	p{
+		width: 70%;
+		color: #fff;
+		font-size: 21px;
+		line-height: 1.4;
+		margin-bottom: 20px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		text-shadow:0 1px 2px rgba(0,0,0,.6);
+	}
+	.pppmmm{
+		width: 126px;
+		border-radius: 10px;
+		font-size: 18px;
+		padding: 10px 16px;
+		background-color: #428bca;
+		position: relative;
+	}
+	.pppmmm a{
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		color: #fff;
+	}
+	.j1{
+		width: 20%;
+		height: 500px;
+		position: absolute;
+		top: 0px;
+		text-align: center;
+		line-height: 500px;
+		z-index: 99999;
+		font-size: 30px;
+		color: #fff;
+		font-weight: bold;
+		cursor:pointer;
+	}
+	.j2{
+		left: 0px;
+		background-image: linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,0.5));
+	}
+	.j2:hover{
+		background-image: linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,0.8));
+	}
+	.j3{
+		right: 0px;
+		background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.5));
+	}
+	.j3:hover{
+		background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.8));
+	}
+	.ul{
+		width:46px;
+		height:12px;
+		position: absolute;
+		bottom:5%;
+		left: 50%;
+		margin-left: ;
+		z-index: 9999;
+		margin: 0;
+		padding: 0;
+	}
+	.li{
+		width: 10px;
+		height: 10px;
+		border: 2px solid #ccc;
+		margin-right: 5px;
+		list-style: none;
+		float: left;
+		border-radius: 50%;
+		box-sizing:border-box;
+	}
+	.ul .li:last-child{
+		margin: 0;
+	}
+	.li:first-child{
+		background-color: #ccc;
+	}
+	.nav{
+		width: 100%;
+		height: 71px;
+		
+		position: absolute;
+		top: 20px;
+		left: 0px;
+	}
+	.nav1{
+		width: 80%;
+		height: 50px;
+		margin:0 auto;
+		border-radius: 5px;
+		background-color: #222222;
+	}
+	.nav2{
+		height: 20px;
+		padding:15px;
+		float: left;
+	}
+	.nav2:nth-child(2){
+		background-color: #000;
+	}
+	.nav2:nth-child(2) a{
+		color: #fff;
+	}
+	.nav2 a{
+		text-decoration: none;
+		color: #9d9d9d;
+		position: relative;
+		font-size: 18px;
+	}
+	.nav2 a:hover{
+		color: #fff;
+	}
+	.sanjiao{
+		width: 0px;
+		height: 0px;
+		border-top: 5px solid #d9d9d9;
+		border-right: 5px solid rgba(0,0,0,0);
+		border-left: 5px solid rgba(0,0,0,0);
+		border-bottom: 5px solid rgba(0,0,0,0);
+		position: absolute;
+		top: 8px;
+		left: 80px;
+	}
+	.ppp123{
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+	<div class="bigbox ppp123">
+		<div class="row h">
+			<div class="col-dq-12 k3 nn1 n1">
+				<h1>One more for good measure</h1>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				<p class="pppmmm">
+					<a href="">Leam more</a>
+				</p>
+			</div>
+			<div class="col-dq-12 k3 nn1 n2">
+					<h1>Example headline</h1>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				<p class="pppmmm">
+					<a href="">Browse galler</a>
+				</p>
+			</div>
+			<div class="col-dq-12 k3 nn1 n3">
+					<h1>Another example headline.</h1>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				<p class="pppmmm">
+					<a href="">Leam more</a>
+				</p>
+			</div>
+		</div>
+		<!-- left right -->
+			<div class="j1 j2">&lt;</div>
+			<div class="j1 j3">&gt;</div>
+		<!-- 小点跟随 -->
+		<ul class="ul">
+			<li class="li"></li>
+			<li class="li"></li>
+			<li class="li"></li>
+		</ul>
+		<!-- nav -->
+		<div class="nav">
+			<div class="nav1">
+				<div class="nav2"><a href="" class="o1">Project name</a></div>
+				<div class="o4">
+					<div class="nav2"><a href="" class="o1">Home</a></div>
+					<div class="nav2"><a href="" class="o1">About</a></div>
+					<div class="nav2"><a href="" class="o1">Contact</a></div>
+					<div class="nav2"><a href="" class="o1">Dropdown<div class="sanjiao"></div></a></div>
+				</div>
+				
+				<div class="po1 block-sj hidd-sj">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- content -->
+	<div class="bigbox g1 .pad">
+		<div class="row">
+			<div class="col-dq-4 col-xq-4 col-qb-12 col-sj-12 k2 .pad">
+				<div class="nei1"></div>
+				<h2 class="g2">heading</h2>
+				<p class="g3">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p class="k5"><a href="">View detalls>></a></p>
+			</div>
+			<div class="col-dq-4 col-xq-4 col-qb-12 col-sj-12 k2 .pad">
+				<div class="nei1"></div>
+				<h2 class="g2">heading</h2>
+				<p class="g3">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p class="k5"><a href="">View detalls>></a></p>
+			</div>
+			<div class="col-dq-4 col-xq-4 col-qb-12 col-sj-12 k2 .pad">
+				<div class="nei1"></div>
+				<h2 class="g2">heading</h2>
+				<p class="g3">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p class="k5"><a href="">View detalls>></a></p>
+			</div>
+		</div>
+		<!-- content2 -->
+		<hr id="hr14" />
+		<!-- 分割线 -->
+		<div class="row">
+			<div class="gg1 col-dq-7 col-xq-7 col-qb-7">
+				<h2>First featurette heading. <span>It'll blow your mind.</span></h2>
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+			<img class="gg2 col-dq-5 col-xq-5 col-qb-5"  src='截图03.png'>
+		</div>
+		<hr id="hr14" />
+		<!-- 分割线 -->
+		<div class="row">
+			<img class="gg2 col-dq-5 col-xq-5 col-qb-5"  src='截图03.png'>
+			<div class="gg1 col-dq-7 col-xq-7 col-qb-7">
+				<h2>First featurette heading. <span>It'll blow your mind.</span></h2>
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+			
+		</div>
+		<hr id="hr14" />
+		<!-- 分割线 -->
+		<div class="row">
+			<div class="gg1 col-dq-7 col-xq-7 col-qb-7">
+				<h2>First featurette heading. <span>It'll blow your mind.</span></h2>
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+			<img class="gg2 col-dq-5 col-xq-5 col-qb-5"  src='截图03.png'>
+		</div>
+		<!-- 分割线 -->
+		<hr id="hr14"/>
+		<!-- 版权信息 -->
+		<div class="banquan">
+			<span>© 2014 Company, Inc.  </span>
+			<a href="">· Privacy</a>
+			<a href="">· Terms</a>
+			<a href="">Back to top</a>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
+<script>
+	var lbimg=document.getElementsByClassName('nn1');
+	var dimg=document.getElementsByClassName('h')[0];
+	window.setInterval(function(){
+		var dd=document.documentElement.clientWidth;
+		for(var i=0;i<lbimg.length;i++){
+			lbimg[i].style.width=dd+'px';
+		}
+		var gb=dd*3;
+		dimg.style.width=gb+'px';
+		lbimg[1].style.left=dd+'px';
+		lbimg[2].style.left=dd*2+'px';
+	},1);
+
+
+	var li=document.getElementsByClassName('li');
+	var next=0;
+	var now=0;
+	var tt1=window.setInterval(fn,3000);
+	function fn(){
+		next+=100;
+		now++;
+		if(now>=li.length){
+			now=0;
+		}
+		if(next>=300){
+			next=0;
+		}
+		dimg.style.left=-next+'%';
+		// 小点跟随
+		for(var i=0;i<li.length;i++){
+			li[i].style['background-color']='rgba(0,0,0,0)';
+		}
+		li[now].style['background-color']='#ccc';
+	}
+
+	// 左右箭头更随走
+	var zy=document.getElementsByClassName('j1');
+	zy[0].onclick=function(){
+		window.clearInterval(tt1);
+		next-=100;
+		now--;
+		if(now<0){
+			now=li.length-1;
+		}
+		if(next<0){
+			next=200;
+		}
+		dimg.style.left=-next+'%';
+		tt1=window.setInterval(fn,3000);
+		// 小点跟随
+		for(var i=0;i<li.length;i++){
+			li[i].style['background-color']='rgba(0,0,0,0)';
+		}
+		li[now].style['background-color']='#ccc';
+	}
+	zy[1].onclick=function(){
+		window.clearInterval(tt1);
+		fn();
+		tt1=window.setInterval(fn,3000);
+	}
+	
+
+	// 点击动画
+	var kla=document.getElementsByClassName('po1')[0];
+	var kla1=document.getElementsByClassName('o4')[0];
+	var flag123=false;
+	kla.onclick=function(){
+		if(flag123){
+			kla1.style.height=200+'px';
+		}else{
+			kla1.style.height=0+'px';
+		}
+		flag123=!flag123;
+	}
+</script>

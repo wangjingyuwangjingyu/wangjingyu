@@ -1,0 +1,219 @@
+body .g1 {
+  height: auto;
+  background-image: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.nei1 {
+  width: 140px;
+  height: 140px;
+  background-color: #5a5a5a;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.g2 {
+  width: 100%;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  color: #333;
+}
+.nav1 {
+  position: relative;
+}
+.g3 {
+  width: 100%;
+  color: #a5a5a5;
+}
+.po1 {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 5%;
+}
+.po1 span {
+  background-color: #fff;
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+}
+.po1 span:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .block-sj {
+    display: block;
+  }
+  body .nav {
+    margin: 0;
+    top: 0px;
+  }
+  body .nav1 {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hidd-sj {
+    display: none;
+  }
+}
+.g3 {
+  color: #666;
+  font-size: 16px;
+  font-style: none;
+  text-shadow: none;
+}
+.g1 {
+  padding-bottom: 80px;
+}
+.k5 {
+  width: 112px;
+  height: 34px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
+}
+.k5 a {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  text-shadow: none;
+}
+.gg1 h2 {
+  margin-top: 120px;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.gg1 p {
+  text-shadow: none;
+  color: #444;
+  margin: 0px;
+  padding: 0px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.gg2 {
+  max-width: 500px;
+  background: #ccc;
+}
+#hr14 {
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.banquan {
+  width: 100%;
+  height: 20px;
+  border-bottom: 10px;
+}
+.banquan span {
+  font-size: 14px;
+  color: #5a5a5a;
+  float: left;
+}
+.banquan a {
+  line-height: 1.4;
+  color: #428bca;
+  text-decoration: none;
+  font-size: 14px;
+}
+.banquan a:hover {
+  text-decoration: underline;
+}
+.gg2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 500px;
+}
+.banquan a:nth-child(2) {
+  float: left;
+}
+.banquan a:nth-child(3) {
+  float: left;
+}
+.banquan a:last-child {
+  float: right;
+}
+.gg1 h2 span {
+  font-size: 45px;
+  color: #777;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.gg1 p {
+  width: 100%;
+  text-align: left;
+}
+.gg1 h2 {
+  text-align: left;
+}
+.banquan {
+  margin-top: 60px;
+  margin-bottom: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .gg2 {
+    width: 300px;
+    height: 300px;
+    margin-top: 150px;
+  }
+}
+.po1 {
+  width: 40px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 14px;
+  cursor: pointer;
+  z-index: 9999777777;
+}
+.po1:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.po1 span {
+  margin-left: 5px;
+}
+.po1 span:first-child {
+  margin-top: 5px;
+}
+.nav {
+  z-index: 99999999999999;
+}
+.o4 {
+  transition: all .5s;
+}
+@media screen and (max-width: 768px) {
+  .nav2 {
+    width: 100%;
+    float: none;
+    background: #222;
+    z-index: 99988899999999999999;
+    cursor: pointer;
+  }
+  .nav2:hover .o1 {
+    color: #fff;
+  }
+  .o4 {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    overflow: hidden;
+  }
+}
