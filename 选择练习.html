@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		ma
+	}
+	</style>
+</head>
+<body>
+
+
+
+<form method="get" action="">
+<label>性别:</label>
+<label for="nn">男</label>
+<input type="checkbox" id="nn" name="sex">
+<label for="mm">女</label>
+<input type="checkbox" id="mm" name="sex">
+<label for="bu">不男不女</label>
+<input type="checkbox" id="bu" name="sex">
+<label for="gui">鬼</label>
+<input type="checkbox" id="gui" name="sex">
+<label for="mogui">魔鬼</label>
+<input type="checkbox" id='mogui' name="sex">
+<label for="manGod">男神</label>
+<input type="checkbox" id='manGod' name="sex">
+<label for="womanGod">女神</label>
+<input type="checkbox" id="womanGod" name="sex"><br/>
+<input type="button" value="全不选" name="qbx">
+<input type="button" value="全选" name="qx">
+<input type="button" value="反选" name="fx">
+</form>
+
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+var bb=document.forms[0];
+bb.style.width=700+'px';
+bb.style.textAlign='center';
+bb.style.marginLeft='auto';
+bb.style.marginRight='auto';
+bb.style.height=100+'px';
+bb.style.background='red';
+var bw=bb.elements.qbx;
+var bw1=bb.elements.qx;
+var bw2=bb.elements.fx;
+var bvc=bb.elements.sex;
+
+console.dir(bvc[0]);
+bw.onclick=function(){
+	for(var i in bvc){
+		bvc[i].checked=false;
+	}
+}
+
+bw1.onclick=function(){
+	for(var i in bvc){
+		bvc[i].checked=true;
+	}
+}
+bw2.onclick=function(){
+	for(var i in bvc){
+			if(bvc[i].checked){
+				bvc[i].checked=false;
+			}else if(bvc[i].checked==false){
+				bvc[i].checked=true;
+			}
+		}
+}
+var flag=true;
+bb.onclick=function(){
+	if(flag){
+		bb.style.background='blue';
+		flag=false; 
+	}else if(flag==false){
+		bb.style.background='red';
+		flag=true;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

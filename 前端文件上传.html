@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+
+<style>
+	.doc{
+		width: 800px;
+		height: 500px;
+		border: 20px solid #333;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		line-height: 500px;
+		color: red;
+		font-size: 50px;
+		user-select:none;
+	}
+</style>
+
+</head>
+<body>
+
+	<div class="doc">
+		文件上传区，'请拖拽...'
+	</div>
+
+
+</body>
+</html>
+<script>
+	var doc=document.getElementsByClassName('doc')[0];
+	// 投放区
+	doc.ondragenter=function(e){
+		e.preventDefault();
+		this.style.background='red';
+	}
+	doc.ondragover=function(e){
+		e.preventDefault();
+	}
+	doc.ondrop=function(e){
+		e.preventDefault();
+		console.dir(e.dataTransfer);
+
+		var form=new FormData;
+		console.dir(form);
+		form.append('file',e.dataTransfer.files[0]);
+
+
+		var xml=new XMLHttpRequest();
+		xml.open("POST",phpajxa.php,true);
+		xml.send('file'+e.dataTransfer.file[0]);
+	}
+
+
+
+</script>

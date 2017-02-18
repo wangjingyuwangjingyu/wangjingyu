@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+	<style>
+		label{
+			color: #fff;
+			text-shadow:1px 1px 2px #ccc;
+			user-select:none;
+			margin-right: 15px;
+		}
+		input,h1{
+			user-select:none;
+		}
+
+	</style>
+</head>
+<body>
+	<form id="form1" action="p.php" method="get">
+	</form>
+	<div class="box" style="width:500px;height:500px;text-align:center;border:3px solid #000;margin-left:50%;transform:translateX(-50%);margin-top:100px;background:black;box-shadow:5px 5px 15px #333">
+		<h1 style="color:#fff;">登录框</h1>
+		<label for="user">用&nbsp;户&nbsp;名:</label>
+		<input type="text" id="user" name="user" form='form1' style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;" autofocus><br/>
+		<label for="pass">密&nbsp;&nbsp;&nbsp;码:</label>
+		<input  style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;"  type="password" plache form='form1' id="pass"><br/>
+		<label for="brath">出生年月日:</label>
+		<input  style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;"  type="date" form1='form1'  id="brath"><br/>
+		<label for="jg">籍&nbsp;&nbsp;&nbsp;贯:</label>
+		<input  style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;"  type="text" form='form1' id="jg"><br/>
+		<label for="tel">电&nbsp;&nbsp;&nbsp;话:</label>
+		<input  style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;"  type="tel" id="tel" form='form1'><br/>
+		<label for="emil">邮&nbsp;&nbsp;&nbsp;箱:</label>
+		<input  style="width:350px;height:25px;outline:none;border:none;font-size:20px;color:#fff;border-bottom:3px solid red;background:#000;margin-top:10px;"  type="email" id="emil" form='form1'><br/>
+		<label for="r1" style="font-size:14px;">科研</label>
+		<input type="radio" name="inter" form='form1' id="r1" style="width:80px;height:20px;">
+		<label style="font-size:14px;" for="r2">技术</label>
+		<input type="radio" name="inter" form='form1' id="r2" style="width:80px;height:20px;">
+		<label style="font-size:14px;" for="r3">基础</label>
+		<input type="radio" name="inter" form='form1' id="r3" style="width:80px;height:20px;">
+		<!-- 按钮 -->
+		<input type="submit" id="btn1" value="登录" form='form1' style="width:50%;height:30px;background:blue;border:none;color:#fff;font-size:25px;cursor:pointer;text-aglin:center;line-height:30px;display:inline-block;float:left;margin-top:70px;box-sizing:border-box;outline:none;">
+		<input type="button" form='form1' id='btn2' value="重置" style="width:50%;height:30px;background:blue;border:none;color:#fff;font-size:25px;cursor:pointer;text-aglin:center;line-height:30px;display:inline-block;float:left;margin-top:70px;box-sizing:border-box;outline:none;">
+	</div>
+	
+
+
+
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	var u=$('#user')[0];
+	var p=$('#pass')[0];
+	var chushen=$('#brath')[0];
+	var jg=$('#jg')[0];
+	var tel=$('#tel')[0];
+	var emil=$('#emil')[0];
+	var btn1=$('#btn1')[0];
+	var btn2=$('#btn2')[0];
+	var xq=$('input[type=radio]');
+
+	btn1.onclick=function(){
+		localStorage.setItem('u',u.value);
+		localStorage.setItem('p',p.value);
+		localStorage.setItem('csnyr',chushen.value);
+		localStorage.setItem('jg',jg.value);
+		localStorage.setItem('tel',tel.value);
+		localStorage.setItem('emil',emil.value);
+		for(var i=0;i<xq.length;i++){
+			localStorage.setItem('inter'+i,xq[i].checked);
+		}
+		
+	}
+	btn2.onclick=function(){
+		localStorage.clear();
+	}
+/*测试*/
+// var aa=function aa1(){alert(123)}
+// localStorage.setItem('aa',aa.toString());
+// console.dir(localStorage.getItem('aa'));
+// var str=localStorage.getItem('aa');
+// eval(str);
+// aa();
+
+var a1=u.value;
+if(!a1){
+	u.value=localStorage.getItem('u');
+}
+var a2=p.value;
+if(!a2){
+	p.value=localStorage.getItem('p');
+}
+var a3=chushen.value;
+if(!a3){
+	chushen.value=localStorage.getItem('csnyr');
+}
+var a4=jg.value;
+if(!a4){
+	jg.value=localStorage.getItem('jg');
+}
+var a5=tel.value;
+if(!a5){
+	tel.value=localStorage.getItem('tel');
+}
+var a6=emil.value;
+if(!a6){
+	emil.value=localStorage.getItem('emil');
+}
+for(var i=0;i<xq.length;i++){
+	if(localStorage.getItem('inter'+i)=='true'){
+		xq[i].checked=true;
+	}
+}
+
+tel.onblur=function(){
+	var telval=tel.value;
+	var reg=/[0-9]{1-15}/;
+	if(reg.exec(string)!=-1){
+		alert('成功');
+	}
+}
+
+</script>

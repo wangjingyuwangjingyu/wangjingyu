@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.xxk{
+		width: 150px;
+		height: 100px;
+		float: left;
+		font-size: 50px;
+		text-align: center;
+		line-height: 100px;
+		cursor: pointer;
+	}
+	.x1{
+		background-color: red;
+	}
+	.x2{
+		background-color: green;
+	}
+	.x3{
+		background-color: blue;
+	}
+	.x4{
+		background-color: yellow;
+	}
+	.f{
+		width: 600px;
+		height: 600px;
+		background-color: pink;
+		position: relative;
+		display: block;
+	}
+	.zxxk{
+		width: 600px;
+		height: 500px;
+		position: absolute;
+		background-color: black;
+		top: 100px;
+		left: 0px;
+		font-size: 60px;
+		text-align: center;
+		line-height: 500px;
+	}
+	.zk1{
+		background-color: red;
+	}
+	.zk2{
+		background-color: green;
+	}
+	.zk3{
+		background-color: blue;
+	}
+	.zk4{
+		background-color: yellow;
+	}
+	span{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+
+
+<div class="f">
+	<div class="x1 xxk">1<span class="zxxk zk1">1</span></div>
+	<div class="x2 xxk">2<span class="zxxk zk2">2</span></div>
+	<div class="x3 xxk">3<span class="zxxk zk3">3</span></div>
+	<div class="x4 xxk">4<span class="zxxk zk4">4</span></div>
+</div>
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+	if(document.getElementsByClassName){
+		var xxk=document.getElementsByClassName('xxk');
+		var zxxk=document.getElementsByClassName('zxxk');
+		for(var i=0;i<zxxk.length;i++){
+		zxxk[i].style.display='none';
+		}
+		zxxk[0].style.display='block';
+		for(var i=0;i<xxk.length;i++){
+			xxk[i].indexsss=i;
+			xxk[i].onclick=function(){
+			for(var j=0;j<zxxk.length;j++){
+				zxxk[j].style.display='none';
+			}
+			zxxk[this.indexsss].style.display='block'
+		}
+	}
+	}else if(document.querySelectorAll){
+		var xxk=document.querySelectorAll('.xxk');
+		var zxxk=document.querySelectorAll('.zxxk');
+		for(var i=0;i<zxxk.length;i++){
+			zxxk[i].style.display='none';
+		}
+		zxxk[0].style.display='block';
+		for(var i=0;i<xxk.length;i++){
+			xxk[i].indexsss=i;
+			xxk[i].onclick=function(){
+			for(var j=0;j<zxxk.length;j++){
+				zxxk[j].style.display='none';
+			}
+			zxxk[this.indexsss].style.display='block'
+		}
+	}
+	}else{
+		var xxk=document.getElementsByTagName('div');
+		var zxxk=document.getElementsByTagName('span');
+
+		for(var i=0;i<zxxk.length;i++){
+			zxxk[i].style.display='none';
+		}
+		zxxk[0].style.display='block';
+		for(var i=1;i<xxk.length;i++){
+			xxk[i].indexsss=i-1;
+			xxk[i].onclick=function(){
+				for(var j=0;j<zxxk.length;j++){
+					zxxk[j].style.display='none';
+				}
+				zxxk[this.indexsss].style.display='block'
+			}
+		}
+
+	}
+</script>

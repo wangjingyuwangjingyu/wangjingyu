@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<sctipt src='.\js animate\animate.js'></sctipt>
+<style type="text/css">
+.head,.end{
+	width: 300px;
+	height: 100px;
+	margin:0 auto;
+	background-color: pink;
+	text-align: center;
+	font-size: 100px;
+	color: #fff;
+}
+.floor{
+	width: 300px;
+	height: 700px;
+	margin: 20px auto;
+	background-color: red;
+	text-align: center;
+	font-size: 100px;
+	color: #fff;
+}
+.pp1{
+	width: 50px;
+	height: 160px;
+	background-color: pink;
+	position: fixed;
+	right: 20px;
+	top: 50%;
+	margin-top:-25px; 
+	display: none;
+}
+.pp1 div{
+	width: 50px;
+	height: 38px;
+	border-bottom: 2px solid #ccc;
+	float: left;
+	background-color: red;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	font-size: 22px;
+	cursor:pointer;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="head">
+	头部
+</div>
+<div class="floor">
+	1楼
+	<img src="" apath='150409160699599.jpg'>
+</div>
+<div class="floor">
+	2楼
+	<img src="" apath='150409160699599.jpg'>
+</div>
+<div class="floor">
+	3楼
+	<img src="" apath='150409160699599.jpg'>
+</div>
+<div class="floor">
+	4楼
+	<img src="" apath='150409160699599.jpg'>
+</div>
+<div class="end">
+	尾部
+</div>
+<div class="pp1">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</div>
+
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="animate.js"></script>
+<script>
+	var jk=parseInt(document.documentElement.clientHeight);
+	var floor=document.getElementsByClassName('floor');
+	var mm=document.getElementsByTagName('img');
+	var nn=[];
+	for(var i=0;i<floor.length;i++){
+		nn[i]=floor[i].offsetTop;
+		console.dir(nn[i]);
+	}
+
+	var yuio=document.getElementsByClassName('pp1')[0];
+	var yup=document.getElementsByTagName('div');
+	var newarr=[];
+	for(var i=0;i<yup.length;i++){
+		if(yuio==yup[i].parentNode){
+			newarr[newarr.length]=yup[i];
+		}
+	}
+
+
+	for(var i=0;i<newarr.length;i++){
+		newarr[i].indexss=i;
+		newarr[i].onclick=function(){
+			for(var h=0;h<newarr.length;h++){
+				newarr[h].style.background='';
+			}
+			newarr[this.indexss].style.background='green';
+			animate(document.body,{"scrollTop":nn[this.indexss]});
+			animate(document.documentElement,{scrollTop:nn[this.indexss]});
+		}
+	}
+
+
+	window.onscroll=function(){
+		var oo=parseInt(document.body.scrollTop);
+		var kk=oo+jk;
+		console.dir(oo);
+		for(var i=0;i<nn.length;i++){
+			if(kk>=nn[i]+350){
+				for(var h=0;h<newarr.length;h++){
+				newarr[h].style.background='';
+				}
+				newarr[i].style.background='green';
+				mm[i].src=mm[i].getAttribute('apath');
+			}
+		}
+		if(oo>=1200){
+			yuio.style.display='block';
+		}
+		if(oo<1000){
+			yuio.style.display='none';
+		}
+	}
+</script>

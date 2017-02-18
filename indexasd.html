@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-weidth">
+	<title>Document</title>
+	<style>
+		#can{
+			display: block;
+			margin: 0 auto;
+			border:1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	
+<canvas width='1000px' height='600px' id='can'>
+	你的浏览器不支持
+</canvas>
+
+</body>
+</html>
+<script>
+	var can=document.querySelector('#can');
+	var o=can.getContext('2d');
+	// alert(can);
+	// o.moveTo(300,300);
+	// o.quadraticCurveTo(400,400,350,500);
+	// o.stroke();
+	// o.moveTo(0,0);
+	// o.bezierCurveTo(100,200,900,200,1000,0);
+	// o.stroke();
+	// o.moveTo(100,100);
+	// o.lineTo(100,500);
+	// for(var i=1;i<=8;i++){
+	// 	o.bezierCurveTo(100*i+20,530,100*i+80,530,i*100+100,500);
+	// }
+	// o.fillStyle='red';
+	// o.lineTo(900,100);
+	// // for(var i=7;i>0;i++){
+	// // 	o.bezierCurveTo(100*i-20,70,100*i-80,70,i*100,100);
+	// // }
+	// o.stroke();
+	// o.fill();
+
+var sa=0,ea=360*3/4;
+var t1=window.setInterval(function(){
+	sa+=10;
+	if(sa>=ea){
+		window.clearInterval(t1);
+		
+	}
+	o.lineWidth=20;
+	o.beginPath();
+	o.linecap='round';
+	o.arc(250,250,100,Math.PI/180*ea,Math.PI/180*sa,0);
+	o.stroke();
+	o.closePath();
+},100);
+
+var flag=true;
+
+window.setInterval(fn1,100);
+function fn1(){
+	if(flag){
+		flag=false;
+		o.clearRect(390,30,30,30);
+		o.fillStyle='red';
+		o.beginPath(); 
+		o.arc(400,390,20,0,2*Math.PI,0);
+		o.fill();
+		o.closePath();
+		o.fillStyle='red';
+		o.beginPath();
+		o.arc(500,390,20,0,2*Math.PI,0);
+		o.fill();
+		o.closePath();
+	}else{
+		flag=true;
+		o.fillStyle='yellow';
+		o.beginPath();
+		o.arc(500,390,20,0,2*Math.PI,0);
+		o.fill();
+		o.closePath();
+		o.fillStyle='yellow';
+		o.beginPath();
+		o.arc(400,390,20,0,2*Math.PI,0);
+		o.fill();
+		o.closePath();
+	}
+	
+}
+
+
+o.beginPath();
+o.arc(450,450,100,0,Math.PI,0);
+o.closePath();
+o.stroke();
+o.closePath();
+o.beginPath();
+o.arc(450,475,50,0,Math.PI,0);
+o.fill();
+o.beginPath();
+o.arc(500,390,30,0,2*Math.PI,0);
+o.stroke();
+o.closePath();
+o.beginPath();
+o.arc(400,390,30,0,2*Math.PI,0);
+o.stroke();
+o.closePath();
+o.beginPath();
+o.arc(450,420,150,-Math.PI*2,0,0);
+o.stroke();
+o.closePath();
+o.beginPath();
+o.arc(300,300,50,0,2*Math.PI,0);
+o.fill();
+o.closePath();
+o.beginPath();
+o.arc(600,300,50,0,2*Math.PI,0);
+o.fill();
+o.closePath();
+
+
+var img=0;
+	can.onmousedown=function(e){
+		var cx=e.offsetX;
+		var cy=e.offsetY;
+		o.beginPath();
+		console.dir(img);
+		can.onmousemove=function(e){
+			var mx=e.offsetX;
+			var my=e.offsetY;
+			
+o.clearRect(0,0,can.width,can.height);
+			if(img){
+				o.putImageData(img,0,0,0,0,can.width,can.height);
+			}
+
+			o.strokeRect(cx+0.5,cy+0.5,mx-cx+0.5,my-cy+0.5);
+			
+			img=o.getImageData(0,0,can.width,can.height);
+		}
+		can.onmouseup=function(e){
+			o.closePath();
+			can.onmousemove=null;
+			can.onmouseup=null;
+		}
+	}
+
+</script>

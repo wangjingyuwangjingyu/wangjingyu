@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			width: 500px;
+			height: 300px;
+			list-style: none;
+			background-color: rgba(521,0,0,0.5);
+			text-align: center;
+			line-height: 300px;
+			color: #000;
+			font-size: 200px;
+			position: absolute;
+			display: block;
+			background-size:cover;
+		}
+		.m1{
+			width: 800px;
+			height: 500px;
+			position: absolute;
+			border: 5px solid #ccc;
+			top: 50%;
+			left: 50%;
+			margin-top: -250px;
+			margin-left: -400px;
+			perspective:1200px;
+			perspective-origin:left top;
+		}
+		.m2{
+			width: 500px;
+			height: 300px;
+			border: 5px solid blue;
+			margin: 100px 150px;
+			box-shadow: 0 0 80px #333 inset;
+			transition:all 2s;
+			transform-style:preserve-3d;
+		}
+	</style>
+</head>
+<body>
+	<div class="m1">
+		<div class="m2">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</div>
+	</div>
+	<script>
+		var lis=document.getElementsByClassName('m2')[0].getElementsByTagName('li');
+		var widths=lis[0].offsetWidth;
+		var ang=360/lis.length;
+		var r=widths/2/Math.tan(Math.PI/180*ang/2)+50;
+		console.dir(ang);
+		for(var i=0;i<lis.length;i++){
+			lis[i].style.transform='rotateY('+i*ang+'deg) translateZ('+r+'px)';
+			lis[i].style['background-image']='url('+(i+1)+'.jpg)';
+		}
+		var ff=document.getElementsByClassName('m2')[0];
+		// var
+		var t1=window.setInterval(fn,1000);
+		function fn(){
+			ang=ang+36;
+			ff.style.transform='rotateY('+ang+'deg)';
+			// for(var i=0;i<lis.length;i++){
+			// 	var mmk=(i+1)*ang;
+			// 	lis[i].style.transform='rotateY('+mmk+'deg) translateZ('+r+'px)';
+			// }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+//定义数组 
+var arr=[[2,3,4],[1],[3,4,5,6],[2,3]];
+
+
+
+// 封装的函数
+function arrMax(arr){
+	var maxleng=arr[0];
+	for(var i=1;i<arr.length;i++){
+		if(arr[i].length>maxleng.length){
+			maxleng=arr[i];
+		}
+	}
+	return maxleng;
+}
+
+
+
+// 调用
+alert(arrMax(arr));
+</script>

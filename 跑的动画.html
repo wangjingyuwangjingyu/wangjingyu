@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background-color: red;
+		left: 0px;
+		top: 100px;
+		border-radius: 100px;
+		/*opacity: 0;*/
+	}
+	ul,li{
+		list-style: none;
+	}
+	li{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+		float: left;
+		margin-right: 20px;
+		font-size: 30px;
+		text-align: center;
+		line-height: 100px;
+		color: #fff;
+		position: relative;
+	}
+</style>
+<body>
+	<div></div>
+<!-- 	<ul>
+		<li>1<div></div></li>
+		<li>2<div></div></li>
+		<li>3<div></div></li>
+		<li>4<div></div></li>
+		<li>5<div></div></li>
+	</ul> -->
+</body>
+</html>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+// 下滑列表
+// $('document').ready(function(){
+
+// 		$('li').hover(function fn1(){
+// 			$(this).children('div').animate({height:500,'opacity':1},2000);
+// 		},function fn2(){
+// 			$('div').animate({'height':0,'opacity':0},500);
+// 		});
+		
+		
+// 	});
+	// $('div').map(function(i,obj){
+	// 	if($(this).is('.one')){
+	// 		return obj;
+	// 	}
+	// }).css({'background-color':'green'});
+	// $('div').eq(3).css({'background-color':'green'});
+	// $('div').first().css('background-color','blue');
+	// $('div').last().css('background-color','pink');
+	// console.dir($('div').hasClass('one'));
+	// $('div').each(function(i,obj){
+	// 	if($(this).hasClass('one')){
+	// 		$(this).css('background-color','yellow');
+	// 	}
+	// });
+	// $('div').has('.one').css('background-color','pink');
+	// $('div').not('.one').css('background-color','green');
+	// $('div').slice(1,3).css('background-color','green');
+	// $('em').children().css('background-color'.'green');
+	// $('em').find('div');
+	// console.dir($('div').next());
+	// console.dir($('h2').nextAll());
+	// console.dir($('h1').nextUntil());
+	// console.dir($('h1').find('html'));
+	// console.dir($('em').offsetParent());
+	// console.dir($("div").siblings());
+	// console.dir($('div').parent());
+	// console.dir($('div').parents());
+	// console.dir($('em').parentsUntil('body'));
+	// console.dir($('em').prev());
+	// console.dir($('em').prevAll());
+	// console.dir($('em').add('div'));
+	// $('h1:eq(1)').next(  ).css({'background-color','green'});
+	// .add('h1:first').css({'background-color','green'});
+	// $('document').ready(function(){
+	// 	$('div').on('click',fn);
+	// 	function fn(){
+	// 		alert('assdkfjg');
+	// 	}
+	// 	$('h1').on('mouseover',fn);
+	// 	$('h1').off('mouseover',fn);
+	// 	$('div').off('click',fn);
+	// 	$('div').bind('dblclick',fn1);
+	// 	function fn1(){
+	// 		alert('123456');
+	// 	}
+	// 	$('div').unbind('dblclick',fn1);
+	// 	$('div').one('mouseout',fn1).triggerHandler('click');
+	// 	$('div').click(fn1);
+		// $()
+		// $('')
+	// });
+	$('div').animate({left:1200},200,function(){
+		$(this).css('background-color','green');
+		$(this).animate({top:650},300,function(){
+			$(this).css('background-color','pink');
+			$(this).animate({left:500},400,function(){
+				$(this).css('background-color','yellow');
+				$(this).animate({top:50},500,function(){
+					$(this).css('background-color','black');
+					$(this).animate({left:160,top:1000},600,function(){
+						$(this).css('background-color','#553');
+						$(this).animate({left:200,top:700},1000,function(){
+							$(this).animate({left:1300},2000);
+							$(this).css('background-color','blue');
+						});
+					});
+				});
+			});
+		});
+	});
+	
+</script>

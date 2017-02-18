@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+	*{
+		margin: 0px;
+	}
+	canvas{
+		border: 1px solid #ccc;
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		margin-top: 50px;
+	}
+	.d1{
+		width: 1000px;
+		height: 50px;
+		position: absolute;
+		left: 50%;
+		margin-left: -500px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 35px;
+		user-select:none;
+	}
+	.nav{
+		position: absolute;
+		width: 50px;
+		height: 100px;
+		top: 150px;
+		left: 10px;
+		border: 2px solid #ccc;
+	}
+	.n-1,.n-2{
+		width: 100%;
+		height: 50%;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;
+		cursor:pointer;
+		background-color: pink
+	}
+	.n-1:hover,.n-2:hover{
+		background-color: blue;
+		color: #fff;
+	}
+	.n-1{
+		border-bottom: 1px solid #ccc;
+	}
+</style>
+
+</head>
+<body>
+	<div class="d1">(小&nbsp;画&nbsp;板)</div>
+	<canvas id='can' width='1000' height='500'>你的浏览器不支持！请跟换浏览器。</canvas>
+	<nav class='nav'>
+		<div class="n n-1">画笔</div>
+		<div class="n n-2">矩形</div>
+	</nav>
+
+</body>
+</html>
+<script>
+	var can=document.querySelector('#can');
+	var hj=can.getContext('2d');
+	function fn1(){
+		can.onmousedown=function(e){
+		var cx=e.offsetX;
+		var cy=e.offsetY;
+		hj.beginPath();
+		hj.moveTo(cx,cy);
+		can.onmousemove=function(e){
+			var cx=e.offsetX;
+			var cy=e.offsetY;
+			hj.lineTo(cx,cy);
+			hj.stroke();
+		}
+		can.onmouseup=function(){
+			hj.closePath();
+			can.onmousemove=null;
+			can.onmouseup=null;
+		}
+	}
+	}
+	
+function fn2(){
+		can.onmousedown=function(e){
+		var cx=e.offsetX;
+		var cy=e.offsetY;
+		hj.strokeStyle='red';
+		hj.beginPath();
+		hj.moveTo(cx,cy);
+		var arrx=[],arry=[];
+		var index=-1;
+		can.onmousemove=function(e){
+			index++;
+			var mx=e.offsetX;
+			var my=e.offsetY;
+			arrx.push(mx);
+			arry.push(my);
+			if(index!=0){
+				if(my-cy<0){
+					if(mx>arrx[index-1]||my>arry[index-1]){
+						hj.clearRect(cx,cy,arrx[index-1]-cx,arry[index-1]-cy);
+					}
+				}
+				if(my-cy>0){
+					if(mx<arrx[index-1]||my<arry[index-1]){
+						hj.clearRect(cx,cy,arrx[index-1]-cx,arry[index-1]-cy);
+					}
+				}
+			}
+			hj.lineTo(mx,cy);
+			hj.lineTo(mx,my);
+			hj.lineTo(cx,my);
+			hj.lineTo(cx,cy);
+			hj.stroke();
+			hj.clearRect(cx,cy,mx-cx,my-cy);
+		}
+		can.onmouseup=function(){
+			hj.closePath();
+			can.onmousemove=null;
+			can.onmouseup=null;
+		}
+	}
+
+}
+	var ns=document.querySelectorAll('.n');
+	ns[0].onclick=function(){
+		fn1();
+		for(var i=0;i<2;i++){
+			ns[i].style['background-color']='';
+			ns[i].style['color']='';
+		}
+		ns[0].style['background-color']='blue';
+		ns[0].style['color']='#fff';
+	}
+	ns[1].onclick=function(){
+		fn2();
+		for(var i=0;i<2;i++){
+			ns[i].style['background-color']='';
+			ns[i].style['color']='';
+		}
+		ns[1].style['background-color']='blue';
+		ns[1].style['color']='#fff';
+	}
+	fn1();
+	ns[0].style['background-color']='blue';
+	ns[0].style['color']='#fff';
+</script>

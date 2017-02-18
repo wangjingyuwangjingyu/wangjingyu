@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+	ul{
+		margin: 0;
+		padding:0;
+	}
+	.bigbox{
+		width: 620px;
+		height: 200px;
+		border: 10px dotted red;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		overflow: hidden;
+		perspective:1200px;
+		perspective-origin:left top;
+	}
+	.box{
+		width: 2090px;
+		height: 200px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		animation:dh 15s linear infinite;
+		
+		transform-style:preserve-3d;
+		transform:rotateX(30deg);
+	}
+	@keyframes dh{
+		form{
+			left: 0px;
+		}
+		to{
+			left: -1400px;
+		}
+	}
+	.bigbox .box li{
+		width: 200px;
+		height: 200px;
+		list-style:none;
+		float: left;
+		margin-right: 10px;
+		display: block;
+		
+	}
+	.box li:last-child{
+		margin-right: 0;
+		background-image: url(4.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(1){
+		margin-right: 0;
+		background-image: url(2.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(2){
+		margin-right: 0;
+		background-image: url(3.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(3){
+		margin-right: 0;
+		background-image: url(4.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(4){
+		margin-right: 0;
+		background-image: url(5.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(5){
+		margin-right: 0;
+		background-image: url(6.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(6){
+		margin-right: 0;
+		background-image: url(7.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(7){
+		margin-right: 0;
+		background-image: url(8.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(8){
+		margin-right: 0;
+		background-image: url(2.jpg);
+		background-size: cover;
+	}
+	.box li:nth-child(9){
+		margin-right: 0;
+		background-image: url(3.jpg);
+		background-size: cover;
+	}
+	</style>
+	<div class="bigbox">
+		<ul class="box">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<style>
+	.mm1{
+		width: 500px;
+		height: 500px;
+		border: 5px solid red;
+		position: absolute;
+		left: 50%;
+		margin-left: -250px;
+		top: 600px;
+		perspection:1200px;
+		perspective-origin:left top;
+	}
+	#mm2{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		display: block;
+		transform:translate(-50%,-50%);
+		top: 50%;
+		left: 50%;
+		border:1px solid blue;
+		transform:rotate3d(1,0,0,45px);
+		transform-style:perserve-3d;
+	}
+	.k{
+		width: 0px;
+		height: 0px;
+		display: block;
+		text-align: center;
+		line-height:200px;
+		font-size: 70px;
+		margin:0;
+		padding: 0;
+		position: absolute;
+		top:0px;
+		left: 0px;
+		color: #fff;
+	}
+	.k:first-child{
+		border-left: 200px solid red;
+		border-top: 200px solid rgba(0,0,0,0);
+		border-right: 200px solid rgba(0,0,0,);
+		border-bottom: 200px solid rgba(0,0,0,0);transform:rotate3d(1,0,0,45deg);
+		transform-origin:right top;
+	}
+	.k:nth-child(2){
+		border-left: 200px solid rgba(0,0,0,0);
+		border-top: 200px solid blue;
+		border-right: 200px solid rgba(0,0,0,0);
+		border-bottom: 200px solid rgba(0,0,0,0);
+		transform:translateZ(-200px);
+	}
+	.k:nth-child(3){
+		border-left: 200px solid rgba(0,0,0,0);
+		border-top: 200px solid rgba(0,0,0,0);
+		border-right: 200px solid yellow;
+		border-bottom: 200px solid rgba(0,0,0,0);
+		/*transform:rotate3d(1,0,0,45deg);
+		transform-origin:;*/
+	}
+	.k:nth-child(4){
+		border-left: 200px solid rgba(0,0,0,0);
+		border-top: 200px solid rgba(0,0,0,0);
+		border-right: 200px solid rgba(0,0,0,0);
+		border-bottom: 200px solid pink;
+		transform:translateY(-400px);
+	}
+	</style>
+	<!-- 立方体 -->
+	<div class="mm1">
+		<div id="mm2">
+			<p class="k"></p>
+			<p class="k"></p>
+			<p class="k"></p>
+			<p class="k"></p>
+		</div>
+	</div>
+</body>
+</html>

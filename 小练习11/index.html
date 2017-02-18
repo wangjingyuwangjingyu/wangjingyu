@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="videwport" content="width=device-width">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+		}
+		canvas{
+			display: block;
+		}
+	</style>
+	
+</head>
+<body>
+	<canvas id='can' width='600px' height='600px'>
+		请更换浏览器！
+	</canvas>
+	<canvas id='can1' width='600px' height='600px'>
+		
+	</canvas>
+	<canvas id='can2' width='600px' height='600px'></canvas>
+	<canvas id='can3' width='600px' height='600px'></canvas>
+</body>
+</html>
+<script>
+	var can=document.querySelector('#can');
+	// var g1=can.getContext('2d');
+	// console.dir(g1);
+	// g1.fillStyle='rgba(0,0,255,0.55)'
+	// g1.strokeStyle='#000';
+	// g1.rect(0,0,200,200);
+	// g1.fill();
+	// g1.stroke();
+	// g1.strokeRect(200,200,300,300);
+	// g1.fillStyle='pink';
+	// g1.fillRect(200,0,300,200);
+	// g1.strokeStyle='yellow';
+	// g1.strokeRect(0,200,200,300);
+	// g1.clearRect(); 
+	var gl=can.getContext('2d');
+	function fn1(){
+		for(var i=0;i<10;i++){
+		for(var j=0;j<10;j++){
+			gl.fillStyle='rgba('+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.floor(Math.random()*256)+','+Math.random()+')';
+			gl.fillRect(j*50+20.5,i*50+20.5,50,50);
+			}
+		}
+		gl.strokeRect(20.5,20.5,500,500);
+	}
+	fn1();
+	window.setInterval(fn1,100);
+
+
+	var can1=document.querySelector('#can1');
+	var gl1=can1.getContext('2d');
+	var ml=gl1.createLinearGradient(20.5,0.5,200,200);
+	ml.addColorStop(0,'red');
+	ml.addColorStop(1,'blue');
+	gl1.fillStyle=ml;
+	gl1.fillRect(20.5,0.5,200,200);
+	var ml1=gl1.createRadialGradient(350,100, 0,350,100,100);
+	ml1.addColorStop(0,'pink');
+	ml1.addColorStop(1,'yellow');
+	gl1.fillStyle=ml1;
+	gl1.rect(220.5,0,300,300);
+	gl1.fill();
+	var can2=document.querySelector('#can2');
+	var gl2=can2.getContext('2d');
+	var img=new Image();
+	img.src='8.jpg';
+	console.dir(img.src);
+	gl2.fillStyle=img;
+	gl2.rect(0,0,300,300);
+	gl2.fill();
+	
+
+	var can3=document.querySelector('#can3');
+	var hh=can3.getContext('2d');
+	hh.strokeStyle='red';
+	hh.moveTo(0,0);
+	hh.lineTo(100,0);
+	hh.lineTo(100,100);
+	hh.lineTo(0,100);
+	hh.lineTo(0,0);
+	hh.stroke();
+	hh.fillStyle='blue';
+	hh.fill();
+
+	hh.moveTo(200,0);
+	hh.lineTo(400,0);
+	hh.lineTo(200,200);
+	hh.closePath();
+	hh.stroke();
+	hh.fill();
+</script>

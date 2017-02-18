@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		.p1{
+			width: 350px;
+			height: 100px;
+			font-size: 18px;
+			margin: 0px auto 100px;
+			color: #fff;
+			border:1px solid #fff;
+			border-radius: 35px;
+			padding-left: 30px;
+			padding-top: 10px;
+			box-shadow: 10px 10px 10px #333;
+			background-color: #666;
+		}
+		.p2{
+			width: 200px;
+			height: 50px;
+			font-size: 38px;
+			margin: 100px auto 20px;
+			text-align: center;
+			line-height: 50px;
+			font-weight: bold;
+			color: #fff;
+			border:1px solid #fff;
+			border-radius: 20px;
+			box-shadow: 10px 10px 10px #333;
+			background-color: #666;
+		}
+		body{
+			background-color: #888;
+		}
+		#ipt1{
+			position: absolute;
+			border-radius: 10px;
+			border:1px solid yellow;
+			background-color:blue;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			line-height: 100%;
+			outline: none;
+
+		}
+	</style>
+</head>
+<body>
+
+<div class="p2">倒计时</div>
+<div class="p1"></div>
+<input type="button" value="停止计时"  id='ipt1'>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var ss=document.getElementsByClassName('p1')[0];	
+		function js(){
+			var dated=new Date();
+			var datew=new Date(2017,0,28,0,0,0);
+			var sc=datew.getTime()-dated.getTime();
+			var djyear=parseInt(sc/(1000*60*60*24*30*12));
+			var djmount=parseInt(sc%(1000*60*60*24*30*12)/(1000*60*60*24*30))
+			var djday=parseInt(sc%(1000*60*60*24*30)/(1000*60*60*24));
+			var djshi=parseInt(sc%(1000*60*60*24)/(1000*60*60));
+			var djfen=parseInt(sc%(1000*60*60)/(1000*60));
+			var djmiao=parseInt(sc%(1000*60)/(1000));
+			if(djshi<10){
+				djshi='0'+djshi;
+			}
+			if(djmiao<10){
+				djmiao='0'+djmiao
+			}
+			if(djfen<10){
+				djfen='0'+djfen;
+			}
+			ss.innerHTML='距离过年还有： <br/>&nbsp;&nbsp;&nbsp;'+djyear+' 年 '+djmount+' 月 '+djday+' 天 <br/>&nbsp;&nbsp;&nbsp;'+djshi+' 时 '+djfen+' 分 '+djmiao+' 秒 <br/>&nbsp;&nbsp;&nbsp;'+sc+' 毫秒 ';
+		}
+		var tt=window.setInterval(js,1);
+		var tz=document.getElementById('ipt1');
+		var flag=true;
+		tz.onclick=function(){
+			if(flag){
+				window.clearInterval(tt);
+				flag=false;
+			}else{
+				tt=window.setInterval(js,1);
+				flag=true;
+			}
+		}
+		document.onkeydown=function(e){
+			var pp1=tz.offsetLeft;
+			if(e.keyCode==38){
+				tz.style.top=pp1-10+'px';
+
+			}else if(e.keyCode==37){
+				tz.style.left=pp1-10+'px';
+			}
+			if(e.keyCode==40){
+				tz.style.top=pp1+10+'px';
+
+			}else if(e.keyCode==39){
+				tz.style.left=pp1+10+'px';
+			}
+			if(e.keyCode==16){
+				if(flag){
+				window.clearInterval(tt);
+				flag=false;
+				}else{
+					tt=window.setInterval(js,1);
+					flag=true;
+				}
+			}
+		}
+
+		
+	}
+</script>

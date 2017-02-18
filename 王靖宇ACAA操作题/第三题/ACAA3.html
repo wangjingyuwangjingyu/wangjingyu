@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	
+// 封装求自幂函数
+	function fn(a,b){
+		var arr=[];
+		for(var i=a;i<=b;i++){
+			var s=String(i);
+			var sum=0;
+			for(var j=0;j<s.length;j++){
+				var g1=Number(s.slice(j,j+1));
+				var cheng=1;
+				for(var n=0;n<s.length;n++){
+					cheng*=g1;
+				}
+				sum+=cheng;
+			}
+			if(sum==i){
+				arr[arr.length]=i;
+			}
+		}
+		return arr;
+	}
+
+
+
+//调用 
+	alert(fn(100,1000));
+</script>

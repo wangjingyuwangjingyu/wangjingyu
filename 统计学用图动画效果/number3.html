@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<canvas id='can'>
+		你的浏览器不能使用，建议尽快升级。
+	</canvas>
+</body>
+</html>
+<script>
+	var can=document.querySelector('#can');
+	var o=can.getContext('2d');
+	can.width='1000';
+	can.height='600';
+	can.style.border='1px solid red';
+	o.translate(500,300);
+
+	var num=88;
+	var se=0;
+
+	var t1=window.setInterval(fn,10);
+	function fn(){
+		o.clearRect(-can.width/2,-can.height/2,can.width,can.height);
+		var bfb=num/100;
+		var angle=Math.floor(360*bfb);
+		se+=1;
+	
+		var cs=Math.floor(se/360*100);
+		var str=cs+'%';
+		if(se>=angle){
+			se=angle;
+			str=cs+1+'%';
+			o.beginPath();
+			o.fillText(str,0,0);
+			o.closePath();
+			window.clearInterval(t1);
+		}
+		
+		o.beginPath();
+		o.strokeStyle='#000';
+		
+		o.lineWidth=80;
+		o.arc(0,0,250,-Math.PI/2,-Math.PI/2+Math.PI/180*se,0);
+		o.font='90px 宋体';
+		o.textAlign='center';
+		o.textBaseline='middle';
+		o.fillText(str,0,0);
+		o.stroke();
+		o.closePath();
+	}
+
+</script>

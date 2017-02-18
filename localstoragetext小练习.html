@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	
+	<style>
+		form{
+			margin-top: 200px;
+			margin-left: 300px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	
+<form action="p.php" method="get">
+	<input class="p1" type="text" name='user' placeholder="请输入用户名..." autofocus><br/><br/>
+	<input class="p2" type="password" name="pass" placeholder='请输入密码...'><br/><br/>
+	<input class="p3" type="submit" name="sumbit" value="登录">
+	<input class="p4" type="button" value="清空历史数据">
+</form>
+
+   
+<div class="mo1" style="width:300px;height:200px;border:1px solid #ccc;margin-left:300px;margin-top:20px;">
+	
+</div>
+<button style="margin-left:560px;" class="p6">刷新</button>
+</body>
+</html>
+<script>
+
+	var user=document.querySelector('.p1');
+	var pass=document.querySelector('.p2');
+	var sgin=document.querySelector('form .p3');
+	var clear=document.querySelector('.p4');
+	var btn=document.querySelector('.p6');
+	var text=document.querySelector('.mo1');
+
+
+	sgin.onclick=function(){
+		var uval=user.value;
+		var pval=pass.value;
+
+		localStorage.setItem('u',uval);
+		localStorage.setItem('p',pval);
+
+		sessionStorage.u=uval;
+		sessionStorage.p=pval;
+
+	}
+
+	var lu=localStorage.getItem('u');
+	var lp=localStorage.getItem('p');
+	if(!user.value){
+		user.value=lu;
+	}
+	if(!pass.value){
+		pass.value=lp;
+	}
+	
+
+	clear.onclick=function(){
+		localStorage.removeItem('u');
+		localStorage.removeItem('p');
+	}
+	var pmk1=sessionStorage.getItem('u');
+		var pmk2=sessionStorage.getItem('p');
+		text.innerHTML=pmk1+'<br/>'+pmk2;
+	btn.onclick=function(){
+		var pmk1=sessionStorage.getItem('u');
+		var pmk2=sessionStorage.getItem('p');
+		text.innerHTML=pmk1+'<br/>'+pmk2;
+	}
+
+
+</script>

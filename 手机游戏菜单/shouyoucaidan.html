@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+<style>
+	.m1{
+		width: 100px;
+		height: 100px;
+		margin-top: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 50%;
+		position: relative;
+	}
+	.m3{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+	.m3 li{
+		width:100%;
+		height: 100%;
+		background-color: blue;
+		border-radius: 50%; 
+		list-style: none;
+		text-align: center;
+		line-height: 100px;
+		font-size: 50px;
+		color: #fff;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.m2{
+		width: 100%;
+		height: 100%;
+		background-color: red;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 100px;
+		font-size: 20px;
+		color: #fff;
+		position: absolute;
+		z-index: 999;
+		cursor: pointer;
+	}
+
+</style>
+</head>
+<body>
+	<div class='m1'>
+		<div class="m2">菜单</div>
+		<ul class="m3">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		<!-- 	<li>4</li>
+			<li>5</li> -->
+		<!-- 	<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li> -->
+		</ul>
+
+	</div>
+</body> 
+</html>
+<script>
+	var flag=true;
+	var obj=document.getElementsByClassName('m2')[0];
+	var lis=document.getElementsByClassName('m3')[0].getElementsByTagName('li');
+	obj.onclick=function(){
+		if(flag){
+			flag=false;
+			fn();
+		}else{
+			flag=true;
+			for(var i=0;i<lis.length;i++){
+				lis[i].style.transform='translate(0px,0px)';
+				lis[i].style.transition='all .5s';	
+			}
+		}
+	}
+
+
+	// 重点三jiao算法
+	function fn(){
+	var dushu=90/(lis.length);
+
+	for(var i=0;i<lis.length;i++){
+
+		var m=getxy(dushu*i);
+
+		lis[i].style.transform='translate('+m.x+'px,'+m.y+'px)';
+		lis[i].style.transition='all 2s ease';
+	}
+
+
+
+
+
+
+	function getxy(dushu){
+		// 弧度转换
+		var hd=Math.PI/180*dushu;
+		var r=200;
+		var y=Math.sin(hd)*r;
+		var x=Math.cos(hd)*r;
+		return {x:x,y:y};
+	}
+}
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#can{
+		border:2px solid #ccc;
+	}
+	</style>
+</head>
+<body>
+	<canvas id='can' width='1000' height='600'>你的浏览器不支持。</canvas>
+</body>
+</html>
+<script>
+	var can=document.querySelector('#can');
+	var o=can.getContext('2d');
+	o.translate(300,300);
+	o.moveTo(0,0);
+	o.lineTo(0,-200);
+	o.stroke();
+	o.moveTo(0,0);
+	o.lineTo(350,0);
+	o.stroke();
+	o.moveTo(10,-10);
+	o.lineTo(50,-30);
+	o.lineTo(100,-60);
+	o.lineTo(150,-200);
+	o.lineTo(200,-150);
+	o.lineTo(250,-50);
+	o.lineTo(300,-90);
+	o.stroke();
+	o.font='35px 宋体';
+	var str='max'
+	o.fillText(str,-10,-190);
+	var str='min'
+	o.fillText(str,350,0);
+	o.stroke();
+	o.font='20px 宋体';
+	var str='0,0'
+	o.fillText(str,-20,20);
+</script>

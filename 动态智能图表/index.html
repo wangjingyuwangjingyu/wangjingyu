@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='veiwport' content="width=device-width">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<canvas id='can'>
+		你的浏览器不支持！
+	</canvas>
+</body>
+</html>
+<script>
+	var data=[
+		{value:555,name:'',bi:0,colors:''},
+		{value:65,name:'',bi:0,colors:''},
+		{value:95,name:'',bi:0,colors:''},
+		{value:65,name:'',bi:0,colors:''},
+		{value:984,name:'',bi:0,colors:''}
+	]
+	var can=document.querySelector('#can');
+	var o=can.getContext('2d');
+	can.width='800';
+	can.height='600';
+	can.style.border='3px solid #ccc';
+	o.translate(300,300);
+	var start=0;
+	var sum=0;
+	function fn(){
+		for(var i=0;i<data.length;i++){
+			sum+=data[i].value;
+		}
+		for(var i=0;i<data.length;i++){
+			data[i].bi=Math.round(data[i].value/sum*360);
+			data[i].colors=Math.floor((Math.random()*155+100))+','+Math.floor((Math.random()*155+100))+','+Math.floor((Math.random()*155+100))+','+Math.random();
+
+		}
+		var bi=[];
+
+		for(var i=0;i<data.length;i++){
+			bi.push(data[i].value/sum);
+		}
+		var gao=50;
+		for(var i=0;i<data.length;i++){
+			o.beginPath();
+			o.moveTo(0,0);
+			o.arc(0,0,250,start,start+Math.PI/180*data[i].bi,0);
+			o.fillStyle='rgba('+data[i].colors+')';
+			o.fill();
+			// 三角函数添加文字
+			// o.lineTo(0,0);
+			var hd=start+Math.PI/180*data[i].bi/2;
+			var x=Math.cos(hd)*210;
+			var y=Math.sin(hd)*210;
+			o.font='30px 宋体';
+			o.fillStyle='#000';
+			o.textAlign='center';
+			o.textBaseline='middle';
+			var str=Math.round(bi[i]*100)+'%';
+			o.fillText(str,x,y);
+			o.lineTo(0,0);
+			o.stroke();
+			o.closePath();
+			start+=Math.PI/180*data[i].bi;
+
+			o.beginPath();
+			o.rect(430,gao,50,20);
+			o.font='22px 宋体';
+			o.fillText(str,460,gao+10);
+			o.strokeStyle='#000';
+			o.fillStyle='rgba('+data[i].colors+')';
+			o.fill();
+			o.stroke();
+			o.closePath();
+			gao+=25;
+		}
+	}
+	fn();
+
+</script>

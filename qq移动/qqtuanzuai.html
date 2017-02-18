@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.p1{
+		width: 80px;
+		height: 80px;
+		background-color: yellow;
+		cursor: pointer;
+		position: absolute;
+		left: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div class="p1"></div>
+</body>
+</html>
+<script>
+
+
+var obj=document.getElementsByClassName('p1')[0];
+
+
+	function kn(obj,op){
+	this.obj=obj;
+	this.isx=op.isx;
+	this.isy=op.isy;
+	this.maxx=op.ml[1];
+	this.minx=op.ml[0];
+	this.maxy=op.my[1];
+	this.miny=op.my[0];
+}
+kn.prototype.play=function(){
+	this.down();
+}
+kn.prototype.down=function(){
+	self2=this;
+	self2.obj.onmousedown=function(e){
+		e=e||window.event;
+		self2.aa=e.offsetX;
+		self2.aa1=e.offsetY;
+		self2.move();
+	}
+}
+kn.prototype.move=function(){
+	self=this.obj;
+	seeew=this;
+	document.onmousemove=function(e){
+		e=e||window.event;
+		var cx=e.clientX;
+		var cy=e.clientY;
+		var lefts=cx-seeew.aa;
+		var tops=cy-seeew.aa1;
+		if(seeew.isx){
+			if(seeew.minx>lefts){
+				lefts=seeew.minx;
+			}
+			if(seeew.maxx<lefts){alert(cx);
+				lefts=seeew.maxx;
+			}
+			self.style.left=lefts+'px';
+		}
+		
+		if(seeew.isy){
+			if(tops<seeew.miny){
+			tops=seeew.miny;
+			}
+			if(tops>seeew.maxy){
+				tops=seeew.maxy;
+			}
+			console.dir(tops);
+			self.style.top=tops+'px';
+		}
+		
+	}
+}
+var jj= new kn(obj,{isx:true,ml:[200,1000],isy:true,my:[50,600]});
+jj.play();
+
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+<style>
+	.box1,.box2{
+		width: 500px;
+		height: 700px;
+		border:10px solid #ccc;
+		position: absolute;
+	}
+	.box1{
+		top:20px;
+		left: 10px;
+	}
+	.box2{
+		bottom:20px;
+		right: 10px;
+	}
+	.box3{
+		width: 200px;
+		height: 50px;
+		background-color: red;
+		float: left;
+		margin: 25px;
+		border-radius: 5px;
+		font-size: 45px;
+		color: #fff;
+		line-height: 50px;
+		text-align: center;
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="box1">
+		<div class="box3">1天</div>
+		<div class="box3">2天</div>
+		<div class="box3">3天</div>
+		<div class="box3">4天</div>
+		<div class="box3">5天</div>
+		<div class="box3">6天</div>
+		<div class="box3">7天</div>
+		<div class="box3">8天</div>
+		<div class="box3">9天</div>
+	</div>
+	<div class="box2">
+		
+	</div>
+
+
+
+</body>
+</html>
+
+<script>
+	var a1=document.getElementsByClassName('box1')[0];
+	var az=document.getElementsByClassName('box3');
+	var a2=document.getElementsByClassName('box2')[0];
+
+// 初始化
+var gg;
+// 拖
+	a1.ondragstart=function(e){
+		e.dataTransfer.setData('text/HTML',e.target.innerHTML);
+		gg=e.target;
+	}
+// 综合
+for(var i=0;i<az.length;i++){
+	az[i].draggable=true;
+	az[i].style['user-select']='none';
+	// 拽
+	az[i].ondragover=function(e){
+		e.preventDefault();
+	}
+	az[i].ondrop=function(e){
+		var a=e.dataTransfer.getData('text/HTML');
+		// 赋值
+		var b=this.innerHTML;
+		this.innerHTML=a;
+		gg.innerHTML=b;
+	}
+}
+
+
+
+
+
+
+</script>
