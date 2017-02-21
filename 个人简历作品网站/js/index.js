@@ -66,10 +66,11 @@ $('.zz').click(function(){
 $('.bb-11').click(function(){
 	var imgsrc=$(this).find('img')[0].getAttribute("imgsrc");
 	var lianjie=$(this).find('img')[0].getAttribute("lianjie");
-	$('.zzdian a')[0].href='http://'+lianjie;
+	$('.zzdian a')[0].href='https://'+lianjie;
 	console.dir(lianjie);
 	$('.zz').css({'transform':'scale(1)','opacity':'1'});
 	$('.zzz').find('img')[0].src=imgsrc;
+	console.dir(imgsrc);
 });
 $('.zzdian')[0].onclick=function(e){
 	e.stopPropagation();
@@ -86,6 +87,19 @@ $('.dianji').each(function(){
 $('.big-1').css({'display':'none'});
 $($('.big-1')[0]).css({'display':'block'});
 $('.nav-3')[0].style.cssText='background:#333;color:#fff;';
+
+
+window.addEventListener('scroll',function(){
+	var stt=document.body.scrollTop;
+	var hh123=$('.grhh1')[0].offsetTop;
+	var doc=document.documentElement.clientHeight;
+	if(hh123<=(stt+doc)){
+		$('.bjn').css({'opacity':'1'});
+	}else{
+		$('.bjn').css({'opacity':'0'});
+	}
+	console.dir(stt+doc+'--'+hh123);
+});
 
 
 
