@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background-color: #0A2451;
+		overflow-x:hidden;
+	}
+	.changjing{
+		width: 650px;
+		height: 365px;
+		margin: 0 auto;
+		margin-top: 200px;
+		position: relative;
+		background-image: url(52b1OOOPIC99.jpg);
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+	<div class="changjing">
+		
+	</div>
+
+
+
+</body>
+</html>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+	function dyxy(obj){
+		this.obj=obj;
+		this.jjj=0;
+		this.sjyn=[1,2,3,5,1,2,3,2,1,1];
+		this.sjyarr=[1,2,3,4,5,6,7,8,9];
+		this.sjyarrwh=[[155,130],[55,30],[195,80],[165,115],[249,197],[113,127],[131,73],[372,127],[260,67]];
+		this.speed=1;
+		this.speed1=-1;
+		// 1tomp
+		this.ltop=[];
+		this.lleft=[];
+		// 2tomp
+		this.rtop=[];
+		this.rleft=[];
+		this.lmop='f1.png';
+	}
+	dyxy.prototype={
+		play:function(){
+			this.chushihua();
+			this.daxiaoyuchuanjianz();
+			this.leftfashselpz();
+			this.daxiaoyuchuanjiany();
+			this.leftfashselpy();
+			this.keyshijian();
+			this.baozhuchuanjian();
+			this.shuimuchuanjian();
+			this.meeat();
+			this.shengji();
+		},
+		chushihua:function(){
+			seft=this;
+			$('<div>').addClass('me').css({'width':this.sjyarrwh[0][0]/4+'px','height':this.sjyarrwh[0][1]/4+'px','background-image':'url(fashimg/f1.png)','background-size':this.sjyarrwh[0][0]/4+'px','position':'absolute','top':'200px','left':'300px'}).appendTo(this.obj);
+
+			// 水泡创建
+			var vhy=window.setInterval(fnnm1,200);
+			function fnnm1(){
+				var huy12p=Math.floor(Math.random()*650);
+				var a=1024/10;
+				var b=710/10;
+				$('<div>').addClass('shuipao').appendTo(seft.obj).css({'width':a+'px','height':b+'px','background-image':'url(fashimg/91y58PICQpf_1024.png)','position':'absolute','background-size':a+'px','top':'400px','left':huy12p+'px'});
+			}
+			// 大水泡创建
+			var tnp1=window.setInterval(fnnm2,5000);
+			function fnnm2(){
+				var nk=Math.floor(Math.random()*650);
+				var a=1001/13;
+				var a1=704/13;
+				$('<div>').addClass('dashuipao').appendTo(seft.obj).css({'background-image':'url(fashimg/paopao1.png)','position':'absolute','top':'400px','background-size':a+'px','left':nk+'px','width':a+'px','height':a1+'px','z-index':'123456'});
+			}
+			// 水泡上升,大水泡上升
+			var tt12=window.setInterval(fnn16,200);
+			function fnn16(){
+				$('.shuipao').each(function(i,j){
+					var bjup1=j.offsetTop-10;
+					j.style.top=bjup1+'px';
+				});
+			}
+			var tt136=window.setInterval(fnhg1,20);
+			function fnhg1(){
+				$('.dashuipao').each(function(i,j){
+					var bjup2=j.offsetTop-1;
+					j.style.top=bjup2+'px';
+				});
+			}
+		},
+		// 左面鱼创建
+		daxiaoyuchuanjianz:function(){
+			seft=this;
+			var t1=window.setInterval(fn1,5000);
+			function fn1(){
+				var flag1=true;
+				var a1=Math.floor(Math.random()*9);
+				var a2=Math.floor(Math.random()*10);
+				for(var i=0;i<seft.sjyn[a2];i++){
+					$('<div>').appendTo(seft.obj).css({'position':'absolute','background-position':'no-repeat'}).each(function(i,j){
+						
+						var a5=Math.floor(Math.random()*340);
+						var a6=Math.floor(Math.random()*500);
+						
+						for(var i=0;i<seft.ltop.length;i++){
+							if(a5>=seft.ltop[i]+100||a5+100<=seft.ltop[i]){
+								flag1=true;
+							}else{
+								flag1=false;
+								i=0;
+								var a5=Math.floor(Math.random()*340);
+								continue;
+							}
+						}
+						for(var i=0;i<seft.lleft.length;i++){
+							if(a5>=seft.lleft[i]+100||a5+100<=seft.lleft[i]){
+								flag1=true;
+							}else{
+								flag1=false;
+								i=0;
+								var a6=Math.floor(Math.random()*340);
+								continue;
+							}
+						}
+
+
+
+						$(j).addClass('n1').css({'top':a5+'px','left':-a6+'px','width':seft.sjyarrwh[seft.sjyarr[a1]-1][0]/2,'height':seft.sjyarrwh[seft.sjyarr[a1]-1][1]/2+'px','background-size':seft.sjyarrwh[seft.sjyarr[a1]-1][0]/2+'px','background-image':'url(fashimg1/f'+seft.sjyarr[a1]+'.png)'});
+					});
+
+				}
+			}
+			
+		},
+		// 左面鱼走
+		leftfashselpz:function(){
+			seft=this;
+			// 走
+			var t3=window.setInterval(fn3,10);
+			function fn3(){
+				$('.n1').each(function(i,j){
+					var bbp=j.offsetLeft+1;
+					$(this)[0].style.left=bbp+'px';
+				});
+			// 碰壁消失
+				$('.n1').each(function(i,j){
+					if($(j).offset().left>1000){
+						$(j).remove();
+					}
+				});
+			}
+		},
+		// 右面鱼创建
+		daxiaoyuchuanjiany:function(){
+			seft=this;
+			var tt2=window.setInterval(fnn2,5000);
+			function fnn2(){
+				var a1=Math.floor(Math.random()*9);
+				var a2=Math.floor(Math.random()*10);
+				for(var i=0;i<seft.sjyn[a2];i++){
+					$('<div>').appendTo(seft.obj).css({'position':'absolute','background-position':'no-repeat'}).each(function(i,j){
+						// 重叠问题?????
+						var a5=Math.floor(Math.random()*340);
+						var a6=Math.floor(Math.random()*300+650);
+
+
+						for(var i=0;i<seft.rtop.length;i++){
+							if(a5>=seft.rtop[i]+100||a5+100<=seft.rtop[i]){
+								flag1=true;
+							}else{
+								flag1=false;
+								i=0;
+								var a5=Math.floor(Math.random()*340);
+								continue;
+							}
+						}
+						for(var i=0;i<seft.rleft.length;i++){
+							if(a5>=seft.rleft[i]+100||a5+100<=seft.rleft[i]){
+								flag1=true;
+							}else{
+								flag1=false;
+								i=0;
+								var a6=Math.floor(Math.random()*300+650);
+								continue;
+							}
+						}
+
+
+						$(j).addClass('nn2').css({'top':a5+'px','left':a6+'px','width':seft.sjyarrwh[seft.sjyarr[a1]-1][0]/2,'height':seft.sjyarrwh[seft.sjyarr[a1]-1][1]/2+'px','background-image':'url(fashimg/f'+seft.sjyarr[a1]+'.png)','background-size':seft.sjyarrwh[seft.sjyarr[a1]-1][0]/2});
+					});
+
+				}
+				$('.shuipao').each(function(i,j){
+					if(j.offsetTop<-200){
+						$(j).remove();
+					}
+				});
+				$('.dashuipao').each(function(i,j){
+					if(j.offsetTop<-200){
+						$(j).remove();
+					}
+				});
+			}
+			
+		},
+		// 右面鱼走
+		leftfashselpy:function(){
+			seft=this;
+			// 走
+			var tt5=window.setInterval(fnn5,10);
+			function fnn5(){
+				$('.nn2').each(function(i,j){
+					var bbh=j.offsetLeft-1;
+					$(j).css({'left':bbh});
+				});
+				// 碰壁消失
+				$('.nn2').each(function(i,j){
+					if(j.style.left<=-500+'px'){
+						$(j).remove();
+					}
+				});
+			}
+		},
+		keyshijian:function(){
+			seft=this;
+			$('body')[0].onkeydown=function(e){
+				if(e.keyCode==37){
+					$('.me').css({'background-image':'url(fashimg/'+seft.lmop+')'});
+					var bnv=$('.me')[0].offsetLeft-50;
+					// $('.me')[0].style.left=bnv+'px';
+					$('.me').stop();
+					$('.me').animate({'left':bnv});
+				}
+				if(e.keyCode==38){
+					var bnv=$('.me')[0].offsetTop-50;
+					// $('.me')[0].style.top=bnv+'px';
+					$('.me').stop();
+					$('.me').animate({'top':bnv});		
+				}
+				if(e.keyCode==39){
+					$('.me').css({'background-image':'url(fashimg1/'+seft.lmop+')'});
+					var bnv=$('.me')[0].offsetLeft+50;
+					// $('.me')[0].style.left=bnv+'px';
+					$('.me').stop();
+					$('.me').animate({'left':bnv});
+				}
+				if(e.keyCode==40){
+					var bnv=$('.me')[0].offsetTop+50;
+					// $('.me')[0].style.top=bnv+'px';
+					$('.me').stop();
+					$('.me').animate({'top':bnv});
+				}
+			}
+		},
+		shuimuchuanjian:function(){
+			seft=this;
+			// 水母走
+			var fnn6=window.setInterval(fnn6,10);
+			function fnn6(){
+				$('.shuimu').each(function(i,j){
+					var aa1=j.offsetTop-1;
+					j.style.top=aa1+'px';	
+				});
+				// 水母消失
+				$('.shuimu').each(function(i,j){
+					if(j.offsetTop<-200){
+						$(j).remove();
+					}
+				});
+			}
+			//创建水母
+			var t77=window.setInterval(fnn7,2000);
+			function fnn7(){
+				var bvg=Math.floor(Math.random()*650);
+				$('<div>').addClass('shuimu').appendTo(seft.obj).css({'width':'90px','height':'153px','position':'absolute','background-image':'url(fashimg/shuimu.png)','top':'365px','left':bvg+'px'});
+			}
+		},
+		baozhuchuanjian:function(){
+			seft=this;
+			fnn10();
+			fnn10();
+			function fnn10(){
+				var bhu=Math.floor(Math.random()*20);
+				var bhu1=Math.floor(Math.random()*500+50);
+				var a=90/3;
+				var b=102/3;
+				$('<div>').addClass('baozhu').appendTo(seft.obj).css({'width':a+'px','height':b+'px','background-image':'url(fashimg/baozhu.png)','background-size':a+'px','position':'absolute','bottom':bhu+'px','left':bhu1+'px'});
+				var bhu123=Math.floor(Math.random()*20);
+				var bhu1123=Math.floor(Math.random()*500+50);
+				$('<div>').addClass('baozhu').appendTo(seft.obj).css({'width':a+'px','height':b+'px','background-image':'url(fashimg/baozhu.png)','background-size':a+'px','position':'absolute','bottom':bhu123+'px','left':bhu1123+'px'});
+			}
+			var tt9=window.setInterval(fnn8,20000);
+			function fnn8(){
+				$('.baozhu').remove();
+				fnn10();
+				fnn10();
+			}
+		},
+		meeat:function(){
+			seft=this;
+			window.setInterval(fnn15,50);
+			function fnn15(){
+				$('.me').each(function(i,j){
+				var ll=j.offsetLeft;
+				var tt=j.offsetTop;
+				$('.n1').each(function(i,j){
+					if((j.offsetLeft<=ll&&j.offsetLeft+50>=ll)&&(j.offsetTop<=tt&&j.offsetTop+50>=tt)){
+							$(j).remove();
+							seft.jjj++;
+						}
+					});
+				$('.nn2').each(function(i,j){
+					if((j.offsetLeft<=ll&&j.offsetLeft+50>=ll)&&(j.offsetTop<=tt&&j.offsetTop+50>=tt)){
+							$(j).remove();
+							seft.jjj++;
+						}
+					});
+				$('.baozhu').each(function(i,j){
+					if((j.offsetLeft<=ll&&j.offsetLeft+50>=ll)&&(j.offsetTop<=tt&&j.offsetTop+50>=tt)){
+							$(j).remove();
+							seft.jjj++;
+						}
+					});
+				});
+			}
+			
+		},
+		shengji:function(){
+			seft=this;
+			window.setInterval(fnn166,100);
+			function fnn166(){
+				var bjg123=String(seft.jjj);
+				switch(bjg123){
+					case '3' : $('.me').css({'width':seft.sjyarrwh[3][0]/3+'px','height':seft.sjyarrwh[3][1]/3+'px','background-image':'url(fashimg/f4.png)','background-size':seft.sjyarrwh[3][0]/3+'px'});
+					seft.lmop='f4.png';seft.jjj++;break;
+					case '6' :$('.me').css({'width':seft.sjyarrwh[4][0]/2+'px','height':seft.sjyarrwh[4][1]/2+'px','background-image':'url(fashimg/f5.png)','background-size':seft.sjyarrwh[4][0]/2+'px'});
+					seft.lmop='f5.png';seft.jjj++;break;
+					case '11' :$('.me').css({'width':seft.sjyarrwh[5][0]/2+'px','height':seft.sjyarrwh[5][1]/2+'px','background-image':'url(fashimg/f6.png)','background-size':seft.sjyarrwh[5][0]/2+'px'});
+					seft.lmop='f6.png';seft.jjj++;break;
+					case '16' :$('.me').css({'width':seft.sjyarrwh[6][0]+'px','height':seft.sjyarrwh[6][1]+'px','background-image':'url(fashimg/f7.png)','background-size':seft.sjyarrwh[6][0]+'px'});
+					seft.lmop='f7.png';seft.jjj++;break;
+					case '21' :$('.me').css({'width':seft.sjyarrwh[7][0]+'px','height':seft.sjyarrwh[7][1]+'px','background-image':'url(fashimg/f8.png)','background-size':seft.sjyarrwh[7][0]+'px'});
+					seft.lmop='f8.png';seft.jjj++;break;
+					case '26' :$('.me').css({'width':seft.sjyarrwh[8][0]+'px','height':seft.sjyarrwh[8][1]+'px','background-image':'url(fashimg/f9.png)','background-size':seft.sjyarrwh[8][0]+'px'});
+					seft.lmop='f9.png';seft.jjj++;break;
+				}
+			}
+		}
+	}
+
+	var dy=new dyxy($('.changjing')[0]);
+	dy.play();
+</script>
