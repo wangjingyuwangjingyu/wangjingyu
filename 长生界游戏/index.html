@@ -1,0 +1,723 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 10px;
+		color: blue;
+	}
+	body{
+		overflow:hidden;
+	}
+	.changjing{
+		width: 1000px;
+		height: 300px;
+		margin:auto;
+		position: relative;
+		overflow: hidden;
+	}
+	.m1{
+		height: 300px;
+		display: inline-block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 12;
+	}
+	img{
+		font-size: 0px;
+	}
+	.m2{
+		width: 2140px;
+		height: 120px;
+		position: absolute;
+		bottom: 25px;
+		left: 0px;
+		z-index: 123;
+		background-color:rgba(255,0,0,0.2);
+	}
+	.m4{
+		left: 1015px;
+		z-index: 10;
+	}
+	.m3{
+		position: absolute;
+		z-index: 123;
+		top: 0px;
+		left: 0px;
+	}
+	.yidongchangjing{
+		width: 2140px;
+		height: 300px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.xnh1{
+		width: 80px;
+		height: 135px;
+		position: absolute;
+		top: -80px;
+		left: 100px;
+		text-align: center;
+		z-index: 9999999999;
+	}
+	.xnh15{
+		width: 160px;
+	}
+	.xnh1 img{
+		width:160px;
+	}
+	.xnh2 img,.xnh3 img,.xnh4 img,.xnh5 img,.xnh6 img,.xnh7 img,.xnh8 img,.xnh14 img{
+		width: 80px;
+	}
+	.xnh2{
+		position: absolute;
+		left: 500px;
+	}
+	.xnh3{
+		position: absolute;
+		left: 650px;
+	}
+	.xnh4{
+		position: absolute;
+		left: 800px;
+	}
+	.xnh5{
+		position: absolute;
+		top: -70px;
+		left: 1120px;
+	}
+	.xnh6{
+		position: absolute;
+		left:1200px;
+	}
+	.xnh7{
+		position: absolute;
+		left: 1600px;
+	}
+	.xnh8{
+		position: absolute;
+		left: 2000px;
+	}
+	.xnh9{
+		position: absolute;
+		left: 0px;
+	}
+	.xnh10{
+		width: 160px;
+		left: 1250px;
+	}
+	.xnh11{
+		position: absolute;
+		left: 340px;
+	}
+	.xnh12{
+		position: absolute;
+		left: 1820px;
+		width: 160px;
+	}
+	.xnh14{
+		position: absolute;
+		top: -20px;
+		left: 0px;
+	}
+	.m6{
+		position: absolute;
+		display: block;
+		top: -380px;
+		left: 560px;
+		z-index: 123456;
+	}
+	.w1{
+		width: 1000px;
+		height: 50px;
+		margin: 120px auto 0px;
+		position: relative;
+	}
+	.w1 img{
+		display: block;
+		float: left;
+		margin-top: 10px;
+		margin-left: 200px;
+	}
+	.w1 .w2{
+		margin-left: 0px;
+	}
+	.w3{
+		width: 50px;
+		height: 30px;
+		background-color: yellow;
+		float: left;
+		margin-top: 12px;
+		margin-left: 15px;
+		border-radius: 5px;
+		font-size: 25px;
+		color: pink;
+		text-align: center;
+		line-height: 30px;
+	}
+	.w4{
+		width: 180px;
+		height: 12px;
+		background-color: red;
+		position: absolute;
+		top: 8px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		left: 35px;
+	}
+	.w5{
+		width: 180px;
+		height: 12px;
+		background-color: blue;
+		position: absolute;
+		top: 25px;
+		left: 45px;
+		border: 1px solid #ccc;
+		border-radius: 20px;
+	}
+	.w6{
+		width: 1000px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.w7,.w8,.w9,.w10,.w11,.w12{
+		width: 30px;
+		height: 50px;
+		float: right;
+		margin-right: 20px;
+		cursor: pointer;
+		text-align: center;
+		font-size: 14px;
+		color: red;
+		font-weight: bold;
+	}
+	.w123{
+		width: 42px;
+		height: 30px;
+		float: left;
+		margin-top: 10px;
+		margin-left: 2px;
+		text-align: center;
+		font-size: 20px;
+		line-height: 30px; 
+	}
+	</style>
+</head>
+<body>
+	<!-- 场景外 -->
+	<div class="w1">
+		<img src="npcimg\hp.png" alt="" class="w2">
+		<!-- 血条，魔条 -->
+		<div class="w4"></div>
+		<div class="w5"></div>
+		<img src="npcimg\zuanshi.png" alt="">
+		<div class="w3">0</div>
+		<div class="w123">积分</div>
+	</div>
+
+
+	
+	<div class="changjing">
+		<!-- 场景 -->
+		<div class="yidongchangjing">
+			<img src="u=2264627295,3246386241&fm=21&gp=0.jpg" alt="" class="m1">
+			<img src="u=2264627295,3246386241&fm=21&gp=0.jpg" alt="" class="m1 m4">
+		</div>
+		<!-- 道路 -->
+		<div class="m2">
+			<div class="xnh1 xnh15"><img src="npcimg\xiaomeimei.gif" alt="">天真无邪.小妹妹</div>
+			<div class="xnh1 xnh2"><img src="npcimg\jingchengzhu.png" alt="">金城主</div>
+			<div class="xnh1 xnh3"><img src="npcimg\kongming.png" alt="">雪月仙子</div>
+			<div class="xnh1 xnh4"><img src="npcimg\qihuanxianzi.png" alt="">奇幻仙子</div>
+			<div class="xnh1 xnh5"><img src="npcimg\qinger.png" alt="">琴儿</div>
+			<div class="xnh1 xnh6"><img src="npcimg\tianshen.png" alt="">天神</div>
+			<div class="xnh1 xnh7"><img src="npcimg\wuqidashi.png" alt="">武器材料</div>
+			<div class="xnh1 xnh8"><img src="npcimg\xuesha.png" alt="">血杀</div>
+			<div class="xnh1 xnh9"><img src="npcimg\dilong.gif" alt="">碧火地龙</div>
+			<div class="xnh1 xnh10"><img src="npcimg\pixiu.gif" alt="">不死神兽</div>
+			<div class="xnh1 xnh11"><img src="npcimg\lang.gif" alt="">天狼</div>
+			<div class="xnh1 xnh12"><img src="npcimg\huanfen.gif" alt="">万域蜂后</div>
+			<div class="xnh1 xnh14"><img src="npcimg\laodao.png" alt="">神秘老道</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- 装备资料任务 -->
+	<div class="w6">
+		<div class="w7 ww1"><img src="npcimg\shezhi.png" alt="">设置</div>
+		<div class="w8 ww1"><img src="npcimg\haoyou.png" alt="">好友</div>
+		<div class="w9 ww1"><img src="npcimg\gongji.png" alt="">法术</div>
+		<div class="w10 ww1"><img src="npcimg\renwu.png" alt="">任务</div>
+		<div class="w11 ww1"><img src="npcimg\xueyao.png" alt="">药</div>
+		<div class="w12 ww1"><img src="npcimg\beibao.png" alt="">背包</div>
+	</div>
+
+</body>
+</html>
+
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+
+
+// 游戏参数
+function changshengjie(obj){
+	this.obj=obj;
+	this.a;
+	this.a1;
+	this.npcgps=[100,500,650,800,1120,1200,1600,2000];
+	this.npctel=[['我是可爱的小女孩（0_0)','哥哥，抱抱'],['最近城里有奸细混入','保护建业城是我分内的责任'],['漫天雪花，雪之美','雪听吾之命'],['尘世间皆为虚幻','你猜猜我是谁,幻影,嘿嘿'],['幸福','为君生，长伴君'],['千百万年了......活这么长，能有琴儿在我身边才是真正活着','天神?...我就是天神'],['客官，买些装备吧，嘻嘻','我们这里什么也有，什么也敢卖,客官里面聊'],['杀杀杀，杀，心魔，心魔...','死亡如风，常伴我身，哈哈哈,你死']];
+	this.monimeleft=300;
+	this.t33;
+	this.arr=[[1,'npcimg\\ss1.png'],[2,'npcimg\\ss2.png'],[3,'npcimg\\ss3.png'],[4,'npcimg\\ss4.png'],[5,'npcimg\\ss5.png']];
+	this.mmmkkk=[];
+	this.flagss=true;
+	this.flagsss=true;
+}
+// 游戏开始
+changshengjie.prototype={
+	play:function(){
+		this.chushihua();
+		this.key();
+	},
+	// 初始化场景人物
+	chushihua:function(){
+		self=this;
+		$('<div>').addClass('me').appendTo(self.obj).css({'width':'150px','height':'150px','background-image':'url(medongzuo/stop.gif)','position':'absolute','top':'120px','left':'300px','background-size':'500px','background-position':'-150px -250px','z-index':'123456789'});
+		$('.ww1').hover(function(){
+			$(this).css({'background-color':'pink'});
+		},function(){
+			$(this).css({'background-color':''});
+		});
+		// 点击人物出对话框
+		$('.xnh7').find('img').css({'cursor':'pointer'});
+		$('.xnh7')[0].onclick=function(e){
+			e.stopPropagation();
+			$('<div>').addClass('maimai1').appendTo('.xnh7').css({'width':'50px','height':'80px','background-color':'black','position':'absolute','left':'60px','top':'20px','z-index':'99999','text-align':'center','color':'#fff','border-radius':'5px','font-size':'30px'});
+			$('<div>').addClass('maimai2').appendTo('.maimai1').css({'width':'45px','height':'35px','line-height':'35px','background-color':'#fff','float':'left','margin-left':'2px','margin-top':'5px','font-size':'20px','cursor':'pointer'}).text('商店');
+			$('<div>').addClass('maimai3').appendTo('.maimai1').css({'width':'45px','height':'35px','line-height':'35px','background-color':'#fff','float':'left','margin-left':'2px','margin-top':'5px','font-size':'20px','cursor':'pointer'}).text('闲聊');
+				dianji();
+		}
+		// 点击屏幕清除对话框
+		$('.yidongchangjing').click(function(){
+			$('.maimai1').remove();
+			$('.shangping123').remove();
+			self.mmmkkk=[];
+		});
+		$('.m2').click(function(){
+			$('.maimai1').remove();
+			$('.shangping123').remove();
+			self.mmmkkk=[];
+		});
+		// 点击弹出商品买卖框
+		function dianji(){
+			$('.maimai2')[0].onclick=function(e){
+			e.stopPropagation();
+			$('<div>').addClass('shangping123').appendTo(self.obj).css({'width':'300px','height':'180px','position':'absolute','top':'30px','left':'250px','background-color':'red','border-radius':'10px','z-index':'123456789','padding':'10px'});
+				for(var i=0;i<5;i++){
+					$('<div>').addClass('s1').appendTo('.shangping123').css({'width':'50px','height':'50px','background-color':'#fff','text-align':'center','float':'left','margin-right':'3px','margin-bottom':'2px','cursor':'pointer'}).each(function(i,j){
+						$('<img>').addClass('smkl1').css({'width':'50px'}).appendTo(j);
+					}).click(function(){
+						$(this).css({'background-color':'yellow'});
+					});
+				}
+				$('.smkl1')[0].src='npcimg\\ss1.png';
+				$('.smkl1')[1].src='npcimg\\ss2.png';
+				$('.smkl1')[2].src='npcimg\\ss3.png';
+				$('.smkl1')[3].src='npcimg\\ss4.png';
+				$('.smkl1')[4].src='npcimg\\ss5.png';
+
+				// 收集点击url数据
+				$($('.s1')[0]).click(function(){
+					var plmo=$(this).find('img')[0].src;
+					self.mmmkkk.push(plmo);
+				})
+				$($('.s1')[1]).click(function(){
+					var plmo=$(this).find('img')[0].src;
+					self.mmmkkk.push(plmo);
+				})
+				$($('.s1')[2]).click(function(){
+					var plmo=$(this).find('img')[0].src;
+					self.mmmkkk.push(plmo);
+				})
+				$($('.s1')[3]).click(function(){
+					var plmo=$(this).find('img')[0].src;
+					self.mmmkkk.push(plmo);
+				})
+				$($('.s1')[4]).click(function(){
+					var plmo=$(this).find('img')[0].src;
+					self.mmmkkk.push(plmo);
+				})
+
+
+				for(var i=0;i<10;i++){
+					$('<div>').addClass('s1').appendTo('.shangping123').css({'width':'50px','height':'50px','background-color':'#fff','text-align':'center','float':'left','margin-right':'3px','margin-bottom':'2px','cursor':'pointer'}).click(function(){
+						alert('暂时没有商品上架');
+					});
+				}
+				// 购买按钮
+				$('<div>').addClass('gbs1').appendTo('.shangping123').css({'width':'100px','height':'15px','background-color':'blue','text-align':'center','float':'left','margin-left':'200px','margin-top':'5px','color':'#fff','cursor':'pointer','font-size':'16px'}).text('购买').click(function(){
+					console.dir(self.mmmkkk);
+					// 背包中放入物品
+						for(var i=0;i<self.mmmkkk.length;i++){
+							var bbmop=$('<img>').css({'width':'40px'}).addClass('p1');
+							bbmop[0].src=self.mmmkkk[i];
+							for(var j=0;j<$('.me1').length;j++){
+								var bbnop=$('.me1')[j];
+								if(!($($('.me1')[j]).find('img')[0])){
+									$(bbnop).append(bbmop[0]);
+								}
+							}
+						}
+						$('.s1').css({'background-color':'#fff'});
+						self.mmmkkk=[];
+					});
+			}
+			// 对话框创建
+			$('.maimai3')[0].onclick=function(e){
+				e.stopPropagation();
+				var aaa=Math.floor(Math.random()*2);
+					$('<div>').addClass('npchuan').appendTo(self.obj).css({'width':'800px','height':'100px','position':'absolute','z-index':'1234567899','left':'150px','text-align':'center','line-height':'100px','font-size':'50px','font-weight':'bold','background-color':'rgba(23,55,200,0.6)','border':'5px solid #ccc','color':'#fff','border-radius':'50px','top':'200px'}).text(self.npctel[6][aaa]).each(function(i,j){
+							$('<div>').addClass('guanbiduihuakuan').appendTo('.npchuan').css({'width':'80','height':'50px','background-color':'pink','font-size':'30px','text-align':'center','color':'#fff','position':'absolute','top':'5px','right':'10px','z-index':'9999999999','cursor':'pointer','line-height':'50px','border-radius':'20px'}).text('关闭').click(function(){
+								$('.npchuan').remove();
+								$('.guanbiduihuakuan').remove();
+							});
+					});
+					
+			}
+		}
+		// 
+		$('<div>').css({'width':'250px','padding':'5px','height':'200px','position':'absolute','display':'none','top':'35px','left':'650px','background-color':'pink','border':'3px solid #ccc','z-index':'12354678'}).addClass('wodebeibao').appendTo(self.obj);
+		for(var i=0;i<20;i++){
+			$('<div>').css({'width':'40px','height':'40px','float':'left','background-color':'#fff','margin-right':'3px','margin-bottom':'5px','text-align':'center'}).addClass('me1').appendTo('.wodebeibao')
+		}
+		$('<div>').addClass('cuncuo').appendTo('.wodebeibao').css({'width':'30px','height':'200px','font-size':'12px','color':'black','position':'absolute','top':'10px','left':'220px'}).html('金子:1000000<br/><br/>银子:10000<br/><br/>铜钱：300<br/><br/>会员:0');
+		$('.w12').click(function(){
+			if(self.flagss){
+				self.flagss=false;
+				$('.wodebeibao').css('display','block');				
+			}else{
+				self.flagss=true;
+				$('.wodebeibao').css('display','none');
+			}
+		});
+	
+	},
+	// 主角走路
+	key:function(){
+		self=this;
+		$('.w10').click(function(){
+			if(self.flagsss){
+				self.flagsss=false;
+				$('<div>').css({'width':'30px','border':'3px solid #ccc','border-radius':'10px','height':'150px','font-size':'28px','color':'#333','line-height':'50px','text-align':'center','font-weight':'bold','background-color':'#fff','position':'absolute','top':'50px','left':'390px','z-index':'12345678999'}).addClass('kz').appendTo(self.obj).text('任务');
+								$('<div>').css({'width':'0px','height':'60px','background-color':'#fff','box-shadow':'8px 8px 8px #ccc','font-size':'14px','padding':'35px','color':'#333','position':'absolute','top':'60px','left':'400px','z-index':'1234567899'}).appendTo(self.obj).addClass('kz').animate({'width':'150px'},400,function(){
+									$('<div>').css({'width':'30px','border':'3px solid #ccc','border-radius':'10px','height':'150px','font-size':'28px','color':'#333','line-height':'50px','text-align':'center','background-color':'#fff','position':'absolute','top':'50px','left':'590px','z-index':'12345678999'}).addClass('kz').appendTo(self.obj);
+								}).html('顶级20级,牛刀小试，亲,快练级吧!(^_^)<br/><br/><>br/向左走，试炼口!   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----->');
+			}else{
+				self.flagsss=true;
+				$('.kz').css('display','none');
+			}
+			
+		});
+		self.t33=window.setInterval(fn3,100);
+		function fn3(){
+			self.a=$('.me')[0].offsetLeft;
+			self.a1=$('.me')[0].offsetTop;
+		}
+		document.body.onkeydown=function(e){
+			//任务廊
+			if(e.keyCode==78){
+				if(self.flagsss){
+					self.flagsss=false;
+					$('<div>').css({'width':'30px','border':'3px solid #ccc','border-radius':'10px','height':'150px','font-size':'28px','color':'#333','line-height':'50px','text-align':'center','font-weight':'bold','background-color':'#fff','position':'absolute','top':'50px','left':'390px','z-index':'12345678999'}).addClass('kz').appendTo(self.obj).text('任务');
+								$('<div>').css({'width':'0px','height':'60px','background-color':'#fff','box-shadow':'8px 8px 8px #ccc','font-size':'14px','padding':'35px','color':'#333','position':'absolute','top':'60px','left':'400px','z-index':'1234567899'}).appendTo(self.obj).addClass('kz').animate({'width':'150px'},400,function(){
+									$('<div>').css({'width':'30px','border':'3px solid #ccc','border-radius':'10px','height':'150px','font-size':'28px','color':'#333','line-height':'50px','text-align':'center','background-color':'#fff','position':'absolute','top':'50px','left':'590px','z-index':'12345678999'}).addClass('kz').appendTo(self.obj);
+								}).html('顶级20级,牛刀小试，亲,快练级吧!(^_^)<br/><br/><>br/向左走，试炼口!   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----->');
+				}else{
+					self.flagsss=true;
+					$('.kz').css('display','none');
+				}
+				
+			}
+			// 法术效果
+			if(e.keyCode==88){
+				var bh=$('.me').css('background-image');
+				bh=bh.slice(5,bh.length-2);
+				if(bh.indexOf('zou1.gif')!=-1||bh.indexOf('stop1.gif')!=-1){
+					// 左侧法术打击效果
+					$('.me').css({'background-image':'url(medongzuo/fashu2.gif)'});
+					// 激光打击
+					$('<div>').addClass('shadixiaoguo').appendTo('.me').css({'position':'absolute','left':'-1210px','top':'20px','background-image':'url(medongzuo/jiguan1.gif)','width':'1210px','border-radius':'100px','height':'151px'});
+					// 旋风打击
+					for(var n=0;n<6;n++){
+						var asd=Math.floor(Math.random()*800-400);
+						var asd1=Math.floor(Math.random()*250);
+						var ap1=$('.me')[0].offsetTop;
+						var ap2=$('.me')[0].offsetLeft;
+						if(!(asd>=ap2&&asd<=ap2+150&&asd1>=ap1&&asd1<=ap1+150)){
+							$('<div>').appendTo('.me').addClass('shadixiaoguo').css({'width':'100px','height':'100','background-image':'url(medongzuo/xuanfen.gif)','background-size':'100px','position':'absolute','top':asd1+'px','left':asd+'px'});
+						}
+						
+					}
+					// 火焰打击
+					for(var n=0;n<10;n++){
+						var asd=Math.floor(Math.random()*800-400);
+						var asd1=Math.floor(Math.random()*250);
+						var ap1=$('.me')[0].offsetTop;
+						var ap2=$('.me')[0].offsetLeft;
+						if(!(asd>=ap2&&asd<=ap2+150&&asd1>=ap1&&asd1<=ap1+150)){
+							$('<div>').appendTo('.me').addClass('shadixiaoguo1').css({'width':'100px','height':'100','background-image':'url(medongzuo/huo.gif)','background-size':'100px','position':'absolute','top':asd1+'px','left':asd+'px'});
+						}
+						
+					}
+					window.setTimeout(function(){
+						$('.shadixiaoguo1').remove();
+					},2500);
+
+					window.setTimeout(function(){
+						$('.shadixiaoguo').remove();
+					},1000);
+					window.setTimeout(function(){
+						$('.me').css({'background-image':'url(medongzuo/stop1.gif)','background-size':'500px'});
+					},5000);
+				}else{
+					// 右侧法术打击效果
+					$('.me').css({'background-image':'url(medongzuo/fashu1.gif)'});
+					// 激光打击
+					$('<div>').addClass('shadixiaoguo').appendTo('.me').css({'position':'absolute','left':'160px','top':'20px','background-image':'url(medongzuo/jiguan.gif)','width':'1210px','border-radius':'100px','height':'151px'});
+					// 旋风打击
+					for(var n=0;n<6;n++){
+						var asd=Math.floor(Math.random()*800-400);
+						var asd1=Math.floor(Math.random()*250);
+						var ap1=$('.me')[0].offsetTop;
+						var ap2=$('.me')[0].offsetLeft;
+						if(!(asd>=ap2&&asd<=ap2+150&&asd1>=ap1&&asd1<=ap1+150)){
+							$('<div>').appendTo('.me').addClass('shadixiaoguo').css({'width':'100px','height':'100','background-image':'url(medongzuo/xuanfen.gif)','background-size':'100px','position':'absolute','top':asd1+'px','left':asd+'px'});
+						}
+						
+					}
+					// 火焰打击
+					for(var n=0;n<10;n++){
+						var asd=Math.floor(Math.random()*800-400);
+						var asd1=Math.floor(Math.random()*250);
+						var ap1=$('.me')[0].offsetTop;
+						var ap2=$('.me')[0].offsetLeft;
+						if(!(asd>=ap2&&asd<=ap2+150&&asd1>=ap1&&asd1<=ap1+150)){
+							$('<div>').appendTo('.me').addClass('shadixiaoguo1').css({'width':'100px','height':'100','background-image':'url(medongzuo/huo.gif)','background-size':'100px','position':'absolute','top':asd1+'px','left':asd+'px'});
+						}
+						
+					}
+					window.setTimeout(function(){
+						$('.shadixiaoguo1').remove();
+					},2500);
+					window.setTimeout(function(){
+						$('.shadixiaoguo').remove();
+					},1000);
+					window.setTimeout(function(){
+						$('.me').css({'background-image':'url(medongzuo/stop.gif)','background-size':'500px'});
+					},5000);
+				}
+				
+			}
+			// 方向键控制
+			if(e.keyCode==32){
+				$('.npchuan').remove();
+				$('.guanbiduihuakuan').remove();
+			}
+			if(e.keyCode==37){
+				var a=$('.me')[0].offsetLeft-10;
+				$('.me')[0].style.left=a+'px';
+				self.monimeleft=self.monimeleft-10;
+				$('.me').css({'background-image':'url(medongzuo/zou1.gif)','background-size':'500px'});
+				window.setTimeout(function(){
+					$('.me').css({'background-image':'url(medongzuo/stop1.gif)','background-size':'500px'});
+				},4000);
+			}
+			if(e.keyCode==39){
+				var a=$('.me')[0].offsetLeft+10;
+				$('.me')[0].style.left=a+'px';
+				self.monimeleft=self.monimeleft+10;
+				$('.me').css({'background-image':'url(medongzuo/zou.gif)','background-size':'500px'});
+				window.setTimeout(function(){
+					$('.me').css({'background-image':'url(medongzuo/stop.gif)','background-size':'500px'});
+				},4000);
+			}
+			if(e.keyCode==38){
+				var a=$('.me')[0].offsetTop-10;
+				$('.me')[0].style.top=a+'px';
+			}
+			if(e.keyCode==40){
+				var a=$('.me')[0].offsetTop+10;
+				$('.me')[0].style.top=a+'px';
+			}
+			// 和NPC对话方式
+			if(e.keyCode==66&&self.a1<=100){
+				for(var i=0;i<self.npcgps.length;i++){
+					if(self.monimeleft>=self.npcgps[i]-50&&self.monimeleft<=self.npcgps[i]+20){
+						var aaa=Math.floor(Math.random()*2);
+						$('<div>').addClass('npchuan').appendTo(self.obj).css({'width':'800px','height':'100px','position':'absolute','z-index':'1234567899','left':'150px','text-align':'center','line-height':'100px','font-size':'50px','font-weight':'bold','background-color':'rgba(23,55,200,0.6)','border':'5px solid #ccc','color':'#fff','border-radius':'50px','top':'200px'}).text(self.npctel[i][aaa]).each(function(i,j){
+								$('<div>').addClass('guanbiduihuakuan').appendTo(j).css({'width':'80','height':'50px','background-color':'pink','font-size':'30px','text-align':'center','color':'#fff','position':'absolute','top':'5px','right':'10px','z-index':'9999999999','cursor':'pointer','line-height':'50px','border-radius':'20px'}).text('关闭').click(function(){
+									$('.npchuan').remove();
+									$('.guanbiduihuakuan').remove();
+								});
+						});
+					}
+				}
+			}
+		}
+		// 走停时候的效果
+		function xingzoufn(){
+			$('.me').css({'background-image':'url(medongzuo/stop.gif)','background-size':'500px'});
+		}
+		// 行走限制
+		var t1=window.setInterval(fn1,10);
+		function fn1(){
+			var a=$('.me')[0].offsetLeft;
+			var a3=$('.me')[0].offsetTop;
+			var a1=$('.yidongchangjing')[0].offsetLeft;
+			var a2=$('.m2')[0].offsetLeft;
+			if(self.monimeleft<=20){
+				self.monimeleft=19;
+			}
+			// 左走限制
+			if(a>=900&&!(a1<=-1120)){
+				$('.me')[0].style.left=899+'px';
+				a2=a2-10;
+				a1=a1-10;
+				$('.yidongchangjing')[0].style.left=a1+'px';
+				$('.m2')[0].style.left=a2+'px';
+			}
+			if(a1<=-1120&&a>=900){
+				$('.me')[0].style.left=899+'px';
+			}
+			// 右走限制
+			if(a<=20&&!(a1>0)){
+				$('.me')[0].style.left=20+'px';
+				a2=a2+5;
+				a1=a1+5;
+				$('.yidongchangjing')[0].style.left=a1+'px';
+				$('.m2')[0].style.left=a2+'px';
+			}
+			if(a<=20){
+				$('.me')[0].style.left=19+'px';
+			}
+			// 上走限制
+			if(a3<=80){
+				$('.me')[0].style.top=79+'px';
+			}
+			// 上走限制
+			if(a3>=199){
+				$('.me')[0].style.top=198+'px';
+			}
+		}
+		// 选地图进入游戏
+		var t2=window.setInterval(fn2,9);
+		self=this;
+		function fn2(){
+			var a1=$('.yidongchangjing')[0].offsetLeft;
+			if(a1<=-1120){
+				window.clearInterval(t1);
+				window.clearInterval(t2);
+				window.clearInterval(self.t33);
+				$(self.obj).find('div').remove();
+				$('<img>').addClass('bizhi').appendTo(self.obj).css({'width':'1000px','position':'absolute','top':'-100px'});
+				$('.bizhi')[0].src='npcimg\\310756335811.jpg';
+				$('<span>').addClass('wenzi').appendTo(self.obj).css({'font-size':'20px','font-weight':'bold','color':'#fff','position':'absolute','top':'50px','left':'120px'}).html('战斗即将开始!!!<br/>你准备好了吗？');
+				window.setTimeout(function(){
+					$('.bizhi').remove();
+					$('.wenzi').remove();
+					$('<img>').addClass('ditu').appendTo(self.obj).css({'position':'absolute','top':'0px','left':'150px'});
+					$('.ditu')[0].src='npcimg\\53947323109.jpg';
+					// 各个地图信息,点击不同的地图进入不同的战场
+					$('<div>').addClass('ditu1').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'10px','left':'500px','z-index':'123'}).hover(function(){
+						$('.ditu1').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu1').animate({'width':'50px',"height":"50px"});
+					}).click(function(){
+
+
+
+
+
+
+						// 进入具体的地图战斗(临时的)
+						$(self.obj).find('div').add('.ditu').remove();
+						$('<div>').addClass('me').appendTo(self.obj).css({'width':'150px','height':'150px','background-image':'url(medongzuo/stop.gif)','position':'absolute','top':'120px','left':'300px','background-size':'500px','background-position':'-150px -250px','z-index':'123456789'});
+						$('<div>').addClass('zhangduochangjing1').appendTo(self.obj).css({'width':'1000px','height':'320px','position':'absolute','top':'0px','left':'0px','background-image':'url(5512a5e03f63905419_photo.jpg)'});
+							$('.m2').appendTo(self.obj);
+							window.setInterval(function(){
+								var a=551/3;
+								var a1=354/3;
+								for(var k=0;k<10;k++){
+									var aa56=Math.floor(Math.random()*9000-500);
+									var aa57=Math.floor(Math.random()*200);
+									$('<div>').css({'width':a+'px','height':a1+'px','position':'absolute','top':aa57+'px',"left":aa56+"px",'background-size':a+'px','background-image':'url(1252292_971623.gif)'}).appendTo(self.obj).addClass('guai');
+								}
+								
+							},4000);
+							window.setInterval(function(){
+								$('.guai').each(function(){
+									var g1=this.offsetLeft;
+									var g2=this.offsetTop;
+
+									for(var y=0;y<$('.shadixiaoguo').length;y++){
+										if($('.shadixiaoguo')[y].offsetLeft<=g1&&$('.shadixiaoguo')[y].offsetLeft+1000<=g2||$('.shadixiaoguo')[y].offsetTop>=g2&&$('.shadixiaoguo')[y].offsetTop<=g2){
+											$(this).remove();
+										}
+									}
+									
+								});
+							},10);
+
+
+
+
+
+					});
+					$('<div>').addClass('ditu2').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'150px','left':'250px','z-index':'123'}).hover(function(){
+						$('.ditu2').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu2').animate({'width':'50px',"height":"50px"});
+					});
+					$('<div>').addClass('ditu3').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'200px','left':'200px','z-index':'123'}).hover(function(){
+						$('.ditu3').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu3').animate({'width':'50px',"height":"50px"});
+					});
+					$('<div>').addClass('ditu4').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'200px','left':'450px','z-index':'123'}).hover(function(){
+						$('.ditu4').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu4').animate({'width':'50px',"height":"50px"});
+					});
+					$('<div>').addClass('ditu5').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'250px','left':'550px','z-index':'123'}).hover(function(){
+						$('.ditu5').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu5').animate({'width':'50px',"height":"50px"});
+					});
+					$('<div>').addClass('ditu6').appendTo(self.obj).css({'width':'50px','height':'50px','cursor':'pointer','border-radius':'50px','background-color':'rgba(255,50,30,0.5)','position':'absolute','top':'180px','left':'300px','z-index':'123'}).hover(function(){
+						$('.ditu6').animate({'width':'80px','height':'80px'});
+					},function(){
+						$('.ditu6').animate({'width':'50px',"height":"50px"});
+					});
+				},5000);
+			}
+		}
+	}
+}
+
+
+
+
+var changshengjie=new changshengjie($('.changjing')[0]);
+changshengjie.play();
+
+
+</script>
