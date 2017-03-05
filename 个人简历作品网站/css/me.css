@@ -1,0 +1,307 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html,body,section{
+	width: 100%;
+	height: 100%;
+}
+section{
+	position: relative;
+	z-index: 23;
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0,0,0,0.9);
+	position: absolute;
+	z-index: 99999999999;
+	line-height: 100px;
+}
+.pre1,.pre2,.pre3,.pre4{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.pre2,.pre3,.pre4{
+	left: 100%;
+}
+.zz{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.pre1{
+	background-image: url(../images/tissadg.jpg);
+	background-size: center;
+}
+.p1-1{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	text-align: center;
+	line-height: 200px;
+	font-size: 30px;
+	top: 50%;
+	margin-top: -100px;
+	left: 20%;
+	z-index: 9999;
+	transition:all 1s;
+}
+.mlp{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	top: 300px;
+	left: -25px;
+	cursor: pointer;
+	z-index: 9999999;
+	transition:all 1s;
+	border: 1px solid red;
+	background-image: url(../images/timasdasd.jpg);
+	background-size: 100%;
+}
+.mlp:hover video{
+	opacity: 1;
+	left: 100%;
+}
+.mlp:hover{
+	left: 0px;
+}
+video{
+	position: absolute;
+	top: 10px;
+	opacity: 0;
+	transform:translateY(-50%);
+	left: -100%;
+	transition:all 1s;
+}
+.p1-2{
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	padding: 10px;
+	background-color:#fff;
+	transform:translateY(-50%);
+	z-index: 999;
+	padding-left: 30px;
+	transition:all 1s;
+}
+.p1-2 p{
+	display: block;
+	line-height: 30px;
+}
+.p1-2-1{
+	width: 60%;
+	height: 10px;
+	position: absolute;
+	left:0px;
+	top: 50%;
+	transform:translate(-100%,-50%);
+	background-color: red;
+}
+.nn{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	bottom: 80px;
+	text-align: center;
+}
+.nn li{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	list-style: none;
+	cursor: pointer;
+	transition:all 1s;
+}
+.nn li:hover{
+	background-color: red;
+}
+.nn li:nth-child(1){
+	background-color: yellow;
+}
+.p1-2-2{
+	width: 10px;
+	height: 60%;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	background-color: red;
+	transform:translate(-50%,-100%);
+}
+.p1-2-2-1{
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform:translate(-50%,-100%);
+	border-radius: 50%;
+}
+.pre2{
+	background-image: url(../images/timggg1.jpg);
+	background-size: center;
+}
+
+.pre3{
+	background-image: url(../images/asdasd.jpg);
+	background-size: center;
+}
+
+.pre4{
+	background-image: url(../images/timggg3.jpg);
+	background-size: center;
+}
+body{
+	overflow: hidden;
+}
+
+header img{
+	height: 50px;
+	vertical-align: middle;
+	margin-left: 2%;
+	display: inline-block;
+	font-size: 0px;
+}
+header table tbody tr td a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+}
+header table tbody tr td{
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+}
+header table{
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	margin-right: 5%;
+}
+.pp1{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 50%;
+	top:0px;
+	transform:translate(-50%,-110%);
+	display: inline-block;
+	border-bottom: 20px solid red;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid transparent;
+}
+.pp2{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	transform:translate(-50%,110%);
+	display: inline-block;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid red;
+}
+.pp3{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform:translate(110%,-50%);
+	display: inline-block;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid red;
+	border-right: 20px solid transparent;
+	border-top: 20px solid transparent;
+}
+.pp4{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform:translate(-110%,-50%);
+	display: inline-block;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-right: 20px solid red;
+	border-top: 20px solid transparent;
+}
+.pp5{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+.leftbox{
+	width: 200px;
+	height: 200px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	left: 20%;
+	transition:all 1s;
+}
+.rightbox{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	background-color: #fff;
+	transform:translateY(-50%);
+	left: 45%;
+	transition:all 1s;
+}
+.j1{
+	width: 20%;
+	height: 80px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform:translateX(-50%);
+	transition:all 1s;
+	background-color: red;
+}
+.j2{
+	width: 60%;
+	height: 400px;
+	background-color: red;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform:translateX(-50%);
+	transition:all 1s;
+}
+.lian{
+	width: 50%;
+	height: 300px;
+	background-color: red;
+	transition:all 1s;
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	top: 30%;
+}

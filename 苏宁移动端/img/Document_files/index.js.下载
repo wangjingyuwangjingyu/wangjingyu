@@ -1,0 +1,12 @@
+var can=document.querySelector('#can');
+can.width='800';
+can.height='600';
+can.style.border='1px solid red';
+var o=can.getContext('2d');
+
+
+
+//调用
+var hao123=new hb(can,o);
+// hao123.line();
+hao123.rect();

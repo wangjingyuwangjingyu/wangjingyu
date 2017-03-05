@@ -1,0 +1,82 @@
+
+
+
+function hb(can,o){
+	this.can=can;
+	this.o=o;
+	this.imgs=[];
+	this.colos='red';
+	this.type='stroke';
+}
+// 事件
+hb.prototype.sjfz=function(huidiao1,huidiao2,huidiao3){
+	var self=this;
+	this.can.onmousedown=function(e){
+		var cx=e.offsetX;
+		var cy=e.offsetY;
+		var mx1,my1;
+		huidiao1(self,cx,cy);
+		self.can.onmousemove=function(e){
+			var mx=e.offsetX;
+			var my=e.offsetY;
+			mx1=mx;
+			my1=my;
+			// console.dir(self.imgs.length);
+			// 回调函数
+			huidiao2(self,cx,cy,mx,my);
+		}
+		self.can.onmouseup=function(e){
+			huidiao3(self,cx,cy,mx1,my1);
+			self.imgs.push(self.o.getImageData(0,0,self.can.width,self.can.height));
+			self.can.onmousemove=null;
+			self.o.onmouseup=null;
+		}
+	}
+};
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 工具 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// 画线
+hb.prototype.line=function(){
+	this.sjfz(function(self,cx,cy){
+	},function(self,cx,cy,mx,my){
+		self.o.clearRect(0,0,self.can.width,self.can.height);
+		if(self.imgs.length){
+			console.dir(self.imgs);
+			self.o.putImageData(self.imgs[self.imgs.length-1],0,0,0,0,self.can.width,self.can.height);
+		}
+		self.o.beginPath();
+		self.o.moveTo(cx,cy);
+		self.strokeStyle='blue';
+		self.o.lineTo(mx,my);
+		self.o[self.type]();
+		self.o.closePath();
+	},function(self,cx,cy,mx,my){
+		
+	});
+};
+// 画矩形
+hb.prototype.rect=function(){
+	this.sjfz(function(self,cx,cy){
+
+	},function(self,cx,cy,mx,my){
+		self.o.clearRect(0,0,self.can.width,self.can.height);
+		if(self.imgs.length){
+			console.dir(self.imgs);
+			self.o.putImageData(self.imgs[self.imgs.length-1],0,0,0,0,self.can.width,self.can.height);
+		}
+		self.o.beginPath();
+	
+		self.o.rect(cx,cy,mx-cx,my-cy);
+
+		self.o[self.type]();
+		self.o.closePath();
+	},function(self,cx,cy,mx,my){
+
+	});
+}
+// 画三角形
+
+// 画圆形
+
+// 画铅笔
+
+// 画
