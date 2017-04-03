@@ -1,0 +1,144 @@
+.box1{
+	width: 100%;
+	height: 360px;
+	overflow: hidden;
+}
+.box2{
+	width: 100%;
+	height: 136px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+.box3{
+	width: 100%;
+	height: 94px;
+	font-size:60px;
+	text-align: center;
+	line-height:  95px;
+	font-weight: both;
+	position: relative;
+}
+.box4{
+	text-align: center;
+	line-height: 42px;
+	height: 42px;
+	font-size: 10px;
+	color: #666;
+}
+.box5 .box6{
+	color: #333;
+	font-weight: both;
+}
+.box31{
+	width: 116px;
+	height: 3px;
+	padding-bottom: 1px;
+	display: block;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
+	background-origin: content-box;
+	-webkit-background-origin: content-box;
+	background-color: #000;
+	border-bottom: 1px solid #000;
+	position: absolute;
+	left: 50%;
+	margin-left: -58px;
+}
+.j1{
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.j2{
+	width: 100%;
+	height: 176px;
+	margin-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #F5F5F5;
+}
+.j2 img{
+	float: right;
+	margin-right: 82px;
+}
+.j3{
+	width: 100%;
+	height: 51px;
+	float: left;
+	margin-top: 25px;
+	margin-left: 5.5%;
+}
+.j4{
+	width: 100%;
+	display: block;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;	
+}
+.j5{
+	width: 100%;
+	height: 35px;
+	display: block;
+	font-size: 26px;
+	line-height: 35px;
+	font-weight: both;
+}
+
+.j2 p{
+	float: left;
+	width: 184px;
+	height: 100px;
+	margin: 0px;
+	padding:0px;
+	font-size: 26px;
+	font-weight: both;
+	margin-left: 123px;
+	line-height: 100px;
+	font-weight: both;
+	color: #000;
+}
+.j6{
+	background-color: #4D4D4D;
+	color: #fff;
+}
+#j8{
+	width: 630px;
+	color: #fff;
+}
+#j9{
+	color: #fff;
+}
+.j10{
+	width: 100%;
+	height: 182px;
+	padding: 27px 0px;
+	background-color: #A7A562;
+}
+.j11{
+	width: 100%;
+	height: 161px;
+	background-color: #333;
+	padding-top: 21px;
+}
+.j12{
+	width: 100%;
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 15px;
+	font-weight: both;
+	text-align: center;
+}
+.j13{
+	width: 100%;
+	height: 38px;
+	text-align: center;
+	margin-bottom: 18px;
+}
+.j14{
+	width: 100%;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	color: #fff;
+	height: 48px;
+}

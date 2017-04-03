@@ -1,0 +1,49 @@
+.box1{
+	width: 100%;
+	height: 360px;
+	overflow: hidden;
+}
+.box2{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.box3{
+	width: 300px;
+	padding: 10px 50px;
+}
+.box3 h1{
+	width: 100%;
+	height: 26px;
+	margin: 0px;
+	font-size: 20px;
+	padding: 0px;
+	text-align: right;
+	color: #333;
+}
+.box3 a{
+	text-decoration: none;
+}
+.box3 a img{
+	font-size: 0px;
+}
+.box3 a h2{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	height: 26px;
+	padding: 0px 5px;
+	font-size: 20px;
+	color: red;
+}
+.box3 a p{
+	width: 100%;
+	height: 16px;
+	font-size: 12px;
+	color: #949494;
+}

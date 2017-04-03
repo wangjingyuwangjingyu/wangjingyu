@@ -1,0 +1,31 @@
+
+.section:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.section img{
+	float: left;
+}
+.p1{
+	width: 100%;
+	height: 900px;
+	float: left;
+	margin-top: 5px;
+}
+.p1  p{
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+}
+.p1 p:first-child{
+	font-size: 22px;
+	text-align: center;
+}
+.p1 .p2{
+	font-size: 18px;
+}
+.p1 .p9{
+	text-align: center;
+}

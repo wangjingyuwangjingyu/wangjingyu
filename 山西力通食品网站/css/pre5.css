@@ -1,0 +1,63 @@
+.box1{
+	width: 100%;
+	height: 360px;
+	overflow: hidden;
+}
+.box2{
+	width: 1200px;
+	padding-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 40px;
+}
+.box3{
+	width: 1200px;
+	height: 38px;
+	padding-bottom: 40px;
+	text-align: center;
+	line-height: 38px;
+}
+.box4{
+	width: 318px;
+	display: inline-block;
+	height: 100%;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.box4 a{
+	text-decoration: none;
+	color: #333;
+}
+.box4:nth-child(1){
+	background-color: #333;
+}
+.box4:nth-child(1) a{
+	color: #fff;
+}
+.box5{
+	width: 1200px;
+	height: 360px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ccc;
+}
+.box5 img{
+	float: left;
+	margin-left: 20px;
+}
+.box5 span{
+	float: right;
+	margin-right: ;
+	display: block;
+	width: 440px;
+	height: 35px;
+	font-size: 16px;
+	margin-top:100px;
+	margin-right: 50px;
+	text-align: left;
+	line-height: 38px;
+}
+.box4:nth-child(2) a:hover{
+	color: #f60;
+}

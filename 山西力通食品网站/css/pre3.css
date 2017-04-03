@@ -1,0 +1,161 @@
+.box1{
+	width: 100%;
+	height: 360px;
+	line-height: 0px;
+	overflow: hidden;
+}
+.box1 img{
+	font-size: 0px;
+}
+.box2{
+	width: 1200px;
+	height: 1094px;
+	margin:0 auto;
+	padding-top: 60px;
+}
+.box3{
+	width: 1200px;
+	height: 38px;
+	margin-bottom: 20px;
+	float: left;
+}
+.box4{
+	border-radius: 2px;
+	height: 100%;
+	float: left;
+	padding: 0 30px;
+	border:1px solid #ccc;
+	text-align: center;
+	line-height: 36px;
+}
+.box4 a{
+	text-decoration: none;
+	font-size:14px;
+}
+.box5{
+	background-color: #333;
+	border: 1px solid #333;
+}
+.box5 a{
+	color: #fff;
+}
+.box5~.box4{
+	margin-left: 13px;
+}
+.box5~.box4 a{
+	color: #333;
+	font-size: 14px;
+}
+.box5~.box4 a:hover{
+	color: #f60;
+}
+.box6{
+	width: 1200px;
+	margin-bottom: 20px;
+	float: left;
+}
+.box7{
+	text-align: center;
+	line-height:36px;
+	float: left;
+	border-radius: 2px;
+	border:1px solid #ccc;
+}
+.box7 a{
+	padding: 0px 30px;
+}
+.box7:nth-child(1){
+	background-color: #333;
+}
+.box7:nth-child(1) a{
+	color: #fff;
+}
+.box7 a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+}
+.box7:nth-child(1)~.box7{
+	margin-left: 13px;
+}
+.box7:nth-child(1)~.box7 a:hover{
+	color: #f60;
+}
+.box6{
+	margin-bottom: 20px;
+}
+.box8{
+	width: 1200px;
+	height: 38px;
+	float: left;
+}
+.box9{
+	float: left;
+	line-height: 36px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.box9 a{
+	padding: 0px 30px;
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+}
+.box9:nth-child(1){
+	background-color: #333;
+}
+.box9:nth-child(1) a{
+	color: #fff;
+}
+.box9:nth-child(2){
+	margin-left: 13px;
+}
+.box9:nth-child(2) a:hover{
+	color: #f60;
+}
+.box11{
+	width: 1200px;
+	height: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	float: left;
+}
+.box12{
+	width: 380px;
+	height: 380px;
+	float: left;
+	margin-right: 30px;
+}
+.box12:nth-child(3n){
+	margin-right: 0px;
+}
+.box12 a{
+	width: 100%;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+}
+.box12 a span{
+	margin-top: 18px;
+	display: block;
+	color: #f60;
+}
+.box9:nth-child(1){
+	background-color: #333;
+	border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
