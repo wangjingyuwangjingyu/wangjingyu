@@ -1,0 +1,161 @@
+.g1{
+	width: 100%;
+	height: 1.72rem;
+}
+.g2{
+	margin-top:0.3rem;
+	margin-left: 0.24rem;
+	font-size: 14px;
+	color: #333;
+}
+.g2:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.g2 span{
+	float: left;
+}
+.g2 span:first-child{
+	margin-right: 0.24rem;
+}
+.g2 span:nth-child(2){
+	margin-right: 0.18rem;
+}
+.g3{
+	width: 7rem;
+	height: 0.76rem;
+	border: 1px solid #01B5FF;
+	border-radius: 0.07rem;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0.2rem;
+}
+.g4{
+	width: 33.333333%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.76rem;
+	font-size: 16px;
+	color: #000;
+	float: left;
+	border-radius: 0.07rem;
+	position: relative;
+	cursor: pointer;
+}
+.gg1{
+	color: #fff;
+	background-color: #01B5FF;
+}
+.g5{
+	width: 7.02rem;
+	height: 2.7rem;
+	background-color:#fff;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0.1rem;
+	overflow: hidden;
+}
+.g6{
+	width: 2.3rem;
+	height: 2.3rem;
+	float: left;
+	margin-top: 0.2rem;
+	margin-left: 0.2rem;
+	background-color: red;
+	border-radius: 0.07rem;
+	overflow: hidden;
+}
+.g6 img{
+	width: 100%;
+}
+.g7{
+	width: 4.03rem;
+	height: 2.3rem;
+	margin-top: 0.2rem;
+	margin-left:0.3rem;
+	float: left;
+}
+.g7 div span{
+	font-size: 16px;
+	color: #000;
+	float: left;
+	margin-top: 0.18rem;
+}
+.g7 div:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.g7 div a{
+	margin: 0;
+	padding:0;
+	float: right;
+	font-size: 14px;
+	color: #FF9300;
+	text-decoration: none;	
+	margin-top: 0.21rem;
+	-webkit-tap-highlight-color: transparent;
+}
+.g8{
+	font-size: 14px;
+	color: #01B5FF;
+	margin-top: 0.1rem;
+	display: block;
+	border-top: 1px dashed #999999;
+	padding-top: 0.1rem;
+	width: 1.7rem;
+}
+.g7 p{
+	width: 3rem;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #666;
+	line-height: 15px;
+	text-overflow:epllipsis;
+	margin-top: 0.3rem;
+	white-space: hidden;
+	overflow: hidden;
+}
+.g3,.gg1{
+	position: relative;
+}
+.pml{
+	width:0px;
+	display: block;
+	border-top: 0.12rem solid #01B5FF;
+	border-left: 0.12rem solid transparent;
+	border-right: 0.12rem solid transparent;
+	border-bottom: 0.12rem solid transparent;
+	position: absolute;
+	left: 50%;
+	margin-left: -0.12rem;
+	bottom: -0.24rem;
+	z-index: 99999988;
+}
+
+@media screen and (max-width: 320px){
+	.jkl{
+		font-size: 12px;
+	}
+}
+.jkl{
+	font-size: 16px;
+}
+.wjy-dianhuan:nth-child(2){
+	display: none;
+}
+.wjy-dianhuan:nth-child(3){
+	display: none;
+}
+#asdfqwe{
+	display: block;
+	width: auto!important;
+	height: 100%!important;
+}
+
+
+
+
+

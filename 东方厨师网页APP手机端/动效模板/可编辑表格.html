@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.p1{
+		width: 750px;
+		border:1px solid blue;
+		margin: 50px auto;
+		box-shadow: 10px 10px 10px #888;
+		border-radius: 80px;
+		padding: 50px;
+	}
+	table{
+		width: 100%;
+	}
+	tr{
+		width: 100%;
+		height: 50px;
+	}
+	th{
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+	td{
+		width: 80px;		
+		text-align: center;
+		line-height: 50px;
+		font-size: 16px;
+		color: #333;
+	}
+	#add,#del{
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 26px;
+		color: #fff;
+		border:none;
+		outline: none;
+		border-radius: 20px;
+		float: right;
+		margin-right: 10px;
+		background-color: blue;
+		cursor: pointer;
+	}
+	.o1{
+		clear: none;
+	}
+	.nb123{
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
+	.o2{
+		height: 20px;
+	}
+	</style>
+</head>
+<body>
+<div class="p1">
+	<table>
+		<tbody>
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+				<th>家庭住址</th>
+				<th>籍贯</th>
+				<th>删除</th>
+			</tr>
+		</tbody>
+	</table>
+	
+	<input type="botton" id="add" value="add" name="add">
+	<input type="botton" id="del" value="del" name="del">
+	<div class="o2"></div>
+</div>
+<div class="o1"></div>
+</body>
+</html>
+<script type="text/javascript">
+var mm2=document.getElementsByTagName('tbody')[0];
+
+function bnhu(obj,i){
+	var tt=document.createElement('tr');
+		tt.setAttribute('indexx','i');
+		tt.innerHTML='<td type="num">'+obj.num+'</td><td type="name">'+obj.name+'</td><td type="sex">'+obj.sex+'</td><td type="age">'+obj.age+'</td><td type="jg">'+obj.jg+'</td><td type="jzd">'+obj.jzd+'</td><td class="p0"><input type="checkbox" class="nb123"></td>';
+		mm2.appendChild(tt);
+}
+// 数据
+var obj=[
+	{num:100001,name:'水柔',sex:'女',age:18,jg:'星际联盟',jzd:'地球'},
+	{num:100002,name:'上官云',sex:'女',age:18,jg:'星际联盟',jzd:'木星'},
+	{num:100003,name:'紫艳焉',sex:'女',age:18,jg:'星际联盟',jzd:'水星'},
+	{num:100004,name:'陈留君',sex:'女',age:18,jg:'星际联盟',jzd:'冥王星'},
+	{num:100005,name:'张琴情',sex:'女',age:18,jg:'星际联盟',jzd:'黑洞'},
+	{num:100005,name:'白慧鸣',sex:'女',age:18,jg:'星际联盟',jzd:'黑洞'},
+];
+// 当文件加载时数据初始化
+for(var i=0;i<obj.length;i++){
+	bnhu(obj[i],i);
+}
+// 动态表格实现
+	var ddd=document.getElementsByClassName('p1')[0];
+	ddd.ondblclick=function(e){
+		var pp=e.target;
+		if(pp.nodeName=='TD'&&pp.className!='p0'){
+			var values=pp.innerText;
+			pp.innerText='';
+			var jd=document.createElement('input');
+			jd.value=values;
+			jd.style.width=50+'px';
+			var ff=pp.parentNode;
+			pp.appendChild(jd);
+			jd.onblur=function(){
+			var kn=jd.value;
+			if(kn.trim().length){
+				pp.removeChild(jd);
+				var jui1=pp.parentNode.indexx;
+				var yuw1=pp.getAttribute('type');
+				obj[jui1][yuw1]=kn;
+				pp.innerText=kn;
+			}else{
+				pp.removeChild(jd);
+				pp.innerText=values;
+			}
+		}
+	}
+}
+// var bbp1=document.getElementsByClassName('nb123');
+// for(var i=0;i<bbp1.length;i++){
+// 	bbp1[i].checked=false;
+// }
+// console.dir(bbp1[0].checked);
+del.onclick=function(e){
+	var bh=e.target;
+	var bbp1=document.getElementsByClassName('nb123');
+	if(bh.id=='del'){
+		for(var i=bbp1.length-1;i>=0;i--){
+				if(bbp1[i].checked){
+					var km=bbp1[i].parentNode.parentNode;
+					mm2.removeChild(km);
+				}
+			}
+		}
+	// // 删除数据
+	// var pp=e.target;
+	// if(pp.id=='del'){
+	// 	var km=pp.parentNode.parentNode;
+	// 	mm2.removeChild(km);
+	// }
+}
+// 添加数据
+var mm1=document.getElementById('add');
+document.body.onkeydown=mm1.onclick=function(e){
+	obb={num:000000,name:'名字',sex:'性别',age:0,jg:'宇宙联盟',jzd:'火星'}
+		if(e.keyCode==65&&e.shiftKey){
+			obb={num:000000,name:'名字',sex:'性别',age:0,jg:'宇宙联盟',jzd:'火星'}
+			bnhu(obb,obj.length);
+		}if(e.type=='click'){
+			obb={num:000000,name:'名字',sex:'性别',age:0,jg:'宇宙联盟',jzd:'火星'}
+			bnhu(obb,obj.length);
+		}
+}
+// var de=document.getElementById('del');
+// de.onclick=function(){
+// 	var bno=mm2.lastChild;
+// 	mm2.removeChild(bno);
+// }
+
+
+
+</script>

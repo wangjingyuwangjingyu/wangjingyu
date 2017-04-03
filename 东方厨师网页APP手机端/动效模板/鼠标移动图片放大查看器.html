@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+<style type="text/css">
+	.p1{
+		width: 500px;
+		height: 200px;
+		font-size: 36px;
+		display: block;
+		border-top: 6px solid red;
+		border-right: 6px solid blue;
+		border-bottom: 6px solid green;
+		border-left: 6px solid yellow;
+		box-shadow: 10px 10px 20px #888;
+		resize:none;
+		border-radius: 10px;
+	}
+	.p2,.p3{
+		width: 30px;
+		height: 30px;
+		background-color: yellow;
+		display: inline-block;
+	}
+	.p4,.p5{
+		width: 80px;
+		height: 50px;
+		background-color: block;
+		display: inline-block;
+	}
+	.n{
+		width: 100px;
+		height: 30px;
+		background-color: block;
+		font-size: 22px;
+		text-align: center;
+		line-height: 30px;
+		display: inline-block;
+		margin-left: 300px;
+	}
+	.f{
+		margin-top: 50px;
+		margin-left: 100px;
+	}
+	.k1{
+		width: 1000px;
+		height: 50px;
+		background-color:red;
+		margin-top:10px;
+	}
+</style>
+
+</head>
+<body>
+<div  class="f"><textarea class="p1"></textarea>
+	<div class="p4">输入字数:</div><div class="p2">0</div><div class="p5">剩余字数:</div><div class="p3">200</div>
+	<input type="submit" value='发表评论' onclick="fn()" class="n">
+	<div class="k1"></div>
+	<div class="k1"></div>
+</div>
+
+	
+		
+	
+</body>
+</html>
+<script type="text/javascript">
+var sum=0;
+var str='';
+var mk=document.getElementsByClassName('p1')[0];
+var ml=document.getElementsByClassName('p2')[0];
+var mll=document.getElementsByClassName('p3')[0];
+var ff=document.getElementsByClassName('f')[0];
+var js=0;
+mk.maxLength=200;
+mk.onkeydown=function(e){
+	var b=e.keyCode;
+	if(sum<200&&b!=8){
+		if(b){
+				sum=sum+1;
+			}
+	}
+	console.dir(b);
+	if(b==8&&sum>0){
+		sum-=1;
+		str.length=str.length-1;
+	}
+	ml.innerText=sum;
+	mll.innerHTML=200-sum;
+	var ttp=String.fromCharCode(b);
+	str+=ttp;
+	var bb=e.keydown;
+	if(bb==13&&e.shiftkey){
+		fn();
+	}
+}
+
+
+function fn(e){
+	var jd=document.createElement('div');
+	var mydate=new Date();
+	str.length=190;
+	var pm="---------------发布当前时-间-："+mydate;
+	str+=pm;
+	jd.innerHTML="<font size='12px''>"+str+"</font>";
+	sum=0;
+	ff.appendChild(jd,mk);
+	str='';
+	mk.value='';
+	ml.innerText=sum;
+	mll.innerText=200-sum;
+	jd.style.cssText='margin-top:10px;';
+}
+
+
+document.body.onmouseover=function(e){
+	var jdj=e.target;
+	if(jdj.nodeName=='DIV'){
+		jdj.style.background='blue';
+	}
+}
+document.body.onmouseout=function(e){
+	var jbp=e.target;
+	if(jbp.nodeName=="DIV"){
+		jdj.style.background='red';
+	}
+}
+
+
+
+
+
+	// var kn=document.getElementsByClassName('k1');
+	// for(var i=0;i<kn.length;i++){
+	// 	kn[i].indexss=i;
+	// 	kn[i].onmouseover=function(){
+	// 		kn[this.indexss].style['background-color']='blue';
+	// 	}
+	// 	kn[i].onmouseout=function(){
+	// 		kn[this.indexss].style['background-color']='red';
+	// 	}
+	// }
+
+
+
+
+// function ys(){
+// 	var hy=ff.lastChild;
+// 	hy.style.width=1000+'px';
+// 	hy.style.background='black';
+// 	hy.style.color='#fff';
+// 	hy.style.height=300+'px';
+// 	hy.style.border='5px solid red';
+// 	hy.style['margin']=100+'px';
+// 	hy.style['font-size']=10+'px';
+// }
+</script>

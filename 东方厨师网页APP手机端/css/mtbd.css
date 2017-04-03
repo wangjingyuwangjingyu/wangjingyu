@@ -1,0 +1,108 @@
+.t1{
+	width: 100%;
+	height: 0.8rem;
+	padding-top: 0.3rem;
+	padding-left: 0.24rem;
+}
+.t1 div span{
+	float: left;
+	margin-right: 0.24rem;
+}
+.t1 div span:nth-child(3){
+	margin: 0;
+}
+.t2{
+	width: 100%;
+	height: 3.08rem;
+}
+.t3{
+	width: 100%;
+	height: 2.46rem;
+	background-color: #fff;
+}
+.t4{
+	width:100%;
+	height: 0.6rem;
+	background-color: #fff;
+}
+.tt1{
+	box-sizing:border-box;
+	width: 7rem;
+	height: 100%;
+	border-top: 1px solid #F5F6FA;
+	display: block;
+	border-bottom: 1px solid #F5F6FA;
+	margin-right: auto;
+	margin-left: auto;
+}
+.t5{
+	width: 80%;
+	float: left;
+	margin-top:0.22rem;
+	font-size: 14px;
+	color: #000;
+	margin-left: 0.32rem
+}
+.t6{
+	width: 2.04rem;
+	height: 1.56rem;
+	float: left;
+	margin-top: 0.26rem;
+	margin-left: 0.24rem;
+	position: relative;
+}
+.t7,.t8{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #383838;
+	float: left;
+	margin-left: 0.32rem;
+	line-height: 18px;
+}
+.t7{
+	width: 4.65rem;
+	margin-top: 0.36rem;
+}
+.t10,.t11{
+	width: 1.93rem;
+	height: 1.45rem;
+}
+.t10{
+	background-color: #C8C8C8;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 999;
+}
+.t11{
+	border: 2px solid #01B5FF;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.tt2{
+	width: 33.333333%;
+	height: 100%;
+	float: left;
+}
+.tt2 img{
+	height: 0.3rem;
+	margin-top: 0.15rem;
+	float: left;
+}
+.tt2 span{
+	font-size: 12px;
+	color: #333;
+	float: left;
+	margin-top: 0.17rem;
+	margin-left: 0.08rem;
+}
+@media screen and (max-width: 320px){
+	.t6{
+		margin-top: 0.1rem;
+	}
+	.t7{
+		margin-top: 0.15rem;
+	}
+}

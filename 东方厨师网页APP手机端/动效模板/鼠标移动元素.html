@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.p1{
+		width: 50px;
+		height: 50px;
+		background-color: yellow;
+		cursor: pointer;
+		position: absolute;
+	}
+</style>
+
+<body>
+
+<div class="p1"></div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+var j1=document.getElementsByClassName('p1')[0];
+j1.onmousedown=function(e){
+	e=e?e:window.event;
+	var a1=e.offsetX;
+	var a3=e.offsetY;
+	document.onmousemove=function(e){
+			e=e?e:window.event;
+			var a=e.clientX;
+			var a4=e.clientY;
+			var a2=a-a1;
+			var a5=a4-a3;
+			j1.style.left=a2+'px';
+			j1.style.top=a5+'px';
+		}
+	
+	
+}
+j1.onmouseup=function(){
+	document.onmousemove=null;
+}
+
+</script>

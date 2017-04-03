@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Document</title>
+	<style type="text/css">
+	.p1{
+		width: 300px;
+		height: 50px;
+		border:1px solid #ccc;
+		border-radius: 5px 5px 10px #666,10px 10px 10px #666;
+	}
+
+	</style>
+</head>
+<body>
+	
+	<label>邮箱</label>
+	<input type='text' class="p1">
+	<input type='button' class="p2" value="提交">
+
+
+</body>
+</html>
+<script type="text/javascript">
+
+// var str='a12b34c56d7ed890';
+// var num=[];
+// for(var i=0;i<str.length;i++){
+// 	var gg=str.slice(i,i+1);
+// 	if(gg>=0&&gg<=9){
+// 		num.push(gg);
+// 		continue;
+// 	}
+// 	num.push('-');
+// }
+// console.log(num);
+
+
+// var reg=new RegExp('12');
+// console.dir(reg.test(str));
+// console.dir(reg.exec(str));
+
+// console.dir("111111111111");
+// var reg=/asd/;
+// console.dir(reg.test(str));
+// console.dir(reg.exec(str));
+// console.dir("111111111111");
+// var reg=/890/;
+// console.dir(reg.test(str));
+// console.dir(reg.exec(str));
+
+
+
+
+var p1=document.getElementsByClassName('p1')[0];
+var reg=/\d{7,10}[@]\d{3}|[q]{2}[\.]{1}[a-z]{2,3}/;
+
+var p2=document.getElementsByClassName('p2')[0];
+p2.onclick=function(){
+	var pp=p1.value;
+	console.dir(pp.match(reg));
+	if(!pp.match(reg)){
+		alert('你输入非法！！！');
+	}
+}
+
+</script>

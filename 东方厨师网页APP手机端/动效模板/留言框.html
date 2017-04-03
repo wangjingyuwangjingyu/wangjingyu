@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+	.p1{
+		width: 200px;
+		height: 500px;
+		background-color: yellow;
+	}
+	.p2,.p3{
+		width: 100px;
+		height: 250px;
+		background-color: blue;
+	}
+	.p4{
+		width: 100px;
+		height: 250px;
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	
+<div class="p1">
+	<div class="p3"></div>
+	<div class="p4"></div>
+</div>
+
+
+<div class="p2"></div>
+
+
+</body>
+</html>
+<script>
+	var m1=document.getElementsByClassName('p1')[0];
+    var m3=document.getElementsByClassName('p3')[0];
+    var m4=document.getElementsByClassName('p4')[0];
+
+
+    var m2=document.getElementsByClassName('p2')[0];
+
+
+m1.addEventListener('click',function(e){
+	alert('ff');
+	console.dir(e.target);
+},true);
+m3.addEventListener('click',function(e){
+	alert('z2');
+},true);
+m4.addEventListener('click',function(){
+	alert('z1');
+},true);
+
+
+
+m2.addEventListener('click',function(){
+	alert('b');
+},true);
+document.body.onclick=function(e){
+	alert('ddddddd');
+}
+document.body.addEventListener('click',function(e){
+	alert('ddddddddddddddddd');
+	e.stopPropagation();
+	conole.dir(e.target);
+},true);
+
+
+
+</script>

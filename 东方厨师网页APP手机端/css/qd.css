@@ -1,0 +1,281 @@
+.p1{
+	width: 100%;
+	height: 0.82rem;
+	font-size: 14px;
+}
+.p1 span{
+	float: left;
+	margin-top: 0.3rem;
+}
+.p1 span:nth-child(1){
+	margin-left: 0.24rem;
+}
+.p1 span:nth-child(2){
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+}
+.p2{
+	width: 7.02rem;
+	height: 2.25rem;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+.p3{
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	float: left;
+}
+.p3 img{
+	height: 1.2rem;
+	margin-top: 0.28rem;
+	font-size: 0px;
+}
+.p3 span{
+	font-size: 12px;
+	color: #000;
+	display: block;
+	margin-top:0.2rem;
+}
+.p4{
+	width: 7.02rem;
+	height:4.65rem;
+	background-color: #fff;
+	margin-top: 0.1rem;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+.p5{
+	width: 6.4rem;
+	height: 0.67rem;
+	border-bottom: 1px dashed #ccc;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 0.67rem;
+}
+.p5 div{
+	width: 0.04rem;
+	height: 0.2rem;
+	background-color: #01B5FF;
+	position: absolute;
+	left: -0.2rem;
+	top: 50%;
+	margin-top: -0.1rem;
+
+}
+.p5 span{
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+}
+.p6{
+	width: 6.4rem;
+	font-size:14px;
+	line-height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.16rem;
+}
+.p6 p{
+	margin: 0;
+	padding: 0;
+}
+.p6 span{
+	color: #01B5FF;
+	font-weight: bold;
+}
+.p7{
+	width: 7.06rem;
+	height: 5.76rem;
+	background-color: #fff;
+	margin-top: 0.1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.p8{
+	width: 6.4rem;
+	height: 5.07rem;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.p8 img{
+	height: 3.58rem;
+	margin-top: 0.48rem;
+}
+.p8 span{
+	font-size: 14px;
+	color: #000;
+	display: block;
+	margin-top: 0.42rem;
+}
+.p9{
+	width: 7.02rem;
+	height: 5.55rem;
+	background-color: #fff;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 0.1rem;
+}
+.p10{
+	width: 6.4rem;
+	height: 0.56rem;
+	margin-top: 0.2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.p10 img{
+	height: 0.56rem;
+	float: left;
+}
+.p10 span{
+	float: left;
+	margin-left:0.28rem;
+}
+.p10 span:nth-child(2){
+	font-size: 12px;
+	color: #01B5FF;
+	display: block;
+	margin-top: 0.06rem;
+	width: 70%;
+}
+.p10 span:nth-child(3){
+	color: #000;
+	display: block;
+	font-size: 8px;
+	margin-top: 0.06rem;
+}
+.p12{
+	width: 7.02rem;
+	height: 5rem;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.1rem;
+}
+.pg1{
+	width: 7.02rem;
+	height: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.1rem;
+	background-color: #fff;
+}
+.pg2{
+	width: 7.02rem;
+	height: 4.3rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.pg2 img{
+	height: 3.82rem;
+	margin-top: 0.33rem;
+}
+.f1{
+	width: 100%;
+	height: 1.11rem;
+	font-size: 10px;
+	color: #666;
+	text-align: center;
+}
+.f1 span{
+	display: block;
+}
+.f1 span:nth-child(1){
+	margin: 0px;
+	padding: 0;
+	line-height: 0;	
+	margin-top: 0.3rem;
+}
+.f1 span:nth-child(2){
+	margin: 0;
+	padding: 0;
+	margin-top: 0.16rem;
+}
+.k1{
+	width: 6.4rem;
+	background-color: #fff;
+	height: 4.3rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.k2 .k3{
+	font-size: 14px;
+	color: #000;
+	float: left;
+	text-align: center;
+	margin-top: 0.3rem;
+}
+.k4{
+	width: 20%;
+}
+.k5{
+	width: 30%;
+}
+.k6{
+	width: 50%;
+}
+.bn1{
+	font-weight: bold;
+}
+.k2 .bn3{
+	color: #FFA201;
+}
+.k2 .k13{
+	margin-top: 0.4rem;
+}
+.k2 .k14{
+	margin-top: 0.3rem;
+}
+.k2 .bhj5{
+	font-size: 14px ;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+}
+.p12{
+	position: relative;
+}
+.jkl1{
+	width: 1px;
+	height: 3.4rem;
+	border-left: 1px dashed #01B5FF;
+	position: absolute;
+	top: 1.45rem;
+	left: 0.3rem;
+}
+.jkl2{
+	width: 0.16rem;
+	height: 0.16rem;
+	background-color: #94E0FF;
+	position: absolute;
+	border-radius: 50%;
+	left: -0.08rem;
+	top: 0.15rem;
+}
+.jkl2 .jkl3{
+	width:0.1rem;
+	height: 0.1rem;
+	background-color: #01B5FF;
+	position: absolute;
+	z-index: 999;
+	border-radius: 50%;
+	margin-top: 0.03rem;
+	margin-left: 0.03rem;
+}
+.p12 .jkl1 .o1{
+	top: 0.9rem;
+}
+.p12 .jkl1 .o2{
+	top: 1.6rem;
+}
+.p12 .jkl1 .o3{
+	top: 2.3rem;
+}
+.p12 .jkl1 .o4{
+	top: 3rem;
+}

@@ -1,0 +1,169 @@
+.p1{
+	height: 0.82rem;
+	width: 100%;
+}
+.p1 div span{
+	float: left;
+	margin-right: 0.3rem;
+}
+.p1 div span:nth-child(3){
+	margin: 0;
+}
+.p1 div{
+	float: left;
+	margin-top: 0.3rem;
+	font-size: 14px;
+	color: #000;
+	margin-left: 0.24rem;
+}
+.p2{
+	width: 7.02rem;
+	height: 4.08rem;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+.p3{
+	width: 6.4rem;
+	height: 0.67rem;
+	border-bottom: 1px dashed #ccc;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	line-height: 0.67rem;
+	position: relative;
+}
+.p3 div{
+	width: 0.04rem;
+	height: 0.2rem;
+	position: absolute;
+	top: 50%;
+	margin-top: -0.1rem;
+	left: -0.2rem;
+	background-color: #01B5FF;	
+}
+.p3 span{
+	float: left;
+}
+.p4{
+	width: 6.40rem;
+	margin-left: auto;
+	margin-right: auto;
+	height: 3.4rem;
+}
+.p5{
+	width: 2.8rem;
+	height: 2.8rem;
+	float: left;
+	margin-top:0.3rem;
+}
+.p5 img{
+	height: 2.8rem;
+}
+.p6{
+	float: left;
+	margin-left: 0.38rem;
+	margin-top: 0.5rem;
+}
+.p6 span:nth-child(1){
+	float: left;
+	font-size: 16px;
+	color: #000;
+}
+.p6 span:nth-child(2){
+	float: left;
+	color: #01B5FF;
+	font-size: 10px;
+	margin-top: 6px;
+	margin-left: 0.08rem;
+}
+.p7{
+	width: 3.05rem;
+	height: 1.5rem;
+	float: left;
+	margin-left: 0.38rem;
+	margin-top: 0.64rem;
+	font-size: 12px;
+	color: #000;
+}
+.p8{
+	float: left;
+}
+.p8 p,.p8 span{
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+.p8 p{
+	width: 1.6rem;
+	height: 0.65rem;
+	line-height: 18px;
+}
+.p10{
+	margin-left: 0.1rem!important;
+}
+.p9{
+	font-weight: bold;
+}
+.p8:nth-child(1)~.p8{
+	margin-top: 0.2rem;
+}
+.p11{
+	margin-top:0.2rem;
+	width: 7rem;
+	height: 4.84rem;
+	background-color:#fff;
+	margin-right: auto;
+	overflow: hidden;
+	margin-left: auto;
+}
+.p12{
+	width: 6.4rem;
+	margin-left: auto;
+	margin-right: auto;
+	height: 4.16rem;
+	font-size: 12px;
+}
+.p12 p{
+	color: #666;
+	margin: 0;
+	padding: 0;
+	line-height: 18px;
+}
+.p12 p:nth-child(1){
+	margin-top: 0.28rem;
+}
+.p12 p:nth-child(2){
+	margin-top: 0.6rem;
+}
+.p13{
+	width: 100%;
+	height: 1.2rem;
+	text-align: center;
+}
+
+.p13 span{
+	width: 100%;
+	text-align: center;
+	font-size: 10px;
+	color: #666;
+	display: block;
+}
+.p13 span:nth-child(1){
+	margin-top: 0.32rem;
+}
+.p13 span:nth-child(2){
+	margin-top: 0.16rem;
+}
+@media screen and (max-width: 320px){
+	.p10{
+		font-size: 10px;
+		margin: 0px;
+	}
+	.p9{
+		font-size: 10px;
+	}
+}
+

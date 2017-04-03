@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+	<style type="text/css">
+	.p1{
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+		border-radius: 200px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		margin: auto;
+		outline: hidden;
+	}
+	.p2{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		border-radius: 100px;
+		position: absolute;
+	}
+	</style>
+<body>
+	<div class="p2"></div>
+	<div class="p1"></div>
+</body>
+</html>
+<script>
+	var p2=document.getElementsByClassName('p2')[0];
+	var p1=document.getElementsByClassName('p1')[0];
+	var a2=p2.offsetWidth;
+	var a1=p1.offsetLeft;
+	var ay1=p2.offsetHeight;
+	var ay2=p1.offsetTop;
+	var chushiweizhix=a1-a2;
+	var chushiweizhiy=ay2-ay1;
+	p2.style.left=chushiweizhix+'px';
+	p2.style.top=chushiweizhiy+'px';
+	var t1=window.setInterval(fn,200);
+	var om=chushiweizhix+100;
+	var om1=chushiweizhiy+100;
+	function fn(){
+		var ofl=p2.offsetLeft;
+		var oft=p2.offsetTop;
+		var sumx=Math.sqrt(om*om-oft*oft)+5;
+		p2.style.left=sumx+'px';
+		var sumy=Math.sqrt(om1*om1-sumx*sumx)+5;
+		p2.style.top=sumy+'px';
+	}
+</script>
