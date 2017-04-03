@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='view' content="width=device-width">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 800px;
+			height: 500px;
+			border:1px solid #ccc;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: auto;
+			z-index: 999999；
+			perspective:200px;
+			perspective-origin:left top;
+			transform-style:preserve-3d;
+		}
+		body{
+			overflow: hidden;
+		}
+		.b1{
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			overflow: hidden;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
+			backface-visibility:vi;
+			transform-style:preserve-3d;
+			transform:rotate3d(0,1,0,60deg);
+			transition:transform 1s,left 0.2s;
+			cursor: pointer;
+		}
+		.b1 img{
+			height: 100%;
+			width: 100%;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			-o-user-select:none;
+			user-select:none;
+		}
+		.bigbox{
+			width: 300px;
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			font-size: 38px;
+			font-weight: bold;
+		}
+		.zz{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			border-radius: 50%;
+			color: #fff;
+			text-align: center;
+			line-height: 300px;
+			font-size: 28px;
+			background-color: rgba(0,0,0,0.5);
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="b1" style="z-index:99999999999999999;">
+		<img src="img/asdas935.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asdgh.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asyudt.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/Ccvouy.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/dshufil.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asdas935.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asdgh.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asyudt.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/Ccvouy.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/dshufil.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+		<div class="b1">
+		<img src="img/asdgh.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asyudt.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asdas935.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asdgh.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asyudt.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/Ccvouy.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/dshufil.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+		<div class="b1">
+		<img src="img/asdgh.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="b1">
+		<img src="img/asyudt.jpg" alt="">
+		<div class="zz">作品名：</div>
+	</div>
+	<div class="bigbox">图片栏目</div>
+	
+	<audio src=""></audio>
+
+</body>
+</html>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+	var num=30;
+	for(var i=0;i<$('.b1').length;i++){
+		$($('.b1')[i]).css({'left':(num*i)+'px','transition':'transform 1s,left 0.2s'});	
+	}
+	var index111;
+	$('.b1').hover(function(){
+		index111=$(this).index();
+
+		$('.b1').each(function(){
+
+			var hehe=$(this).index();
+			if(hehe<index111){
+				var l=parseInt($(this).css('left'));
+				$(this).css({'left':(l-100)+'px'});
+			}
+			if(hehe>index111){
+				var l1=parseInt($(this).css('left'));
+				$(this).css({'left':(l1+100)+'px'});
+			}
+		});
+		$(this).css({'transition':'transform 1s,left 0.2s','z-index':'999999','transform':'rotate3d(0,1,0,0deg) scaleY(2) scaleX(2) translateZ(500px)','border-radius':'0px'});
+		$(this).find('.zz').css({'background-color':'transparent','color':'red'});
+	},function(){
+		index111=$(this).index();
+		$('.b1').each(function(){
+			var hehe=$(this).index();
+			if(hehe<index111){
+				var l=parseInt($(this).css('left'));
+				$(this).css({'left':(l+100)+'px'});
+			}
+			if(hehe>index111){
+				var l1=parseInt($(this).css('left'));
+				$(this).css({'left':(l1-100)+'px'});
+			}
+		});
+		for(var i=0;i<$('.b1').length;i++){
+			$($('.b1')[i]).css({'left':(num*i)+'px','transition':'transform 1s,left 0.2s'});	
+		}
+		$(this).css({'transition':'transform 1s,left 0.2s','z-index':'0','transform':'rotate3d(0,1,0,60deg) scaleY(1) translateZ(0px) scaleX(1)','border-radius':'50%'});
+		$(this).find('.zz').css({'background-color':'rgba(0,0,0,0.5)','color':'#fff'});
+	});
+</script>
