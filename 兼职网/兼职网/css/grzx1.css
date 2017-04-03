@@ -1,0 +1,264 @@
+body,ul,li,p,input,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+body{
+	background-color: #F4EAD5;
+	font-size: 16px;
+}
+
+.head{
+	width: 100%;
+	height: auto;
+	position: relative;
+	box-shadow: 0 1px 1px 4px;
+}
+.head .back{
+	display: block;
+	width: 0.7rem;
+	height: 0.7rem;
+	position: absolute;
+	/*background: url(../../images/zh/fanhui.png) no-repeat;*/
+	top: 0.11rem;
+	left: 0.17rem;
+}
+ .head .back img{
+	width: 100%;
+} 
+.head .bigimg{
+	width: 100%;
+	height: 3.5rem;
+	background-image: url(../images/1yonghu.png);
+	background-size: 160%;
+	background-position: -60px -36px;
+}
+
+.person{
+	width: 100%;
+	height: 2.13rem;
+	position: absolute;
+	top: 2.45rem;
+	left: 0rem;
+}
+.person .personbox{
+	width: 2.45rem;
+	height: 2.45rem;
+	margin-left: 0.17rem;
+	border-radius: 50%;
+	float: left;
+}
+.person .personbox img{
+	width: 100%;
+}
+.person .name{
+	display: block;
+	float: left;
+	font-size: 18px;
+	font-family: "Helvetica Neue LT Pro 95 Black";
+	color: #fff;
+	margin-top: 0.5rem;
+	margin-left: 0.2rem;
+}
+
+.person .biaoqian{
+	width: 4.5rem;
+	height: 1rem;
+	float: left;
+	margin-top: 0.2rem;
+}
+.person .biaoqian .cont{
+	float: left;
+	width: auto;
+	height: 0.46rem;
+	vertical-align: middle;
+	line-height: 0.46rem;
+}
+.person .biaoqian .cont img{
+	width: 0.38rem;
+	margin-left: 0.15rem;
+	vertical-align: middle;
+}
+.person .biaoqian .cont span{
+	font-size: 11px;
+	line-height: 0.46rem;
+	font-family: "华文细黑";
+}
+
+.menu{
+	width: 100%;
+	height: auto;
+	box-sizing:border-box;
+	padding-left: 0.17rem;
+	padding-right: 0.17rem;
+	margin-top: 1.67rem;
+	position: relative;
+}
+.menu .menus{
+	width: 3.47rem;
+	height: 2.29rem;
+	border-radius: 0.1rem;
+	/*background-image: url(../../images/zh/heimian.png);*/
+	background-color: #fff;
+	overflow: hidden;
+	margin-right: 0.22rem;
+	margin-bottom: 0.19rem;
+	float: left;
+	position: relative;
+	/*z-index: 999;*/
+}
+.menu .menus a{
+	display: block;
+}
+.menu .menus:nth-child(2n){
+	margin-right: 0;
+}
+.menu .menus .bgimg{
+	width: 100%;
+	height: 0.95rem;
+	overflow: hidden;
+	/*position: absolute;*/
+	z-index: 999;
+	/*left: 0;*/
+	/*top: 0;*/
+}
+.menu .menus .bgimg img{
+	width: 100%;
+	margin-top: -0.1rem;
+}
+.menu .menus .bgimg .yao2{
+	display: none;
+}
+.menu .menus .bgcont{
+	width:3.47rem;
+	height: 0.95rem;
+	position: absolute;
+	top: 0;
+	left: 0rem;
+	padding-left: 0.15rem;
+	padding-right: 0.15rem;
+	box-sizing:border-box;
+	display: flex;
+	justify-content:space-between;
+	
+}
+.menu .menus .bgcont .text{
+	height: 100%;
+	color: #a8d655;
+	display: flex;
+	flex-direction:column;
+}
+.menu .menus .bgcont .text.hot{
+	color: #e0fc9f;
+}
+.menu .menus .bgcont .text span{
+	font-size: 15px;
+	line-height: 0.3rem;
+	margin-top: 0.2rem;
+}
+.menu .menus .bgcont .text i{
+	font-size: 10px;
+	font-style: normal;
+	line-height: 0.2rem;
+}
+.menu .menus .bgcont .text img{
+	width: 0.71rem;
+	vertical-align: middle;
+	line-height: 0.95rem;
+	margin-top: 0.1rem;
+}
+.menu .menus .middle{
+	width: 100%;
+	height: 0.55rem;
+	border-bottom: 1px dashed #e3e3e3;
+	display: flex;
+	flex-direction:column;
+	line-height: 0;
+	box-sizing:border-box;
+	padding-left: 0.17rem;
+}
+.menu .menus .middle span{
+	font-size: 10px;
+	color: #7f7e7e;
+	line-height: 0.2rem;
+	font-family: "华文细黑";
+	margin-top: 0.05rem;
+}
+.menu .menus .middle i{
+	font-size: 10px;
+	color: #b5b5b5;
+	line-height: 0.2rem;
+	font-style: normal;
+	font-family: "华文细黑";
+	margin-top: 0.04rem;
+}
+.menu .menus .bottom{
+	width: 100%;
+	height: 0.78rem;
+	position: relative;
+}
+.menu .menus .bottom .san{
+	width: 0.37rem;
+	height: 0.37rem;
+	position: absolute;
+	left: 0.04rem;
+	bottom: 0.04rem;
+}
+.menu .menus .bottom .san img{
+	width: 100%;
+}
+.menu .menus .bottom .text{
+	/*float: right;*/
+	position:absolute;
+	right: 0.15rem;
+	bottom: 0.1rem; 
+}
+.menu .menus .bottom .text span{
+	font-size: 10px;
+	color: #b5b5b5;
+	line-height: 0.2rem;
+}
+.menu .menus .bottom .text span i{
+	font-style: normal;
+	font-size: 34px;
+	color: #e41839;
+}
+.menu .menus .bottom .text.yao{
+	width: 3rem;
+	line-height: 0.93rem;
+	left: 0.2rem;
+	top: -0.4rem;
+}
+.menu .menus .bottom .text.yao img{
+	width: 100%;
+}
+
+.menu .menus .long{
+	width: 2.74rem;
+	height: 1.35rem;
+	position: absolute;
+	top: 0.95rem;
+	overflow: hidden;
+}
+.menu .menus .long img{
+	width: 100%;
+}
+.menu .menus .gengduo{
+	width: 2.97rem;
+	height: 1.75rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.33rem;
+	z-index: 1;
+	overflow: hidden;
+}
+.menu .menus .gengduo img{
+	width: 100%;
+}

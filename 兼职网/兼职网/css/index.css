@@ -1,0 +1,174 @@
+@import url(base.css);
+
+*{
+	box-sizing:border-box;
+	font-family: '微软雅黑';
+}
+
+
+header{
+	width: 100%;
+	height: 0.9rem;
+	background: #282828;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	padding: 0 0.2rem;
+}
+header a{
+	display: block;
+	width: auto;
+	height: 0.7rem;
+	font-size: 0;
+}
+header a img{
+	height: 100%;
+}
+header div{
+	width: 2.36rem;
+	height: 0.7rem;
+	/*background: yellow;*/
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+}
+
+
+
+section{
+	width: 100%;
+	height: auto;
+	background: #F7EAD1;
+	position: relative;
+}
+
+section img{
+    width: 100%;
+}
+section img:nth-child(2){
+	margin-top: 1.2rem;
+}
+section img:nth-child(1){
+	top: -0.25rem;
+}
+footer{
+	width: 100%;
+	height: 0.75rem;
+	line-height: 0.75rem;
+	font-size: 0;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+/*floor3*/
+.wy-floor3{
+	width: 100%;
+	padding: 0 0.15rem;
+	box-sizing:border-box;
+}
+.wy-floor3 .wy-mess{
+	width: 100%;
+}
+.wy-floor3 .wy-mess .wy-list{
+	width: 100%;
+	height: 1.5rem;
+	border-radius: 0.2rem;
+	background: #FFFFFF;
+}
+.wy-floor3 .wy-mess .wy-list a{
+	display: block;
+	display: flex;
+	justify-content:space-between;
+}
+.wy-mess .wy-list .wy-thumb{
+	width: 1.5rem;
+	height: 1.5rem;
+	flex:0 0 auto;
+}
+.wy-mess .wy-list .wy-content{
+	flex:1 1 auto;
+	border-bottom: 1px solid #F4EAD5;
+}
+.wy-content .wy-conTop{
+	padding: 0 0.1rem 0.12rem 0.2rem;
+	border-bottom: 1px dashed #999;
+	position: relative;
+	padding-top: 0.1rem;
+
+}
+.wy-content .wy-conTop p{
+	color: #191919;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	width: 3.5rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+}
+.wy-content .wy-conTop p:nth-child(2){
+	color: #7a7774;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+
+.wy-content .wy-conTop span{
+	display: block;
+	position: absolute;
+	right: 0.1rem;
+	top: 0.35rem;
+	font-size: 10px;
+	color: #7a7774;
+}
+.wy-content .wy-conTop span em{
+	font-size: 24px;
+	color: #ff163c;
+}
+/*hj-conBottom*/
+.wy-content .wy-conBottom{
+	padding: 0.1rem 0.1rem 0.1rem 0.2rem;
+	color: #b2b2b2;
+	font-size: 10px;
+	overflow: hidden;
+}
+.wy-content .wy-conBottom span{
+	display: block;
+	width: 0.7rem;
+	height: 100%;
+	float: left;
+	text-align: right;
+	margin-right: 0.25rem;
+	position: relative;
+}
+.wy-content .wy-conBottom span:first-child:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0.26rem;
+	height: 0.25rem;
+	background: url(../img/hj-feedback.png) no-repeat center center/cover;
+	left: -0.08rem;
+	top: 0.04rem;
+}
+.wy-content .wy-conBottom span:last-child:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0.26rem;
+	height: 0.25rem;
+	background: url(../img/hj-favourite.png) no-repeat center center/cover;
+	left: 0.06rem;
+	top: 0.04rem;
+}
+.wy-content .wy-conBottom em{
+	display: block;
+	width: 0.24rem;
+	height: 0.23rem;
+	background: url(../img/hj-more.png) center center/cover;
+	float: right;
+	margin-top: 0.01rem;
+	margin-top: 0.06rem;
+}

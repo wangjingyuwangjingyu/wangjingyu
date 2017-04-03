@@ -1,0 +1,86 @@
+header{
+	width: 7.5rem;
+	height:0.9rem;
+	background-color: #252424;
+	padding: 0px 0.17rem;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.left,.right{
+	width: 0.7rem;
+	height: 0.7rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+.left img,.right img{
+	height: 100%;
+}
+.left{
+	left: 0.18rem;
+}
+.right{
+	right: 0.18rem;
+}
+.w-sphehe{
+	width: 100%;
+	position: relative;
+}
+.w-sphehe img{
+	width: 100%;
+}
+.center{
+	text-align: center;
+	margin-top: 0.18rem;
+}
+.center span{
+	display: block;
+	color: #a8d655;
+}
+.center span:first-child{
+	font-size: 0.3rem;
+}
+.center span:last-child{
+	font-size: 0.2rem;
+}
+.zz{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	top: 0px;
+	left: 0px;
+	line-height: 0px;
+}
+.zz img{
+	width: 100%;
+	font-size: 0px;
+}
+.sp-text{
+	text-align: center;
+	position: absolute;
+	bottom:1.4rem;
+	left: 0px;
+	right: 0px;
+	line-height: 0.37rem;
+	margin: auto;
+}
+.sp-text img{
+	width: 0.37rem;
+	line-height: 0px;
+	font-size: 0px;
+	vertical-align: middle;
+}
+.sp-text span{
+	display: inline-block;
+	color: #3d2f11;
+}
+

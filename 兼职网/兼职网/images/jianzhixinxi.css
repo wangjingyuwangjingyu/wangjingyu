@@ -1,0 +1,369 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+    list-style: none;
+}
+body{
+	font-size: 16px;
+	font-family: Helvetica;
+	background: #F5F6FA;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.head-box{
+        width: 100%;
+        height: 1.76rem;
+        background: #252424;
+        box-shadow: 0 0 10px #000;
+        position: relative;
+    }
+    .head-box .menu{
+        width: 100%;
+        height: 0.88rem;
+    }
+    .head-box .menu .menu-back{
+        width: .72rem;
+        height: .72rem;
+        float: left;
+        margin: 0.08rem 0 0.08rem 0.18rem;
+    }
+    .head-box .menu .menu-back img{
+        width: .72rem;
+        height: .72rem;
+    }
+    .head-box .menu .menu-title{
+        float: left;
+        color: #A8D655;
+        font-size: 15px;
+        padding-top: .14rem;
+        margin-left: 1.68rem;
+    }
+    .head-box .menu .menu-title div{
+        color: #A8D655;
+        font-size: 15px;
+        font-family: '苹方';
+        text-align: center;
+        line-height: .3rem;
+    }
+    .head-box .select{
+        width: 100%;
+        height: 0.88rem;
+    }
+    .head-box .select ul{
+        width: 6.8rem;
+        height: 0.88rem;
+        display: flex;
+        margin: 0 auto;
+    }
+    .head-box .select ul li{
+        width: 2rem;
+        height: .7rem;
+        flex:0 1 33.33%;
+    }
+    .head-box .select ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .head-box .select ul li span{
+        margin-top: .05rem;
+        font-size: 14px;
+        color: #fff;
+    }
+    .head-box .select ul li img{
+        margin-top: .05rem;
+        width: .37rem;
+        height: .38rem;
+        margin-left: .2rem;
+    }
+    .head-box .select ul .active{
+        background: url(../images/bjl_option.png) no-repeat center center/cover;
+    }
+    .head-box .select ul .active span{
+        /*color: #10340A;*/
+    }
+    .head-box .select li{
+        width: 2rem;
+        height: 0.7rem;
+    }
+.list{
+    width: 100%;
+    height: auto;
+    /*margin:0 0.2rem;*/
+    background: #1C1B1B;
+}
+.list:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.list a{
+    float: left;
+    width: 1.55rem;
+    height: 2.24rem;
+    font-size: 12px;
+    margin-right: 0.29rem;
+    color: #000;
+    font-size:Helvetica;
+}
+.list a:nth-child(4n){
+    margin-right: 0rem;
+}
+.list a .pic{
+    float: left;
+    width: 1.2rem;
+    height: 1.5rem;
+    text-align: center;
+}
+.list a .pic img{
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    height: 0.95rem;
+}
+.list a .word{
+    float: left;
+    width: 100%;
+    color: #F4EAD5;
+    height: 0.7rem;
+    margin-left: 0.2rem;
+    text-align: center;
+    line-height: 0.7rem;
+    font-size: 12px;
+}
+.chlist{
+    width: 100%;
+    height: auto;
+    background: #F4EAD5;
+}
+.chlist .student{
+    width: 7.18rem;
+    height: 1.4rem;
+   
+    border-radius: 0.2rem;
+    margin: 0 auto;
+    margin-top: 0.12rem;
+   
+}
+.chlist .student img{
+    width: 7.18rem;
+    height: 1.4rem;
+}
+.chlist .message{
+     width: 7.18rem;
+    height: 1.3rem;
+    background: #fff;
+    border-radius: 0.2rem;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 0.2rem;
+}
+.chlist .message .mleft{
+    width: 1.3rem;
+    height: 1.3rem;
+    float: left;
+    /*background: red;*/
+    border-radius: 0.2rem;
+}
+.chlist .message .mleft a img{
+   width: 1.3rem;
+    height: 1.3rem; 
+}
+.chlist .message .mright{
+     height: 1.3rem;
+     width: auto;
+}
+.message .mright .mtop{
+    height: 0.86rem;
+    width: 5.76rem;
+    float: left;
+    /*position: absolute;*/
+    /*background: red;*/
+}
+.chlist .message .mbottom{
+    height: 0.36rem;
+    width: 5.76rem;
+    float: left;
+    /*position: absolute;*/
+    /*background: green;*/
+    margin-bottom: 0;
+}
+.message .mright .mtop .dd{
+    width: 0.8rem;
+    height: 0.8rem;
+    float: right;
+    position: absolute;
+    background: yellow;
+}
+.message .mright .mtop li{
+    float-size:12px;
+}
+.sy-nav{
+    width: 100%;
+    height: 5.2rem;
+    float: left;
+    background: #F4EAD5;
+}
+.sy-nav ul{
+    width: 7.16rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.sy-nav ul li{
+    width: 100%;
+    height: 1.29rem;
+    float: left;
+    background:white;
+    margin-bottom: 1px ;
+}
+.nav-left{
+    width: 1.29rem;
+    height: 1.29rem;
+    float: left;
+    border-radius: 10px;
+}
+.nav-left img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-right{
+    width: 5.86rem;
+    height: 100%;
+    float:right;
+    /*background: blue;*/
+}
+.right-top{
+    width: 100%;
+    height: 0.87rem;
+    float: left;
+}
+.right-bottom{
+    width: 100%;
+    height: 0.4rem;
+    float: left;
+    border-top: 1px dashed #BFB7A3;
+}
+.right-top-left{
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+.right-top-right{
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    /*background: red;*/
+}
+.right-bottom-left{
+    width: 50%;
+    height: 100%;
+    float: left;
+
+}
+.right-bottom-left span{
+    display: block;
+    color: #B2B2B2;
+    font-size: 10px;
+    line-height: 0.4rem;
+    float: left;    
+}
+.right-bottom-left img{
+    width: 0.26rem;
+    height: 0.26rem;
+    float: left;
+    line-height: 0.4rem;
+    
+}
+.right-bottom-right{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.right-bottom-right img{
+    width: 0.26rem;
+    height: 0.26rem;
+    float: right;
+    margin-right: 7px;
+    margin-top: 3px;
+}
+.right-top-right  span:nth-child(1){
+    display: block;
+    color: #FF163C;
+    font-size: 18px;
+    float: left;
+    line-height: 1.38rem;
+}
+.right-top-right  span:nth-child(2){
+    display: block;
+    color: #7A7774;
+    font-size: 10px;
+    float: left;
+    line-height: 1.38rem;
+}
+.top-left-top{
+    width: 100%;
+    height: 50%;
+    float: left;
+    display: block;
+    color: #191919;
+    font-size: 12px;
+}
+.top-left-bottom{
+    width: 100%;
+    height: 50%;
+    float: left;
+    display: block;
+    color: #A2A09E;
+    font-size: 10px;
+}
+.w-bigbox{
+    position: relative;
+    overflow: hidden;
+}
+.w-xiala{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    transition:left 1s;
+}
+.w-hidden{
+    opacity: 0;
+}
+.w-xiala:nth-child(1)~.w-xiala{
+    left: 100%;
+}
+.w-btn-xiala{
+    width: 2.07rem!important;
+     /*background-image: url(../images/background2.png);*/
+     background-size: 100%;
+}
+.huy1{
+    width: 0.7rem;
+    height: 0.7rem;
+        /*margin-left: 0.12rem;*/
+    margin-top: 0.07rem;
+}
+
+
+.rightlll{
+    margin-left: 5.5rem;
+    margin-top: -0.7rem;
+}
+
+
+
+
+
+
+
+
