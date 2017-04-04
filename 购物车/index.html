@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src='js/angular.js'></script>
+	<script src='js/index.js'></script>
+</head>
+<body  ng-controller='c1'>
+
+<div class="j11">
+	价格筛选器：
+</div>
+<input type="text" id="input" ng-model='m123'>
+<!-- 水果清单 -->
+	<div class="bigbox">
+		<div class="item" ng-repeat='(k,v) in arr|filter:m123'>
+			<div class="img" style="background:url({{v.src}}) no-repeat center center/cover;"></div>
+			<div class="name">{{v.name}}</div>
+			<div class="jq">{{v.dj|currency:'￥'}}</div>
+			<button ng-click='gmfn(v)' class="gm">购买</button>
+		</div>
+	</div>
+<!-- 购物车 -->
+	<table class="car" border=1>
+		<thead>
+			<tr>
+				<td>序号</td>
+				<td>名称</td>
+				<td>数量</td>
+				<td>单价</td>
+				<td>总价</td>
+				<td>删除</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='(k,v) in newarr'>
+				<td>{{v.id}}</td>
+				<td>{{v.name}}</td>
+				<td>
+					<button ng-click='dd1(v,k)'>-</button>
+					<input type="text" ng-value='v.num' ng-click='djsum()' ng-model='v.num'>
+					<button ng-click='dd3(v)'>+</button>
+				</td>
+				<td>{{v.dj}}</td>
+				<td>{{v.sum|currency:'￥'}}</td>
+				<td>
+					<button ng-click='dd2(k)'>-</button>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>总价:</td>
+				<td colspan='5'>{{sum|currency:'￥'}}</td>
+			</tr>
+		</tfoot>
+	</table>
+
+</body>
+</html>
