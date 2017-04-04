@@ -12,10 +12,6 @@ a{
 img{
 	border:0;
 }
-
-
-
-
 /*头部*/
 .p1{
 	width: 100%;
@@ -159,9 +155,6 @@ p{
 	color: #E5004F;
 	text-decoration: underline;
 }
-
-
-
 /*导航菜单*/
 .j1{
 	width: 1190px;
@@ -237,8 +230,6 @@ p{
 .op197{
 	left: -27px;
 }
-
-
 /*线*/
 .j10{
 	width: 100%;
@@ -249,11 +240,6 @@ p{
 	z-index: 100;
 	text-decoration: underline;
 }
-
-
-
-
-
 /*barder*/
 .j11{
 	widows: 1920px;
@@ -333,10 +319,6 @@ p{
 	cursor: pointer;
 	z-index: 120000;
 }
-
-
-
-
 .jk190{
 	width: 16px;
 	height: 17px;
@@ -449,11 +431,6 @@ p{
 	background-image: url(../img/header-01.png);
 	background-position: -153px -255px;
 }
-
-
-
-
-
 .j14 ul li a{
 	color:#fff;
 	float: left;
@@ -596,8 +573,6 @@ p{
 	overflow: hidden;
 	margin-top: 4px;
 }
-
-
 /*1*/
 .ppp2{
 	width: 1190px;
@@ -709,12 +684,6 @@ p{
 	border:1px solid #ccc;
 	cursor:pointer;
 }
-
-
-
-
-
-
 /*main  1部分*/
 .mmm1{
 	width: 1190px;
@@ -914,9 +883,6 @@ p{
 	margin-top: 7px;
 	margin-right: 3px;
 }
-
-
-
 /*结尾*/
 .ty1{
 	width: 1188px;
@@ -946,10 +912,6 @@ p{
 	background-image: url(../img/8ed64b84-5b7f-4080-8ba6-18cc087b95d4.jpg);
 	background-repeat: no-repeat;
 }
-
-
-
-
 .ty10{
 	width: 1188px;
 	height: 89px;
@@ -968,15 +930,6 @@ p{
 .ty12{
 	border-right: 0px;
 }
-
-
-
-
-
-
-
-
-
 .tyy1{
 	width: 1190px;
 	height:162px;
@@ -1008,12 +961,6 @@ p{
 .tyy5 img{
 	height: 40px;
 }
-
-
-
-
-
-
 .nmby21{
 	width: 0px;
 	height: 1px;
@@ -1046,22 +993,6 @@ p{
 	bottom: -1px;
 	background-color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bbnn1{
 background-image: url(../img/截图30.png);
 }
@@ -1211,12 +1142,6 @@ top: 110px;
 	float: left;
 	margin-right: 10px;
 }
-
-
-
-
-
-
 .byc2{
 position: absolute;
 	z-index: 1000000;
@@ -1231,4 +1156,7 @@ position: absolute;
 position: absolute;
 	z-index: 1000000;
 	left: 75px;
+}
+.nml1{
+	z-index: 999999999999999999;
 }
