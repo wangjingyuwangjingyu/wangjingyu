@@ -83,7 +83,20 @@ function fn2(){
 }
 var num=200;
 for(var i=0;i<$('.p1-2 p').length;i++){
-	$('.p1-2 p').css({'transition':'all '+(sum*(i+1))+'s'});
+	$('.p1-2 p').css({'transition':'all '+(num*(i+1))+'s'});
 }
 
+
+window.onresize=rr123;
+function rr123(){
+	var cccw=document.documentElement.clientWidth;
+	if(cccw<500){
+		$('.hehehehhe').css({'display':'none'});
+		$('.jijiji').css({'display':'block'});
+	}else{
+		$('.hehehehhe').css({'display':'block'});
+		$('.jijiji').css({'display':'none'});
+	}
+}
+rr123();
 
