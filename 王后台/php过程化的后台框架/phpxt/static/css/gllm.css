@@ -1,0 +1,28 @@
+table{
+    width: 80%;
+    background: #cccccc;
+    border:1px solid #000000;
+    margin-top:50px;
+    margin-left: 50px;
+}
+thead{
+    font-size: 20px;
+    color: #2932E1;
+}
+thead tr td{
+    text-align: center;
+    border-bottom:1px solid #000000;
+}
+td{
+    border-left:1px solid #000000;
+    border-right:1px solid #000000;
+    text-align: center;
+    padding: 5px 0px;
+}
+tbody tr td a{
+    color: #000;
+    text-decoration: none;
+}
+tbody tr td a:hover{
+    color: red;
+}

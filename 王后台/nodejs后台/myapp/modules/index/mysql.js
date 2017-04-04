@@ -1,0 +1,1 @@
+var mysql=require('mysql');var pool = mysql.createConnection({    host:'localhost',    user: 'root',    password: '',    database: 'nodemysql',    port:  3306});function con() {    pool.connect();    return pool;}module.exports=con();

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="stylesheet" href="<?php echo CSS_PATH?>bootstrap.css">
+    <script src="<?php echo JS_PATH?>jquery-3.1.1.min.js"></script>
+    <script src="<?php echo JS_PATH?>bootstrap.min.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="<?php echo CSS_PATH?>message.css">
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        提示消息
+    </div>
+    <div class="panel-body">
+        <p><?php echo $message?></p>
+        <p><span class="time">3</span>秒后跳转,点击<a href="<?php echo $url ?>">这里</a> </p>
+    </div>
+</div>
+<script>
+    var link = document.querySelector('.panel-body a');
+    var time = document.querySelector('.time');
+    var n = 3;
+    var t = setInterval(function(){
+        n--;
+        if(n==0){
+            clearInterval(t);
+            location.href= link.href;
+        }
+        time.innerHTML = n;
+    },1000)
+
+</script>
+</body>
+</html>

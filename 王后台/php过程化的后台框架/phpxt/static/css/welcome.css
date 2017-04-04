@@ -1,0 +1,25 @@
+.m1{
+    width: 30%;
+    height:200px;
+    padding: 50px;
+    position: absolute;
+    font-size: 28px;
+    color: #000000;
+    text-align: center;
+    background: thistle;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    margin: auto;
+}
+.m1 span{
+    display: block;
+    line-height:100px;
+}
+.m1 span:first-child{
+    font-size:40px;
+}
+.m1 span:last-child{
+    color: #333;
+}

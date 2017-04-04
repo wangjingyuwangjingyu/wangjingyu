@@ -1,0 +1,160 @@
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">管理栏目</div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <td>栏目ID</td>
+            <td>栏目名称</td>
+            <td>父栏目ID</td>
+            <td>操作</td>
+        </tr>
+        <?php foreach($cates as $v){ ?>
+        <tr>
+            <td class="cid"><?php echo $v['cid']?></td>
+            <td>
+                <?php echo $v['tag']?><span class="catename"><?php echo $v['catename']?></span>
+            </td>
+            <td class="pid"><?php echo $v['pid']?></td>
+            <td>
+                <div class="btn-group btn-group-sm" role="group">
+                    <button type="button" class="btn btn-info editbtn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">编辑</button>
+                    <button type="button" class="btn btn-danger del" data-toggle="modal" data-target="#myModal">删除</button>
+                </div>
+            </td>
+        </tr>
+        <?php }?>
+    </table>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">编辑栏目</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">栏目ID</label>
+                        <input type="text" class="form-control" id="recipient-name" disabled="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">栏目名称</label>
+                        <input type="text" class="form-control" id="message-text">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">父栏目</label>
+                        <select name="pid" id="parentid" class="form-control">
+                            <option value="0">一级栏目</option>
+                            <?php foreach($cates as $v){ ?>
+                            <option value="<?php echo $v['cid']?>"><?php echo $v['catename']?></option>
+                            <?php }?>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary submitchange">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">删除栏目</h4>
+            </div>
+            <div class="modal-body">
+                <p>你确定要删除吗？&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger delbtn">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="message" style="width:200px;height:50px;text-align: center;line-height: 50px;position:fixed;display: none">
+    修改成功
+</div>
+
+<script>
+    var message = $('.message');
+function showMessage(msg){
+    message.show(100).html(msg);
+    setTimeout(function(){
+        message.hide(100);
+        history.go(0);
+    },2000)
+}
+var editbtns = $('.editbtn');
+
+var motalcid = $('#recipient-name');
+var motalcname = $('#message-text');
+var motalpid = $('#parentid');
+editbtns.click(function(){
+    var $parent = $(this).parents('tr');
+    $('#recipient-name').val($parent.find('.cid').html())
+    $('#message-text').val($parent.find('.catename').html())
+    var pid = $parent.find('.pid').html();
+    $('#parentid option').each(function(i,o){
+       if($(this).val() ==pid){
+           this.selected = true;
+       }
+    })
+})
+
+    $('.submitchange').click(function(){
+        $.ajax({
+            url:'index.php?m=admin&c=category&a=changecategory',
+            method:'POST',
+            data:{
+                'cid':motalcid.val(),
+                'catename':motalcname.val(),
+                'pid':motalpid.val()
+            },
+            success:function(data){
+                if(data==1){
+                    showMessage('修改成功');
+                }else{
+                    showMessage('修改失败')
+                }
+
+
+            }
+        })
+        $('#exampleModal').modal('hide')
+    })
+    var $parent= null;
+    $('.del').click(function(){
+        $parent = $(this).parents('tr');
+    })
+
+    $('.delbtn').click(function(){
+        $.ajax({
+            url:"index.php?m=admin&c=category&a=delcategory",
+            type:'POST',
+            data:{cid:$parent.find('.cid').html()},
+            success:function(data){
+
+                if(data==1){
+                    showMessage('删除成功');
+                }else{
+                    showMessage('删除失败')
+                }
+            }
+        })
+        $('#myModal').modal('hide')
+    })
+</script>

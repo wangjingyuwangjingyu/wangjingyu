@@ -1,0 +1,70 @@
+.bigbox{
+    width: 80%;
+    margin: 5px auto;
+    background: blanchedalmond;
+}
+.bigbox ul{
+    margin: 0px;
+    padding:0px;
+    padding: 20px;
+}
+.bigbox ul li{
+    list-style:none;
+    width:100%;
+    line-height:50px;
+    display: block;
+}
+.bigbox ul li img{
+    height: 100%;
+    float: left;
+}
+.bigbox ul li a{
+    font-size:20px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #000;
+}
+.bigbox ul li span{
+    float: right;
+    margin-right: 10px;
+}
+.bigbox1{
+    width: 80%;
+    margin: 10px auto;
+    background: pink;
+    min-height: 80px;
+    text-align: center;
+}
+.bigbox1 h1{
+    line-height:80px;
+    color: #fff;
+}
+.bigbox1 ul{
+    margin: 0px;
+    padding:0px;
+}
+.bigbox1 ul li{
+    list-style:none;
+    text-align: left;
+    padding: 0px 30px;
+    line-height:50px;
+    background: #f2dede;
+}
+.bigbox1 ul li a{
+    color: blue;
+    text-decoration: none;
+}
+.bigbox1 ul li a:hover{
+    color: red;
+}
+.mbx{
+    width: 100%;
+    height: 80px;
+    line-height:80px;
+    padding-left: 50px;
+}
+.mbx span{
+    display: inline-block;
+    color: red;
+    font-size: 18px;
+}

@@ -1,0 +1,57 @@
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">文章列表</div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>标题</th>
+            <th>栏目ID</th>
+            <th>点赞</th>
+            <th>浏览量</th>
+            <th>作者</th>
+            <th>操作</th>
+        </tr>
+        <?php foreach($pages['data'] as $v){ ?>
+        <tr>
+            <td><?php echo $v['id']?></td>
+            <td><?php echo $v['title']?></td>
+            <td><?php echo $v['cid']?></td>
+            <td><?php echo $v['like']?></td>
+            <td><?php echo $v['clickcount']?></td>
+            <td><?php echo $v['author']?></td>
+            <td>
+                <div class="btn-group btn-group-sm" role="group">
+                    <a href="index.php?m=admin&c=content&a=edit&id=<?php echo $v['id']?>" type="button" class="btn btn-info editbtn">编辑</a>
+                    <a type="button" class="btn btn-danger del" href="index.php?m=admin&c=content&a=del&id=<?php echo $v['id']?>">删除</a>
+                </div>
+            </td>
+        </tr>
+        <?php }?>
+
+    </table>
+    <nav aria-label="Page navigation" class="text-center" >
+        <ul class="pagination" style="    vertical-align: middle;">
+            <li>
+                <a href="index.php?m=admin&c=content&a=lists&page=<?php echo $pages['nowPage']-1 ?>" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <?php for($i=1;$i<=$pages['pages'];$i++){?>
+            <li><a href="index.php?m=admin&c=content&a=lists&page=<?php echo $i?>"><?php echo $i?></a></li>
+            <?php } ?>
+            <li>
+                <a href="index.php?m=admin&c=content&a=lists&page=<?php echo $pages['nowPage']+1 ?>" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+        <div class="btn-group" role="group" aria-label="..." style="display: inline-block">
+            <button type="button" class="btn btn-default"><?php echo $pages['total']?></button>
+        </div>
+    </nav>
+
+
+
+</div>

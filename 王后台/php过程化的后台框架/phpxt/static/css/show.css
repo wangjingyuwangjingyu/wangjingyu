@@ -1,0 +1,20 @@
+.showbox{
+    width:70%;
+    margin: 10px auto;
+    background: #ffe69f;
+}
+table,thead,tbody,tr{
+    width: 100%;
+}
+td{
+    text-align: center;
+}
+thead tr{
+    line-height:80px;
+}
+.tbody tr{
+    line-height:50px;
+}
+.text td{
+    text-align: left;
+}

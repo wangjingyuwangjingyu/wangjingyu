@@ -1,0 +1,1 @@
+var express = require('express');var router = express.Router();var ejs=require('ejs');/* GET home page. */router.get('/', function(req, res, next) {    //权限    if(!req.session.hid){        res.redirect('/hlogin');    }    //数据处理，以及网页请求    res.render('./admin/index', { jjj: 'Express'});});module.exports = router;

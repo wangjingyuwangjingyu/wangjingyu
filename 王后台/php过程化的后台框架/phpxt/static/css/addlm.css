@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+body{
+    padding: 20px;
+}
+form{
+    width: 500px;
+    background: #cccccc;
+    position: absolute;
+    left:10%;
+    top:5%;
+    padding: 20px;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.num1,.num2,.num3,.num4{
+    height: 50px;
+    line-height: 50px;
+}
+.num1 label{
+    margin-right: 30px;
+}
+.num3 label{
+    margin-right: 50px;
+}
+.num1 select{
+    height: 30px;
+    width:200px;
+    font-size: 14px;
+    outline:none;
+    color: #000;
+    display: inline-block;
+}
+.num2 input{
+    height:30px;
+    width: 200px;
+    font-size: 16px;
+    color: #000;
+    padding-left: 5px;
+}
+.num3 input {
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+.num4 input{
+    margin: 0px;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    line-height:50px;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 25px auto 5px;
+}

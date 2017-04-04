@@ -1,0 +1,1 @@
+var express = require('express');var router = express.Router();var ejs=require('ejs');/* GET home page. */router.get('/', function(req, res, next) {    req.session.ids='';    req.session.name='';    req.session.img='';    req.session.destroy();  res.redirect('/login');});module.exports = router;

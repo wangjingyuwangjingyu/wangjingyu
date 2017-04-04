@@ -1,0 +1,1 @@
+var express = require('express');var router = express.Router();var ejs=require('ejs');//请求欢迎界面router.get('/', function(req, res, next) {    //数据处理，以及网页请求    res.render('./admin/welcome', { data : 'dasd'});});module.exports = router;

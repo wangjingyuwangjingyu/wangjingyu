@@ -1,0 +1,22 @@
+<!---->
+<link rel="stylesheet" href="<?php echo CSS_PATH?>admin/login.css">
+<div class="login-box">
+    <form action="index.php?m=admin&c=login&a=checklogin" method="post">
+    <h3>个人博客后台</h3>
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="请输入用户名" aria-describedby="basic-addon1" name="username">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">
+            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon1" name="password">
+    </div>
+    <div class="input-group">
+        <button class="btn btn-success" type="submit">登录</button>
+    </div>
+    </form>
+</div>

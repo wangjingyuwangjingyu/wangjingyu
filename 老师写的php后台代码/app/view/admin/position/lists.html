@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">文章列表</div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <th>推荐位ID</th>
+            <th>推荐名称</th>
+            <th>操作</th>
+        </tr>
+        <?php foreach($pos as $v){ ?>
+        <tr>
+            <td><?php echo $v['posid']?></td>
+            <td><?php echo $v['posname']?></td>
+            <td>
+                <div class="btn-group btn-group-sm" role="group">
+                    <a href="index.php?m=admin&c=position&a=edit&posid=<?php echo $v['posid']?>" type="button" class="btn btn-info editbtn">编辑</a>
+                    <a type="button" class="btn btn-danger del" href="index.php?m=admin&c=position&a=del&posid=<?php echo $v['posid']?>">删除</a>
+                </div>
+            </td>
+        </tr>
+        <?php }?>
+
+    </table>
+
+
+
+
+</div>

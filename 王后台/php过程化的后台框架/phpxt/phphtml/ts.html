@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/ts.css">
+</head>
+<body>
+<section>
+    <div class="top">
+        <h1>操作提示</h1>
+    </div>
+    <div class="botton">
+       <span class="b1"><?php echo $bian1; ?></span>
+        <p class="b2"><span id="mao" style="margin-right:5px;font-size: 16px;font-weight:bold;color: red;">3</span>秒后跳转，或点击<a class="b3" href="<?php echo $bian2;?>" style="font-size: 18px;" class="zl">这里</a></p>
+    </div>
+</section>
+</body>
+</html>
+<script>
+    var mao=document.querySelector('#mao');
+    var b3=document.querySelector('.b3');
+    var index=3;
+    window.setInterval(function(){
+        index--;
+        mao.innerHTML=index;
+        if(index<=0){
+            location.href=b3.href;
+        }
+    },3000);
+</script>

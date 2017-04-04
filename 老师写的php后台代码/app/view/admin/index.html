@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="<?php echo CSS_PATH?>admin/index.css">
+<link rel="stylesheet" href="<?php echo CSS_PATH?>metisMenu.min.css">
+<link rel="stylesheet" href="<?php echo CSS_PATH?>mm-vertical.css">
+
+<script src="<?php echo JS_PATH?>metisMenu.min.js"></script>
+<div class="container-fluid warp">
+    <div class="row">
+        <div class="col-xs-2 left">
+            <h3 style="color:#f2f2f2;padding:0 15px;">后台管理系统</h3>
+            <div style="color:#f2f2f2;padding:0px 15px 10px;">
+                <a href="index.php?m=index&c=index&a=init" target="_blank"  class="btn btn-default  btn-xs">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 主页
+                </a>
+                <a href="index.php?m=admin&c=login&a=loginout"  class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span> 退出
+                </a>
+
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="metismenu" id="menu1">
+                    <li>
+                        <a class="has-arrow" href="javascript:;">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 网站管理
+                        </a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li>
+                                <a href="index.php?m=admin&c=category&a=add" target="views">
+                                    <span class="fa fa-fw fa-code-fork"></span>  基本信息
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:;">
+                            <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> 栏目管理
+                        </a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li>
+                                <a href="index.php?m=admin&c=category&a=add" target="views">
+                                    <span class="fa fa-fw fa-code-fork"></span> 添加栏目
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.php?m=admin&c=category&a=manage" target="views">
+                                    <span class="fa fa-fw fa-star"></span> 管理栏目
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+                    <!--内容管理-->
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span> 内容管理</a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="index.php?m=admin&c=content&a=add" target="views">添加文章</a></li>
+                            <li><a href="index.php?m=admin&c=content&a=lists" target="views">管理文章</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!--推荐位管理-->
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 推荐管理</a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="index.php?m=admin&c=position&a=add" target="views">添加推荐</a></li>
+                            <li><a href="index.php?m=admin&c=position&a=lists" target="views">管理推荐</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="col-xs-10 right">
+            <iframe id="views" frameborder="0" name="views">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+<script>
+    $('#menu1').metisMenu();
+</script>

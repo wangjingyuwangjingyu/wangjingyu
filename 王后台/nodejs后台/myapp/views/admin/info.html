@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>网站信息</title>  
+    <link rel="stylesheet" href="/stylesheets/pintuer.css">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息设置</strong></div>
+  <div class="body-content">
+
+    <form method="post" class="form-x" action="/hinfo" enctype="application/x-www-form-urlencoded">
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站标题：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wtitle" value="<%= data[0].wtitle %>" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>栏目图片：</label>
+        </div>
+        <div class="field" style="position: relative;">
+          <input type="text" id="urld1" name="wimg" value="<%= data[0].wimg %>" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
+          <input type="file" class="button bg-blue margin-left" id="imagell" value="+ 浏览上传"  style="display: inline-block;width:20%;height: 100%;float:left;">
+          <div class="tipss">图片尺寸：300-1920</div>
+          <img src="" id="tip" alt="" style="width: 200px;height:150px;position: absolute;z-index: 999999;right: 0px;top: 0px;background-position: center;display: block;background-size: cover;">
+        </div>
+      </div>
+      <script>
+        var img=document.querySelector('#imagell');
+        var imgname=document.querySelector('#urld1');
+        var opop=document.querySelector('#tip');
+          opop.src=imgname.value;
+        img.onchange=function(){
+          var formdata=new FormData();
+          formdata.append('data',img.files[0]);
+        //ajax上传
+          var xml=new XMLHttpRequest();
+          xml.open('post','/upload');
+          xml.send(formdata);
+          xml.onreadystatechange=function(){
+              if(xml.readyState==4&&xml.status==200){
+                imgname.value=xml.response;
+                document.querySelector('#tip').src=xml.response;
+              }
+          }
+        }
+      </script>
+
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站域名：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="www" value="<%= data[0].www %>" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站关键字：</label>
+        </div>
+        <div class="field">
+          <textarea  class="input" name="wkey" style="height:80px" value="<%= data[0].wkey %>"><%= data[0].wkey %></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>网站描述：</label>
+        </div>
+        <div class="field">
+          <textarea class="input" name="wmao" value="<%= data[0].wmao %>"><%= data[0].wmao %></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>手机：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wshou" value="<%= data[0].wshou %>" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>QQ：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wqq" value="<%= data[0].wqq %>" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>Email：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wemail" value="<%= data[0].wemail %>" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>地址：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="wdi" value="<%= data[0].wdi %>" />
+          <div class="tips"></div>
+        </div>
+      </div>  
+              
+      <div class="form-group">
+        <div class="label">
+          <label>备注信息：</label>
+        </div>
+        <div class="field">
+          <textarea value="<%= data[0].wbeizhu %>" name="wbeizhu" class="input" style="height:120px;"><%= data[0].wbeizhu %></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body></html>
+

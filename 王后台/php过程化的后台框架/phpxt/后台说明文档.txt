@@ -1,0 +1,31 @@
+本后台由王靖宇个人开发，版权所有。
+
+
+从前端存取数据
+<?php
+	echo ;
+?>
+
+
+数据库文件引入
+
+include 'dbdata.php';
+
+
+
+
+1.context表  --------》》》》》》内容表
+字段：
+id , title , time , text , image , pid
+
+
+2.user表----------》》》》》》》管理员表
+字段：
+id , name , pass , role
+
+3.category表-----------------》》》》》》》栏目表
+字段：
+id , name , image , pid
+
+4.  表--------------》》》》》》》》》》》》》》》评论管理
+
