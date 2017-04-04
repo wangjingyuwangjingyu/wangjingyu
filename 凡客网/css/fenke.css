@@ -12,17 +12,6 @@ a{
 img{
 	border:0;
 }
-
-
-
-
-
-
-
-
-
-
-
 /*头部*/
 .k1{
 	width: 100%;
@@ -105,7 +94,6 @@ img{
 .k6{
 	color: #666;
 }
-
 /*1*/
 .p1{
 	width: 1200px;
@@ -185,10 +173,6 @@ img{
 	color: #727171;
 	font-size: 12px;
 }
-
-
-
-
 /*2*/
 .u1{
 	width: 1200px;
@@ -266,10 +250,7 @@ img{
 	float: left;
 	font-size: 22px;
 	margin-top:8px;
-} 
-
-
-
+}
 /*barner 轮播*/
 .w1{
 	width: 1200px;
@@ -319,8 +300,6 @@ img{
 	margin-left: -60px;
 	bottom: 23px;
 }
-
-
 /*广告*/
 .w7{
 	width: 1200px;
@@ -329,12 +308,6 @@ img{
 	margin: 65px auto 0px;
 	cursor: pointer;
 }
-
-
-
-
-
-
 /*main1*/
 .w8{
 	width: 1200px;
@@ -414,18 +387,12 @@ img{
 .nuypw1{
 	cursor: pointer;
 }
-
-
 /*main2*/
 .j1{
 	width: 1200px;
 	height: 509px;
 	margin: 16px auto 0px;
 }
-
-
-
-
 /*横向图片*/
 .jj1{
 	width: 1200px;
@@ -448,9 +415,6 @@ img{
 .www2{
 	height: 570px;
 }
-
-
-
 .h1{
 	width: 1200px;
 	height: 641px;
@@ -469,9 +433,6 @@ img{
 .h4{
 	margin-right: 0;
 }
-
-
-
 .n1{
 	width: 1200px;
 	height:282px;
@@ -583,3 +544,6 @@ img{
 .mopk7{
 	cursor: pointer;
 }
+
+
+
