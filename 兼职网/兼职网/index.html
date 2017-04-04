@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">	
+</head>
+<style>
+ *{
+ 	padding:0;
+ 	margin: 0;
+ }
+ a{
+ 	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+ }
+ body,html{
+ 	height:100%;
+ 	width: 100%;
+ 	overflow: hidden;
+ }
+ img{
+ 	font-size: 0px;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+ }
+ a{
+ 	display: block;
+ 	width: 3rem;
+ 	height: 1.2rem;
+ 	position: absolute;
+ 	bottom: 1.1rem;
+ 	left: 2.4rem;
+ 	z-index: 999999;
+ }
+ .hjkasd123{
+ 	width: 100%;
+ 	height: 100%;
+ 	position: absolute;
+ 	background-color: red;
+ 	line-height: 0px;
+ 	overflow: hidden;
+ }
+  .hjkasd123 img{
+  	width: 101%;
+  	left: -2px;
+  	font-size: 0px;
+  }
+</style>
+<body style="overflow:hidden;position:relative;line-height:0px;">
+
+
+
+<div class="hjkasd123">
+	<img id="pkimg" src="images/111111.png" alt="">
+	<a href="./html/cehua.html"></a>
+</div>
+	
+
+
+
+
+
+
+</body>
+<script src="js/rem.js"></script>
+</html>
+<script>
+	var h=document.querySelector('.hjkasd123');
+	window.onresize=rr;
+	function rr(){
+		var ch=document.documentElement.clientHeight;
+		h.style.height=ch+'px';
+	}
+	rr();
+</script>
