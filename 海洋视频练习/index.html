@@ -1,0 +1,542 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<meta name='riewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'/>
+
+	<style>
+		body{
+			background-color:#333;
+		}
+		video{
+			width: 1000px;
+		}
+		.bigbox{
+			width: 100%;
+			height: 50px;
+			position: absolute;
+			z-index: 9999999999999999;
+			bottom: -50px;
+			left: 0px;
+			background-color: #333;
+			user-select:none;
+			transition:all 1s;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			background-color:rgba(0,0,0,0.5);
+			position: absolute;
+			left:0px;
+		}
+		.a1{
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+			cursor:pointer;
+			border-radius: 50%;
+			background-color: rgba(88,88,88,0.8);
+		}
+		.a1:hover{
+			background-color: rgba(66,66,66,0.8);
+		}
+		.a2{
+			width: 150px;
+			height: 50%;
+			position: absolute;
+			top: 25px;
+			font-size: 12px;
+			color: #fff;
+			left: 60px;
+			text-align: left;
+			line-height: 25px;
+		}
+		.a2 span{
+			width:60px;
+			height: 25px;
+			text-align: center;
+			color: #fff;
+			line-height: 25px;
+			font-size: 12px;
+		}
+		.a3{
+			color: #fff;
+			font-size: 14px;
+			position: absolute;
+			top: 5px;
+			left:60px;
+		}
+		.a3 span{
+			font-size: 10px;
+		}
+		.a4{
+			width: 100%;
+			height: 5px;
+			border-radius: 5px;
+			background-color: rgba(66,66,66,0.7);
+			box-shadow: ;
+			position: absolute;
+			top: -7px;
+			left: 0px;
+			opacity: 0;
+			transition:all 1s;
+		}
+		.a5{
+			width: 0px;
+			height: 100%;
+			position: relative;
+			background-color: #fff;
+		}
+		.xiaodian{
+			width: 12px;
+			height: 12px;
+			background-color: red;
+			border-radius: 5px;
+			position: absolute;
+			top: -3px;
+			right: -6px;
+			cursor: pointer;
+		}
+		.box:hover .a4{
+			opacity: 1;
+		}
+		.a6{
+			position: absolute;
+			width: 50px;
+			height: 30px;
+			right: 0px;
+			top: 10px;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+			border-left: 1px solid #666;
+
+		}
+		.a7{
+			width: 80px;
+			height: 150px;
+			position: absolute;
+			right: -80px;
+			top: 50%;
+			margin-top: -75px;
+			z-index: 9999999999999;
+			background-color: rgba(0,0,0,0.7);
+			transition:all .5s;
+		}
+		.a8,.a99,.a10{
+			width: 60px;
+			height: 50px;
+			box-sizing:border-box;
+			text-align: center;
+			line-height: 50px;
+			border-bottom: 1px solid #ccc;
+			color: #fff;
+			font-size: 14px;
+			margin-left: 5px;
+			float: left;
+			cursor: pointer;
+		}
+	.bbbbbbb{
+		width: 1000px;
+		height: 428px;
+		position: absolute;
+		left: 50%;
+		top: 20%;
+		overflow: hidden;
+		transform:translateX(-50%);
+	}
+	.shengying{
+		width: 100px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		position: absolute;
+		right: 50px;
+		color: #fff;
+		top: 10px;
+		cursor: pointer;
+	}
+	.a6:hover,.shengying:hover{
+		background-color: #333;
+	}
+	#pm1{
+		width: 5px;
+		height: 100px;
+		background-color:rgba(255,255,255,0.8);
+		position: absolute;
+		top: -120px;
+		right: 50px;
+		opacity: 0;
+		border-radius: 50%;
+		transition:all 2s;
+	}
+	.pm11{
+		width: 20px;
+		height: 10px;
+		background-color: rgba(255,0,230,0.5);
+		position: absolute;
+		top: 10px;
+		left: -7px;
+		cursor: pointer;
+		border-radius: 20px;
+	}
+	.shengying:hover #pm1{
+		opacity: 1;
+	}
+	.a8:hover,.a99:hover,.a10:hover{
+		background-color: rgba(255,0,0,0.8);
+	}
+	.loop{
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		border-radius: 5px;
+		top: 5px;
+		left: 250px;
+		border: 10px solid rgba(255,255,255,0.2);
+		background-color: rgba(0,0,0,0.1);
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		line-height: 25px;
+		cursor: pointer;
+		transition:all 1s;
+	}
+	.loop:hover{
+		background-color: red;
+	}
+	.pm9{
+		width: 50px;
+		height: 10px;
+		position: absolute;
+		bottom: 20px;
+		right: 200px;
+		margin: 0;
+		padding: 0;
+	}
+	.pm9 li{
+		width: 10px;
+		height: 10px;
+		float: left;
+		margin:0;
+		padding: 0;
+		list-style: none;
+		border-radius: 50%;
+	}
+	.pm9 li:nth-child(2){
+		margin-right: 10px;
+		background-color: blue;
+		margin-left: 10px;
+	}
+	.pm9 li:first-child{
+		background-color: red;
+	}
+	.pm9 li:last-child{
+		 background-color: yellow;
+	}
+	</style>
+</head>
+<body>
+
+<div class="bbbbbbb">
+
+
+<!-- video -->
+<video  poset='1.jpg'>
+	<source src='haiyang.ifox'>1</source>
+	<sour8ce src=''>2</source>
+</video>
+
+
+
+
+
+<!-- 视频选框 -->
+<div class="bigbox">
+	<div class="box">
+		<div class="a1">播放</div>
+		<div class="a2">
+			影片总时长:
+			<span>00:00:00</span>
+		</div>
+		<div class="a3">
+			当前进度:
+			<span>00:00:00</span>
+		</div>
+		<div class="loop">
+			加载
+		</div>
+		<div class="a4">
+			<div class="a5">
+				<div class="xiaodian"></div>
+			</div>
+		</div>
+
+		<div class="a6">全屏</div>
+
+		
+		<!-- 声音 -->
+		<div class="shengying">
+			<span class='shengying2'>声音:</span>
+			<span class='shengying1'>90%</span>
+			<div id="pm1">
+				<div class="pm11"></div>
+			</div>
+			
+		</div>
+	</div>
+
+	<ul class="pm9">
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+	
+</div>
+
+<div class="a7">
+	<div class="a8">推出全屏</div>
+	<div class="a99">
+		下载
+	</div>
+	<div class="a10">
+		content
+	</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="fullscreen.js"></script>
+<script>
+	var video=$('video')[0];
+	console.dir(video);
+	console.dir($('video source')[0]);
+	var zsc1=video.duration=0;
+	console.dir(zsc1);
+	var maxwidth;
+
+
+
+
+
+	$('.a1').on('click',function(){
+		if(video.paused){
+			video.play();
+			$(this).html('暂停');
+			 console.dir(video.pause);
+		}else{
+			$(this).html('播放');
+			video.pause();
+		}
+	});
+
+video.oncanplay=function(){
+	var zsc=video.duration;
+	zsc1=video.duration;
+	maxwidth=$('.a4').width();
+	var s=Math.floor(zsc/3600);
+	var f=Math.floor(zsc%3600/60);
+	var m=Math.floor(zsc%3600%60);
+	s=s<=9?'0'+s:s;
+	f=f<=9?'0'+f:f;
+	m=m<=9?'0'+m:m;
+	$('.a2 span').html(s+':'+f+':'+m);
+}
+
+
+video.ontimeupdate=function(){
+
+	var zsc=video.currentTime;
+	var s=Math.floor(zsc/3600);
+	var f=Math.floor(zsc%3600/60);
+	var m=Math.floor(zsc%3600%60);
+	s=s<=9?'0'+s:s;
+	f=f<=9?'0'+f:f;
+	m=m<=9?'0'+m:m;
+	$('.a3 span').html(s+':'+f+':'+m);
+
+	//进度条计算
+	var opl=video.duration;
+	var omil=zsc/opl*100;
+	$('.a5').css({'width':omil+'%'});
+}
+
+
+
+
+// 全屏兼容
+var flag=true;
+$('.a6').on('click',function(){
+	if(flag){
+			flag=false;
+		  if(video.requestFullscreen) {  
+		    video.requestFullscreen();  
+		  } else if(video.mozRequestFullScreen) {  
+		    video.mozRequestFullScreen();  
+		  } else if(video.webkitRequestFullscreen) {  
+		    video.webkitRequestFullscreen();  
+		  } else if(video.msRequestFullscreen) {  
+		    video.msRequestFullscreen();  
+		  }  
+	}else{
+		flag=true;
+		 if(document.exitFullscreen) {  
+		    document.exitFullscreen();  
+		  } else if(document.mozExitFullScreen) {  
+		    document.mozExitFullScreen();  
+		  } else if(document.webkitExitFullscreen) {  
+		    document.webkitExitFullscreen();  
+		  } 
+	}
+});
+
+// 初始化
+
+
+
+// 进度条上的小点
+$('.xiaodian')[0].onmousedown=function(e){
+	var e=e||window.event;
+	var cx=e.clientX;
+	var cww=$('.xiaodian')[0].offsetLeft;
+	var dx=cx-cww-6;
+	document.onmousemove=function(e){
+		var dcx=e.clientX;
+		var bx=dcx-dx;
+		var mm1=$('.a4').width();
+		if(bx>mm1){
+			bx=mm1;
+		}
+		if(bx<0){
+			bx=0;
+		}
+		$('.a5')[0].style.width=bx+'px';
+
+
+		var d12=$('.a5').width();
+		var d123=$('.a4').width();
+		var  d656=d12/d123;
+		var d89=d656*zsc1;
+		video.currentTime=d89;
+	}
+	document.onmouseup=function(){
+		document.onmousemove=null;
+	}
+}
+
+
+// 初始声音
+video.volume=0.9;
+
+$('.shengying').on('click',function(){
+	video.muted=!video.muted;
+	$('.shengying2')[0].innerHTML=video.muted?'静音':'声音:';
+	$('.shengying1')[0].innerHTML=video.muted?'0%':Math.floor(video.volume*100)+'%';
+});
+
+
+// 当声音改变时
+video.onvolumechange=function(){
+	$('.shengying1')[0].innerHTML=Math.floor(video.volume*100)+'%';
+}
+
+$('.pm11')[0].onmousedown=function(e){
+	e.stopepropagation;
+	var e=e||window.event;
+	var cy=e.clientY;
+	var of=this.offsetTop;
+	var num=cy-of;
+	document.onmousemove=function(e){
+		e.stopepropagation;
+		var e=e||window.event;
+		var cy=e.clientY;
+		var ppp=cy-num;
+		if(ppp<0){
+			ppp=0;
+		}
+		if(ppp>100){
+			ppp=100;
+		}
+		$('.pm11')[0].style.top=ppp+'px';
+		var buyp1=ppp/100;
+		video.volume=buyp1;
+	}
+	document.onmouseup=function(){
+		document.onmousemove=null;
+	}
+}
+
+
+
+$('.bbbbbbb').hover(function(){
+	$('.a7').css({'right':'0px'});
+	window.setTimeout(function(){
+		$('.a7').css({'right':-80+'px'});
+		$('.bbbbbbb')[0].onmousemove=function(){
+			fnnnn123();
+		}
+	},3000);
+
+},function(){});
+
+function fnnnn123(){
+		$('.a7').css({'right':'0px'});
+		window.setTimeout(function(){
+			$('.a7').css({'right':-80+'px'});
+			$('.bbbbbbb')[0].onmousemove=function(){
+				fnnnn123();
+			}
+		},3000);
+}
+
+$('.a8').on('click',function(){
+	video.exitfullscreen();
+});
+$('loop').on('click',function(){
+	video.load();
+});
+
+
+$('.bbbbbbb').hover(function(){
+	$('.bigbox').css({'bottom':'0px'});
+},function(){
+	window.setTimeout(function(){
+		$('.bigbox').css({'bottom':'-50px'});
+	},2000);
+});
+
+var arr=['red','blue','yellow'];
+var inop=0;
+window.setInterval(function(){
+	inop++;
+	if(inop>3){
+		inop=0;
+	}
+	var ppmik=inop;
+	$('.pm9 li').each(function(){
+		ppmik++;
+		if(ppmik>3){
+			ppmik=0;
+		}
+		$(this).css({'background-color':arr[ppmik]});
+	});
+	
+
+},100);
+
+
+</script>
