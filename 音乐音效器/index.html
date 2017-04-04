@@ -31,7 +31,6 @@
 	.b{
 		width: 100%;
 		height: 350px;
-		/*background-color:rgba(255,0,0,0.2);*/
 		position: absolute;
 		bottom: 0px;
 		left: 0px;
@@ -46,7 +45,7 @@
 	}
 	.b-2{
 		width: 100%;
-		height: 10px;
+		height: 5px;
 		background-color: red;
 		position: absolute;
 		left: 0px;
@@ -62,13 +61,131 @@
 		left: 0px;
 		transition:height .8s;
 	}
+	h1{
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		margin: auto;
+		text-align: center;
+		top: 20px;
+	}
+	.btn123{
+		display: block;
+		overflow: hidden;
+		cursor: pointer;
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		line-height: 100px;
+		position: absolute;
+		border-radius: 50%;
+		outline: none;
+		border: none;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		margin: auto;
+	}
+	.btn123 img{
+		height: 100%;
+		font-size: 0px;
+		display: inline-block;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	.zzzzzz{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: rgba(0,0,0,0.7);
+		z-index: 99999999;
+	}
+	.hhnb{
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		top: 90px;
+		background-color: rgba(255,255,255,0.3);
+		overflow: hidden;
+	}
+	.hhnb ul{
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		display: block;
+		z-index: 9999999999999999999;
+	}
+	.hhnb ul li{
+		height: 50px;
+		display: block;
+		width: 80%;
+		font-size: 20px;
+		margin:0px;
+		text-align: center;
+		color: yellow;
+		padding: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	</style>
 </head>
 <body>
-	<div class="box">
-		
+	<h1>音乐播放效果</h1>
+	<div class="box">		
 	</div>
 	<div class="box1">
+		<div class="hhnb">
+			<ul>
+				<li>Like Tomorrow Never Comes - Colbie Caillat</li>
+				<li>Written by：Colbie Caillat</li>
+				<li>There's so much that I never knew but I'm still learning</li>
+				<li>Always planning dream after dream and wanting more things</li>
+				<li>All the best things in life are free</li>
+				<li>We'll be happy wherever we'll be</li>
+				<li>So how about right now</li>
+				<li>Let's stay up from dusk 'til dawn</li>
+				<li>Lay until we see the sun</li>
+				<li>Curl up inside your arms right here's where we belong</li>
+				<li>We're the lucky ones living life forever young</li>
+				<li>Get lost in making love let's love</li>
+				<li>Like tomorrow never comes tomorrow never comes</li>
+				<li>Let's stay forever young yeah</li>
+				<li>Like tomorrow never comes</li>
+				<li>Windmills turning our hearts are burning</li>
+				<li>Red like sunrise</li>
+				<li>Kisses on a hot summer morning</li>
+				<li>Live the good life</li>
+				<li>Who knew the good life could taste so sweet</li>
+				<li>I've got all that I'll ever need</li>
+				<li>Right here right now</li>
+				<li>Let's stay up from dusk 'til dawn</li>
+				<li>Lay until we see the sun</li>
+				<li>Curl up inside your arms right here's where we belong</li>
+				<li>We're the lucky ones living life forever young</li>
+				<li>Get lost in making love let's love</li>
+				<li>Like tomorrow never comes tomorrow never comes</li>
+				<li>Let's stay forever young yeah</li>
+				<li>Like tomorrow never comes</li>
+				<li>And if you haven't found love know that you will find it</li>
+				<li>It might take a while you could be right beside him</li>
+				<li>Don't know what the tide brings but that could be a good thing</li>
+				<li>But what if this is the night</li>
+				<li>Let's stay up from dusk 'til dawn</li>
+				<li>Lay until we see the sun</li>
+				<li>Curl up inside your arms right here's where we belong</li>
+				<li>We're the lucky ones living life forever young</li>
+				<li>Get lost in making love let's love</li>
+				<li>Like tomorrow never comes tomorrow never comes</li>
+				<li>Let's stay forever young yeah</li>
+				<li>Like tomorrow never comes</li>
+			</ul>
+		</div>
 		<div class="b">
 			<div class="b-1">
 				<div class="b-2"></div>
@@ -356,51 +473,55 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
+	<audio src="miu.mp3" loop>
+		您的浏览器不支持 audio 标签。
+	</audio>
+	<div class="zzzzzz">
+		<button class="btn123">
+			<img src="timg.jpg" alt="">
+		</button>	
+	</div>
 </body>
 </html>
 <script>
+// 下方块
 	var b3s=document.querySelectorAll('.b-3');
+// 上方块
 	var b2s=document.querySelectorAll('.b-2');
-	window.setInterval(fn,1500);
-	function fn(){
+	function fn(obj1,obj2){
+		var time=Math.floor(Math.random()*500);
+		var t=window.setInterval(function(){
+			var h1=Math.floor(Math.random()*330);
+			obj1.style.height=h1+'px';
+			var sum=350-10-h1;
+			var h2=Math.floor(Math.random()*sum+h1);
+			obj2.style.bottom=h2+'px';
+			obj2.style.bottom=h1+'px';
+			window.clearInterval(t);
+			fn(obj1,obj2);
+		},time);
+	}
+	var yue=document.querySelector('audio');
+	var zz=document.querySelector('.zzzzzz');
+	console.dir(yue);
+	var btn=document.querySelector('.btn123');
+	btn.onclick=function(){
+		yue.play();
+		console.dir(yue.autoplay);
 		for(var i=0;i<b3s.length;i++){
-			var h=fn1();
-			b3s[i].style.height=h+'px';
-			var a=0;
-
-			if(h<=100){
-				a=Math.floor(Math.random()*240);
-			}else if(h<=200){
-				a=Math.floor(Math.random()*140);
-			}else if(h<=300){
-				a=Math.floor(Math.random()*40);
-			}
-			b2s[i].style.transition='bottom 1s';
-			b2s[i].style.bottom=h+'px';
-			b2s[i].style.transition='bottom 0.5s';
-			b2s[i].style.bottom=h+a+'px';
+			fn(b3s[i],b2s[i]);
 		}
-		window.setTimeout(function(){
-			fn2(h,a);
+		btn.style.display="none";
+		zz.style.display="none";
+	}
+
+
+	var lun=document.querySelector('.hhnb ul');
+	var num=0;
+	window.setTimeout(function(){
+		window.setInterval(function(){
+			lun.style.marginTop=-num+'px';
+			num+=30;
 		},1000);
-		
-	}
-	function fn1(){
-		var h=Math.floor(Math.random()*341);
-		return h;
-	}
-	function fn2(h,a){
-		for(var i=0;i<b3s.length;i++){
-			b3s[i].style.height=0+'px';
-			b2s[i].style.transition='bottom 0.5s';
-			b2s[i].style.bottom=h+'px';
-			b2s[i].style.transition='bottom 1s';
-			b2s[i].style.bottom=0+'px';
-		}
-	}
-
+	},80000);
 </script>
