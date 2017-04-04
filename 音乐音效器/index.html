@@ -120,6 +120,7 @@
 		right: 0px;
 		display: block;
 		z-index: 9999999999999999999;
+		transition:all 1s;
 	}
 	.hhnb ul li{
 		height: 50px;
@@ -514,14 +515,12 @@
 		btn.style.display="none";
 		zz.style.display="none";
 	}
-
-
 	var lun=document.querySelector('.hhnb ul');
 	var num=0;
 	window.setTimeout(function(){
 		window.setInterval(function(){
 			lun.style.marginTop=-num+'px';
-			num+=30;
-		},1000);
-	},80000);
+			num+=50;
+		},2500);
+	},7000);
 </script>
