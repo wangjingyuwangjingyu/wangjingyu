@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src='js/angular.js'></script>
+	
+</head>
+<body ng-controller='c1'>
+	
+<!-- 头部 -->
+	<header>
+		<!-- 头部上 -->
+		<div ng-class='{headertop:true}'>
+			<span ng-class='{hh1:true}'>iCloud</span>
+			<span ng-class="{hh2:true}">
+				提醒事项
+				<span ng-class="{hh3:true}">
+					<img src="img/Image 5.jpg" ng-click="tiao()" alt="">
+				</span>
+			</span>
+			<span ng-class='{hh4:true}' ng-click="add()">+</span>
+		</div>
+		<!-- 头部下 -->
+		<div ng-class='{headerbottom:true}'>
+			<span ng-class='{hh5:true}'><img src="img/Image 1.jpg" alt=""></span>
+			<span ng-class="{hh6:true}">已计划</span>
+		</div>
+
+<!-- <div ng-class="{tophehe:true}"></div> -->
+
+
+		<ul ng-class="{hh7:true}">
+		<!-- 循环变更数据 -->
+			<li ng-class="{hh8:true}" ng-repeat="(k,v) in data track by v.id" ng-click="show(v.id)">
+				<span ng-class='{hh9:true}' ng-style="{background:colors[v.id%7]}"></span>
+				<span ng-class="{hh10:true}">{{v.title}}</span>
+				<img src="img/Image 2.jpg" alt="" ng-class="{hh11:true}">
+			</li>
+		</ul>
+	</header>
+<!-- 内容 -->
+	<section>
+		<!-- 内容页头部的搜索 -->
+		<div ng-class="{nn1:true}">
+			<img src="img/Image 3.jpg" alt="" ng-class="{nn3:true}">
+			<!-- 搜索框 -->
+			<input type="text" placeholder="搜索所有提醒..." ng-class="{nn2:true}">
+			<div ng-class="{nn5:true}"></div>
+			<img src="img/Image 4.jpg" alt="" ng-class="{nn4:true}">
+		</div>
+		<!-- 可变化的内容下部分 -->
+		<div ng-class="{nn6:true}">
+			<ul ng-class="{nn7:true}">
+				<!-- 标题 -->
+				<li ng-class="{nn8:true}">
+					<span ng-class="{nn10:true}" ng-style="{color:se}">{{dataing.title?dataing.title:'任务提醒'}}</span>
+					<span ng-class="{nn11:true}" ng-click="fnn($event.target)">选项
+					</span>
+				</li>
+
+
+				<!-- 小标题1 -->
+				<li ng-class="{nn9:true}">
+					已完成：<span>{{num1}}</span>项
+				</li>
+				<!-- 循环的变量 -->
+				<li ng-class="{nn9:true}" ng-repeat="(k,v) in dataing.todo|filter:true" contenteditable="true" ng-blur="xieru(v,k,$event.target)">
+					<span  ng-class="{yuan:true}" ng-style="{borderColor:se}" ng-click="addj(k)" >
+						<span ng-class="{yuan1:true}"  ng-style="{background:se}"></span>
+					</span>
+					{{v.text}}
+				</li>
+
+
+				<!-- 小标题2 -->
+				<li ng-class="{nn9:true}">
+					未完成：<span>{{num2}}</span>项
+				</li>
+				<!-- 循环的变量 -->
+				<li ng-class="{nn9:true}" ng-repeat="(k,v) in dataing.todo|filter:false" contenteditable="true" ng-blur="xieru1(v,k,$event.target)">
+					<span  ng-class="{yuan:true}" ng-style="{borderColor:se}" ng-click="del(k)"></span>
+					{{v.text}}
+				</li>
+				<!-- 新加一条未添加 -->
+				<li ng-class="{nn9:true,nn12:true}" ng-click="addxian()">
+					新项目...
+				</li>
+			</ul>
+		</div>
+
+	</section>
+	
+
+<div ng-class="{sss:true}" ng-show="flag">
+	<!-- 点击出现 -->
+	<div ng-class="{zzz:true}">
+		<div ng-class="{zzz1:true}">
+		<!-- 输入框 -->
+		<input type="text" ng-class="{nn13:true}" ng-value="biancun" ng-model="biancun" ng-blur="f1()">
+		<!-- 颜色 -->
+		<div ng-class="{tkbtn:true}">
+			<div ng-class="{z1:true}">列表颜色</div>
+			<div ng-class="{z2:true}">
+				<span ng-repeat="(k,v) in colors" ng-style="{background:v,borderColor:v==se?se:transparent}" ng-click="xuanse(v,k)" ng-class="{ww:true}"></span>
+			</div>
+		</div>
+		<!-- 按钮 -->
+		<div ng-class="{nn14:true}">
+			<span ng-class="{tkbtn1:true}" ng-click="delete()">删除</span>
+			<div ng-class="{textright:true}">
+				<span ng-class="{tkbtn2:true}" ng-click="none()">取消</span>
+				<span ng-class="{cenrerh:true}"></span>
+				<span ng-class="{tkbtn3:true}" ng-click="f2()">完成</span>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
+<script src="js/index.js"></script>
