@@ -1073,3 +1073,14 @@ body{
 .ggh{
 	background-color: #E70D6E;	
 }
+input{
+	outline: none;
+}
+a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+
+
+
