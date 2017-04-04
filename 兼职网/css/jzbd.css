@@ -1,0 +1,304 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+	text-decoration: none;
+	font-family: Helvetica;
+}
+body{
+	width: 100%;
+}
+		/*header*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+	text-decoration: none;
+	font-family: Helvetica;
+	
+}
+.sy-index{
+	background: #F4EAD5;
+}
+.sy-head{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	background-image: url(../images/top.png);
+	padding: 0 10px;
+	background-size:100%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 99999;
+}
+
+.sy-head .sy-left{
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+
+}
+.sy-head .sy-left .zi{
+	margin-left: 50px;
+	margin-top: -25px;
+	width: 60px;
+}
+.sy-head .sy-left .zi span{
+	font-size: 18px;
+	color: #fff;
+}
+.sy-head .sy-left .zi img{
+	width: 20%;
+}
+.sy-head .sy-left img{
+	width: 100%;
+}
+.sy-head .sy-logo{
+	width: 74px;
+	height: 37px;
+	margin-top: -30px;
+}
+.sy-head .sy-logo img{
+	width: 80%;
+}
+.sy-head .sy-right{
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+
+}
+.sy-head .sy-right img{
+	width: 100%;
+}
+.sy-sousuo{
+	width: 6.6rem;
+	height: 1.5rem;
+	margin: 0 auto;
+	background-image: url(../images/sousuokuang.png);
+	background-size:100%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	margin-top: -40px;
+	position: relative;
+	z-index: 999999;
+}
+.sy-sousuo .sy-sc{
+	padding:0 30px; 
+}
+.sy-sousuo .sy-sc a .ss{
+	width: 30px;
+	height: 30px;
+	margin-top: 30px;
+	padding: 1px;
+}
+.sy-sousuo .sy-sc input{
+	width: 200px;
+	height: 20px;
+	position: absolute;
+	top: 30px;
+	background: transparent;
+	transform:rotate(-3deg);
+	color: #000;
+}
+.sy-sousuo .sy-sc a .yy{
+	width: 25px;
+	height: 25px;
+	margin-top: 25px;
+	margin-left: 200px;
+	position: absolute;
+	padding: 1px;
+}
+.sy-banner{
+	width: 100%;
+	height: 4.9rem;
+	margin-top: -65px;
+}
+.sy-banner img{
+	width: 100%;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+	
+.bjl-advert{
+	width: 7.2rem;
+	height: 1.85rem;
+	margin: .1rem auto;
+}
+.bjl-advert a img{
+	width: 100%;
+}	/*banner*/
+.wy-floor3{
+	width: 100%;
+	padding: 0 0.15rem;
+	box-sizing:border-box;
+}
+.wy-floor3 .wy-mess{
+	width: 100%;
+}
+.wy-floor3 .wy-mess .wy-list{
+	width: 100%;
+	height: 1.5rem;
+	border-radius: 0.2rem;
+	background: #FFFFFF;
+}
+.wy-floor3 .wy-mess .wy-list a{
+	display: block;
+	display: flex;
+	justify-content:space-between;
+}
+.wy-mess .wy-list .wy-thumb{
+	width: 1.5rem;
+	height: 1.5rem;
+	flex:0 0 auto;
+}
+.wy-mess .wy-list .wy-content{
+	flex:1 1 auto;
+	border-bottom: 1px solid #F4EAD5;
+}
+.wy-content .wy-conTop{
+	padding: 0 0.1rem 0.12rem 0.2rem;
+	border-bottom: 1px dashed #999;
+	position: relative;
+	padding-top: 0.1rem;
+
+}
+.wy-content .wy-conTop p{
+	color: #191919;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	width: 3.5rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+}
+.wy-content .wy-conTop p:nth-child(2){
+	color: #7a7774;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+
+.wy-content .wy-conTop span{
+	display: block;
+	position: absolute;
+	right: 0.1rem;
+	top: 0.35rem;
+	font-size: 10px;
+	color: #7a7774;
+}
+.wy-content .wy-conTop span em{
+	font-size: 24px;
+	color: #ff163c;
+}
+/*hj-conBottom*/
+.wy-content .wy-conBottom{
+	padding: 0.1rem 0.1rem 0.1rem 0.2rem;
+	color: #b2b2b2;
+	font-size: 10px;
+	overflow: hidden;
+}
+.wy-content .wy-conBottom span{
+	display: block;
+	width: 0.7rem;
+	height: 100%;
+	float: left;
+	text-align: right;
+	margin-right: 0.25rem;
+	position: relative;
+}
+.wy-content .wy-conBottom span:first-child:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0.26rem;
+	height: 0.25rem;
+	background: url(../img/hj-feedback.png) no-repeat center center/cover;
+	left: -0.08rem;
+	top: 0.04rem;
+}
+.wy-content .wy-conBottom span:last-child:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0.26rem;
+	height: 0.25rem;
+	background: url(../img/hj-favourite.png) no-repeat center center/cover;
+	left: 0.06rem;
+	top: 0.04rem;
+}
+.wy-content .wy-conBottom em{
+	display: block;
+	width: 0.24rem;
+	height: 0.23rem;
+	background: url(../img/hj-more.png) center center/cover;
+	float: right;
+	margin-top: 0.01rem;
+	margin-top: 0.06rem;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+/*footer*/
+.foot{
+	padding-top: 0.1rem;
+	box-sizing:border-box;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	position:fixed;
+	bottom: 0;
+	z-index: 120;
+	width: 100%;
+	height: 1.57rem;
+	background: url(../images/bottom.png) no-repeat center center/cover; 
+}
+.foot a{
+	display: block;
+	flex:1 0 auto;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+.foot a:first-child img{
+	width: 1.76rem;
+	height: 1.19rem;
+}
+.foot a:first-child~a img{
+	width:0.96rem;
+	height: 0.99rem;
+}
+
+
+
+.ww-ding{
+	/*position: fixed;*/
+	top: 0px;
+	left: 0px;
+}
+
+.swiper-pagination-bullet{
+	background-color:rgba(255,255,255,0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ······································· */
+/* ······································· */
+/* ······································· */

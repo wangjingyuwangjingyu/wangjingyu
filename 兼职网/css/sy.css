@@ -1,0 +1,377 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+	text-decoration: none;
+	font-family: Helvetica;
+}
+	/*导航*/
+.web-sy{
+	width: 100%;
+	height: auto;
+}
+.sy-header{
+	width: 100%;
+	height: 0.8rem;
+	float: left;
+	background:#FCFCFC; 
+	border-bottom: 1px solid #EEEEEE;
+}
+.sy-head{
+	width:6.76rem;
+	height: 100%;
+	margin: 0 auto;
+	/*background: yellow;*/
+}
+.head-he{
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+.head-he img{
+	width: 0.4rem;
+	height: 0.4rem;
+	overflow: hidden;	
+	margin-top: 0.2rem;
+	float: left;
+}
+.head-ha{
+	width: 30%;
+	height: 100%;
+	float: left;
+	/*background: red;*/
+}
+.head-ha span{
+	text-align: center;
+	line-height: 0.8rem;
+	display: block;
+	color: #191919;
+	font-size: 16px;
+	font-family: "苹方粗体";
+	font-weight: normal;
+}
+.head-hd{
+	width: 35%;
+	height: 100%;
+	float: left;
+	/*background: blue;*/
+}
+.head-hd a{
+	display: block;
+	color: #5A5A5A;
+	text-align: right;
+	line-height: 0.8rem;
+	font-size: 16px;
+	font-weight: bold;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+.web-box{
+	width: 100%;
+	height: 0.91rem;
+	float: left;
+	/*background: red;*/
+	position: relative;
+}
+.web-out{
+	width: 100%;
+	height: 0.13rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0;
+	bottom:0;
+	/*background: blue;*/
+}
+.web-out-center{
+	width: 2.1rem;
+	height: 100%;
+	margin: 0 auto;
+	/*background: yellow;*/
+}
+.roun:nth-child(1){
+	width: 0.25rem;
+	height: 0.13rem;
+	float: left;
+	border-radius: 10px;
+	background: #424141;
+}
+.roun:nth-child(2){
+	width: 0.13rem;
+	height: 0.13rem;
+	border-radius: 50%;
+	background: #FFF220;
+	float: left;
+	margin-left: 0.22rem;
+}
+.roun:nth-child(3){
+	width: 0.13rem;
+	height: 0.13rem;
+	border-radius: 50%;
+	background:#73ED29;
+	float: left;
+	margin-left: 0.22rem;
+}
+.roun:nth-child(4){
+	width: 0.13rem;
+	height: 0.13rem;
+	border-radius: 50%;
+	background: #FF2572;
+	float: left;
+	margin-left: 0.22rem;
+}
+.roun:nth-child(5){
+	width: 0.13rem;
+	height: 0.13rem;
+	border-radius: 50%;
+	background: #1C91FF;
+	float: left;
+	margin-left: 0.22rem;
+}
+.roun:nth-child(6){
+	width: 0.13rem;
+	height: 0.13rem;
+	border-radius: 50%;
+	background:#771AFF;
+	float: left;
+	margin-left: 0.22rem;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+	/*banner*/
+.web-banner{
+	width: 100%;
+	height: auto;
+	float: left;
+	border-bottom: 1px solid #D8D7D8;
+}
+.web-bann{
+	width: 6.7rem;
+	height: auto;
+	margin: 0 auto;
+}
+.web-img{
+	width: 100%;
+	height: 4.09rem;
+	float:left;
+	background: yellow;
+}
+.web-img img{
+	width: 100%;
+	height:100%;
+	position: relative;
+	z-index: 999;
+}
+.web-ban{
+	width: 100%;
+	height: 2.62rem;
+	float: left;
+	/*background: red;*/
+	position: relative;
+}
+.web-ba{
+	width: 6.47rem;
+	height: 2.1rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	/*background: blue;*/
+}
+.web-ba-title{
+	width: 100%;
+	height: 0.6rem;
+	float: left;
+	/*background: yellow;*/
+}
+.web-ba-title span{
+	color: #212121;
+	display: block;
+	font-size: 16px;
+	font-family: 苹方常规;
+}
+.web-ba-main{
+	width: 100%;
+	height: 1.23rem;
+	float: left;
+	/*background: red;*/
+}
+.web-ba-main span{
+	display: block;
+	color: #5B5B5B;
+	font-size: 12px;
+	font-family: 苹方常规;
+}
+.web-ba-footer{
+	width: 100%;
+	height: 0.3rem;
+	float: left;
+	/*background: orange;*/
+}
+.web-ba-footer-left{
+	width: 1.82rem;
+	height: 100%;
+	float: left;
+	/*background: yellow;	*/
+	display: block;
+	color: #9E9E9E;
+	font-size: 9px;
+	line-height: 0.375rem;
+	letter-spacing:0.8px;
+	/*padding-left: 3px;*/
+}
+.web-ba-footer-left img{
+	width: 0.3rem;
+	height: 0.3rem;
+	float: left;
+}
+.web-ba-footer-right{
+	width: 3.35rem;
+	height: 100%;
+	float: right;
+	/*background: red;*/
+}
+.web-ba-footer-right img{
+	float: left;
+	width: 0.3rem;
+	height: 0.3rem;
+	overflow: hidden;
+	margin-left: 10px;
+}
+.web-ba-footer-right span{
+	float: left;
+	display: block;
+	color: #9E9E9E;
+	font-size: 9px;
+	line-height: 0.375rem;
+	letter-spacing:0.8px;
+	margin-left: 1px;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+		/*banner*/
+.web-section{
+	width: 100%;
+	height: auto;
+	float: left;
+	border-bottom: 1px solid #D8D7D8;
+	margin-top: 0.54rem;
+}
+.web-sect{
+	width: 6.7rem;
+	height: auto;
+	margin: 0 auto;
+}
+.web-sect-img{
+	width: 100%;
+	height: 5.44rem;
+	overflow: hidden;
+	float: left;
+}
+.web-sect-img img{
+	width: 100%;
+	height: 100%;
+}
+.web-sect-banner{
+	width: 100%;
+	height: 2.62rem;
+	float: left;
+	/*background: yellow;*/
+}
+.web-sect-bann{
+	width: 100%;
+	height: 2.14rem;
+	margin-top: 0.33rem;
+	/*background: yellow;*/
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+	/*横线*/
+.web-hx{
+	width: 100%;
+	float: left;
+	height: 0.68rem;
+	border-bottom:1px solid #B8B8B8;
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
+	/*footer*/
+.web-footer{
+	width: 100%;
+	height: 1.08rem;
+	float: left;
+	/*background: yellow;*/
+}
+.web-footer-1{
+	width: 100%;
+	height: 33.3333%;
+	float: left;
+	/*background: red;*/
+}
+.web-footer-2{
+	width: 20%;
+	height: 100%;
+	float: left;
+	/*background: yellow;*/
+}
+.web-footer-3{
+	width: 60%;
+	height: 100%;
+	float: left;
+	/*background: blue;*/
+	font-weight: bold;
+}
+.web-footer-3  span:nth-child(1){
+	display: block;
+	color: #3D3D3D;
+	font-size: 12px;
+	line-height:20px;
+	float: left; 
+	margin-left: 15px;
+	
+}
+.web-footer-3  span:nth-child(2){
+	display: block;
+	color: #2F2F2F;
+	font-size: 10px;
+	line-height: 20px;
+	float: left;
+	margin-left: 15px;
+	
+}
+.web-footer-3  span:nth-child(3){
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	color: #9E9E9E;
+	margin-left: 15px;
+	
+}
+.web-footer-3  span:nth-child(4){
+	display: block;
+	color: #2F2F2F;
+	font-size: 10px;
+	line-height: 20px;
+	float: left;
+	margin-left: 15px;
+	
+}
+.web-footer-3  span:nth-child(5){
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	color: #9E9E9E;
+	margin-left: 15px;
+	
+}

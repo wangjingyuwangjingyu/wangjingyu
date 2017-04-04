@@ -1,0 +1,148 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+	text-decoration: none;
+	font-family: Helvetica;
+}
+.web-pl{
+	width: 100%;
+	height:auto;
+}
+/*header*/
+.web-pl-header{
+	width: 100%;
+	height:0.8rem;
+	background:#FCFCFC; 
+	border-bottom: 1px solid #EEEEEE;
+	float: left;
+}
+.web-pl-header-banner{
+	width:6.76rem;
+	height: 100%;
+	margin: 0 auto;
+	/*background: red;*/
+}
+.web-pl-header-banner-left{
+	width: 33.3333333%;
+	float: left;
+	height: 100%;
+	/*background: yellow;*/
+}
+.web-pl-header-banner-right a{
+	text-align: right;
+	line-height: 0.8rem;
+	display: block;
+	color: #191919;
+	font-size: 16px;
+	font-family: "苹方常规";
+
+}
+.web-pl-header-banner-zj{
+	width: 33.3333333%;
+	float: left;
+	height: 100%;
+	/*background: red;*/
+}
+.web-pl-header-banner-right{
+	width: 33.3333333%;
+	float: left;
+	height: 100%;
+	/*background: blue;*/
+}
+.web-pl-header-banner-zj a{
+	font-size: 18px;
+	color: #2C2C2C;
+	font-family: "苹方粗体";
+	line-height:0.8rem;
+	text-align: center;
+	display: block;
+	font-weight: 5px;
+	font-weight: bold;
+}
+.web-pl-banner{
+	width: 100%;
+	height:auto;
+	float: left;
+	/*background: yellow;*/
+}
+.web-pl-banner-bann{
+	width: 6.76rem;
+	height: auto;
+	margin: 0 auto;
+}
+.web-pl-banner-bann input{
+	height: 2.41rem;
+	width: 6.76rem;
+	border:1px solid #E1E0E0;
+	outline: none;
+	float: left;
+	display: block;
+	color: #000;
+	font-family: "苹方常规";
+	line-height: 20px;
+	font-size: 20px;
+}
+.web-tj{
+	width: 100%;
+	height: 0.83rem;
+	float: left;
+	/*background:blue;*/
+}
+.web-tj-tjzp{
+	width: 6.76rem;
+	height: 100%;
+	margin: 0 auto;
+	/*background: red;*/
+}
+.web-tj-tjzp .web-tj-tjzp-1{
+	display: block;
+	color: #333333;
+	line-height: 0.83rem;
+	/*float: left;*/
+	font-size: 12px;
+	float: left;
+	letter-spacing: 1px;
+}
+.web-tj-tjzp .web-tj-tjzp-2{
+	display: block;
+	color: #999999;
+	line-height: 0.85rem;
+	font-size: 12px;
+	float: left;
+	letter-spacing: 1px;
+	padding-left: 2px;
+}
+.web-jh{
+	width: 100%;
+	height:auto;
+	float: left;
+	/*background: blue;*/
+}
+.web-j{
+	width: 6.76rem;
+	height: auto;
+	margin: 0 auto;
+	/*background: red;*/
+}
+.web-j-1 a{
+	display: block;
+	text-align: center;
+	line-height: 0.97rem;
+	font-size: 36px;
+	color:#A9A8AF;
+	font-weight: normal;
+	font-family: 苹方常规;
+}
+.web-j-1{
+	width:0.97rem;
+	height:0.97rem;
+	border:1px solid #B1B0B6;
+	border-radius: 10px;
+	float: left;
+
+}
+/* ······································· */
+/* ······································· */
+/* ······································· */
