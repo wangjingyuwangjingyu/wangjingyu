@@ -320,8 +320,6 @@
 			divs.style.left=lefts+'px';
 			divs.classList.add('ddjj');
 			document.body.appendChild(divs);
-
-
 			// 敌机销毁界限		
 			var xw=document.documentElement.clientHeight;
 			var xh=document.documentElement.clientWidth;
@@ -333,7 +331,6 @@
 			}
 		}
 		// 敌机子弹创建
-		
 		self.arr[2]=function(){
 			var ddjj1=document.getElementsByClassName('ddjj');
 			for(var i=0;i<ddjj1.length;i++){
@@ -395,6 +392,7 @@
 						divsss.style.top=a3+'px';
 						divsss.style.left=a4+'px';
 						document.body.appendChild(divsss);
+
 						window.setTimeout(function(){
 							document.body.removeChild(divsss);
 						},1100);
