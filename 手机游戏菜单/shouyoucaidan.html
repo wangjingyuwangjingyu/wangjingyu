@@ -7,11 +7,13 @@
 	.m1{
 		width: 100px;
 		height: 100px;
-		margin-top: 200px;
-		margin-left: auto;
-		margin-right: auto;
+		left: 0px;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		margin: auto;
 		border-radius: 50%;
-		position: relative;
+		position: absolute;
 	}
 	.m3{
 		width: 100%;
@@ -33,6 +35,14 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
+		overflow: hidden;
+		line-height: 100px;
+		text-align: center;
+	}
+	.m3 li img{
+		display: inline-block;
+		width: 100%;
+		font-size: 0px;
 	}
 	.m2{
 		width: 100%;
@@ -45,27 +55,68 @@
 		color: #fff;
 		position: absolute;
 		z-index: 999;
+		overflow: hidden;
 		cursor: pointer;
+		line-height: 0px;
+		text-align: center;
+		line-height: 100px;
 	}
-
+	.m2 img{
+		width: 100%;
+		font-size: 0px;
+		display: inline-block;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		margin: 0px;
+		padding: 0px;
+	}
 </style>
 </head>
 <body>
 	<div class='m1'>
-		<div class="m2">菜单</div>
+		<div class="m2">
+			<img src="yuan.jpg" alt="">
+		</div>
 		<ul class="m3">
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-		<!-- 	<li>4</li>
-			<li>5</li> -->
-		<!-- 	<li>6</li>
-			<li>7</li>
-			<li>8</li>
-			<li>9</li>
-			<li>10</li>
-			<li>11</li>
-			<li>12</li> -->
+			<li>
+				<img src="asfdfgd.jpg" alt="">
+			</li>
+			<li>
+				<img src="hfghdfgh.jpg" alt="">
+			</li>
+			<li>
+				<img src="jmhgfkfg.jpg" alt="">
+			</li>
+			<li>
+				<img src="asfdfgd.jpg" alt="">
+			</li>
+			<li>
+				<img src="hfghdfgh.jpg" alt="">
+			</li>
+			<li>
+				<img src="jmhgfkfg.jpg" alt="">
+			</li>
+			<li>
+				<img src="asfdfgd.jpg" alt="">
+			</li>
+			<li>
+				<img src="hfghdfgh.jpg" alt="">
+			</li>
+			<li>
+				<img src="jmhgfkfg.jpg" alt="">
+			</li>
+			<li>
+				<img src="asfdfgd.jpg" alt="">
+			</li>
+			<li>
+				<img src="hfghdfgh.jpg" alt="">
+			</li>
+			<li>
+				<img src="jmhgfkfg.jpg" alt="">
+			</li>
 		</ul>
 
 	</div>
@@ -75,6 +126,7 @@
 	var flag=true;
 	var obj=document.getElementsByClassName('m2')[0];
 	var lis=document.getElementsByClassName('m3')[0].getElementsByTagName('li');
+	// 点击
 	obj.onclick=function(){
 		if(flag){
 			flag=false;
@@ -82,37 +134,26 @@
 		}else{
 			flag=true;
 			for(var i=0;i<lis.length;i++){
-				lis[i].style.transform='translate(0px,0px)';
-				lis[i].style.transition='all .5s';	
+				lis[i].style.transform='translate(0px,0px) rotate('+(-360)+'deg)';
+				lis[i].style.transition='all 0.5s';	
 			}
 		}
 	}
-
-
-	// 重点三jiao算法
+	// 重点三角算法
 	function fn(){
 	var dushu=90/(lis.length);
-
 	for(var i=0;i<lis.length;i++){
-
 		var m=getxy(dushu*i);
-
-		lis[i].style.transform='translate('+m.x+'px,'+m.y+'px)';
-		lis[i].style.transition='all 2s ease';
+		lis[i].style.transform='translate('+m.x+'px,'+m.y+'px) rotate('+720+'deg)';
+		lis[i].style.transition='all 0.5s ease';
 	}
-
-
-
-
-
-
 	function getxy(dushu){
-		// 弧度转换
-		var hd=Math.PI/180*dushu;
-		var r=200;
-		var y=Math.sin(hd)*r;
-		var x=Math.cos(hd)*r;
-		return {x:x,y:y};
+			// 弧度转换
+			var hd=Math.PI/180*dushu*4;
+			var r=250;
+			var y=Math.sin(hd)*r;
+			var x=Math.cos(hd)*r;
+			return {x:x,y:y};
+		}
 	}
-}
 </script>
