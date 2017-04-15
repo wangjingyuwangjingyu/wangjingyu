@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta>
+	<title>Document</title>
+	<style>
+		body,html{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			margin: 0px;
+			padding: 0px;
+			background-color:#0032FF;
+		}
+		.box{
+			position: absolute;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	.boxclass{
+		transition:all 1s;
+	}
+	</style>
+</head>
+<body>
+</body>
+</html>
+<script>
+// 颜色定义
+var colors=['#ff6666','#ff9900','#ff3333','#3399cc','#ff0033','#ffff00','#ffffff','#cccccc','#9990033','#cc99cc','#ffcccc'];
+var h=document.body.clientHeight;
+h=parseInt(h);
+var w=document.body.clientWidth;
+w=parseInt(w);
+// 动态创建球球
+var t1,t2,t3;
+var tt=[],index=0;
+var zz=[];
+var qiuqiu=[];
+t1=window.setInterval(createbox,2000);
+function createbox(){
+	var r5=Math.floor(Math.random()*20+2);
+	for(var i=0;i<r5;i++){
+		var r6=Math.floor(Math.random()*50+20);
+		var box=document.createElement('div');
+		var r9=Math.floor(Math.random()*11);
+		var r7=Math.floor(Math.random()*w);
+		var r10=Math.floor(Math.random()*(h+10)+h);
+		var r11=Math.random()+0.001;
+		box.className='box';
+		box.style.cssText="width:"+r6+"px;height:"+r6+"px;background-color:"+colors[r9]+";top:"+r10+"px;left:"+r7+"px;opacity:"+r11+"";
+		qiuqiu[index]={
+			box:box,
+			id:index,
+			weizhi:{
+				top:r10,
+				left:r7
+		}};
+		document.body.appendChild(box);
+		// 球球走
+		qiuqiu[index].rflage=Math.floor(Math.random()*1000000000);
+		qiuqiu[index].sudu=parseInt(Math.floor(Math.random()*200+1));
+		index++;
+	// // 移动端事件点击效果
+	box.onmousemove=function(e){
+		e.preventDefault();
+		console.dir('asjdhg');
+		this.style.cssText="width:0px;height:0px;opacity:0;";
+		var cx=parseInt(e.clientX);
+		var cy=parseInt(e.clientY);
+		var self=this;
+		window.setTimeout(function(){
+			self.style.display='none';
+		},200);
+		// 小点诞生
+			var b1=[];
+			for(var i=0;i<10;i++){
+				b1[i]=document.createElement('div');
+				var r1=Math.floor(Math.random()*15+3);
+				var rrr=Math.floor(Math.random()*11);
+				b1[i].style.cssText="width:"+r1+"px;height:"+r1+"px;background-color:"+colors[rrr]+";border-radius:50%;position:absolute;";
+				var rrr2=Math.random()+0.6;
+				b1[i].style.transition="all "+rrr2+"s";
+				b1[i].style.top=cy+'px';
+				b1[i].style.left=cx+'px';
+				b1[i].class='boxclass';
+				document.body.appendChild(b1[i]);
+			}
+			window.setTimeout(function(){
+				// 爆炸效果
+				for(var i=0;i<10;i++){
+					var r1=Math.floor(Math.random()*80+10);
+					var r2=Math.floor(Math.random()*80+10);
+					var cat=Math.floor(Math.random()*4+1);
+					switch(cat){
+						case 1:b1[i].style.top=(cy-r2)+'px';
+								b1[i].style.left=(cx-r1)+'px';
+								b1[i].style.opacity=0;
+						break;
+						case 2:b1[i].style.top=(cy-r2)+'px';
+								b1[i].style.left=(cx+r1)+'px';
+								b1[i].style.opacity=0;
+						break;
+						case 3:b1[i].style.top=(cy+r2)+'px';
+								b1[i].style.left=(cx-r1)+'px';
+								b1[i].style.opacity=0;
+						break;
+						case 4:b1[i].style.top=(cy+r2)+'px';
+								b1[i].style.left=(cx+r1)+'px';
+								b1[i].style.opacity=0;
+						break;
+					}
+				}
+			},0);
+		}
+	}
+}
+// 向上走
+var time=window.setInterval(function(){
+	for(var i=0;i<qiuqiu.length;i++){
+		if(qiuqiu[i].top<100){
+			qiuqiu[i].box.style.display='none';
+			qiuqiu.splice(i,1);
+		}
+		if(qiuqiu[i].weizhi){
+			qiuqiu[i].weizhi.top=qiuqiu[i].weizhi.top-1;
+			qiuqiu[i].box.style.top=qiuqiu[i].weizhi.top+'px';
+		}else{
+			console.dir(qiuqiu[i].weizhi);
+		}
+	}
+},0);
+// 向左右走
+window.setInterval(function(){
+	for(var i=0;i<qiuqiu.length;i++){
+		var biaoshi=true;
+		var rl=Math.floor(Math.random()*5);
+		var rrr123=Math.floor(Math.random()*1000);
+		for(var j=2;j<1000;j++){
+			if(rrr123%j==0){
+				biaoshi=false;
+				break;
+			}
+		}
+		if(biaoshi){
+			// fn3();
+		}
+		// 改变方向走
+		if(qiuqiu[i].rflage%2==0){
+			qiuqiu[i].weizhi.left=qiuqiu[i].weizhi.left-1;
+		}else{
+			qiuqiu[i].weizhi.left=qiuqiu[i].weizhi.left+1;
+		}
+		qiuqiu[i].box.style.left=qiuqiu[i].weizhi.left+'px';
+	}
+},30);
+// 随机中途改变方向
+function fn3(){
+	for(var i=0;i<qiuqiu.length;i++){
+		qiuqiu[i].rflage=Math.floor(Math.random()*1000000000);
+	}
+}
+
+
+
+</script>

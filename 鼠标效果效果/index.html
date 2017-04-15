@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+	body,html{
+		width: 100%;
+		height: 100%;
+		background-color:rgba(0,0,0,0.8); 
+		margin:0px;
+		overflow: hidden;
+		padding: 0px;
+	}
+	.box{
+		transition:all 1s;
+	}
+	.btn{
+		width: 150px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		color: #000;
+		background-color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+		position: absolute;
+		left: 15px;
+		top: 10px;
+		user-select:none;
+		z-index: 9999999;
+		box-shadow: 0px 0px 20px #fff;
+	}
+	.fzdiv{
+		width: 80px;
+		height:50px; 
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		margin: auto;
+		right: -100%;
+		text-align: center;
+		line-height: 50px;
+		box-shadow: 0px 0px 20px #fff;
+		background-color:#fff;
+	}
+	</style>
+
+</head>
+<body>
+	<div class="btn">自动动画</div>
+</body>
+</html>
+<script>
+var w=document.body.clientWidth;
+var h=document.body.clientHeight;
+var index=0;
+document.body.onmousedown=fn1;
+function fn1(){
+	document.body.onmousemove=function(e){
+		if(index%3==0){
+			var cx=e.clientX;
+			var cy=e.clientY;
+			var div=document.createElement('div');
+			var r1=Math.floor(Math.random()*50+10);
+			cx=cx-(r1/2);
+			cy=cy-(r1/2);
+			var rcolor1=Math.floor(Math.random()*255);
+			var rcolor2=Math.floor(Math.random()*255);
+			var rcolor3=Math.floor(Math.random()*255);
+			div.style.cssText="width:"+r1+"px;height:"+r1+"px;border:10px solid rgba("+rcolor1+","+rcolor2+","+rcolor3+","+Math.random()+");position:absolute;border-radius:50%;box-shadow:0px 0px 10px rgb("+rcolor1+","+rcolor2+","+rcolor3+");";
+			div.style.top=cy+'px';
+			div.style.left=cx+'px';
+			div.className='box';
+			document.body.appendChild(div);
+			window.setTimeout(function(){
+				div.style.width='0px';
+				div.style.height='0px';
+				div.style.opacity="0";
+			},0);
+		}
+		index++;
+	}
+	document.body.onmouseup=function(){
+		document.body.onmousemove=null;
+	}
+}
+
+var flag=true;
+var btn=document.querySelector('.btn');
+btn.onclick=function(){
+	var fz=document.querySelector('.fzdiv');
+	if(flag||fz.style.display=='none'){
+		flag=false;
+		var fzdiv=document.createElement('div');
+		fzdiv.className='fzdiv';
+		fzdiv.innerText='手动';
+		this.appendChild(fzdiv);
+		var fzdiv=document.querySelector('.fzdiv');
+		fzdiv.onclick=function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			document.body.onmousedown=fn1;
+			this.style.display='none';
+		}
+	}
+
+
+	document.body.onmousedown=null;
+	var cx=Math.floor(Math.random()*w);
+	var cy=Math.floor(Math.random()*h);
+
+	window.setInterval(function(){
+		var rrr=Math.floor(Math.random()*4+1);
+		var top=Math.floor(Math.random()*20+1);
+		var left=Math.floor(Math.random()*20+1);
+		switch(rrr){
+			case 1 :cy=cy-top;
+					cx=cx-left;
+			break;
+			case 2 :cx=cx+left;
+					cy=cy-top;
+			break;
+			case 3 :cx=cx-left;
+					cy=cy+top;
+			break;
+			case 4 :cx=cx+left;
+					cy=cy+top;
+			break;
+		}
+		if(cx<0||cy<0){
+			if(cx<0){
+				cx=0;
+			}
+			if(cy<0){
+				cy=0;
+			}
+		}
+		if(cx>w||cy>h){
+			if(cx>w){
+				cx=w;
+			}
+			if(cy>h){
+				cy=h;
+			}
+		}
+		var div=document.createElement('div');
+		var r1=Math.floor(Math.random()*50+10);
+		cx1=cx-(r1/2);
+		cy1=cy-(r1/2);
+		var rcolor1=Math.floor(Math.random()*255);
+		var rcolor2=Math.floor(Math.random()*255);
+		var rcolor3=Math.floor(Math.random()*255);
+		div.style.cssText="width:"+r1+"px;height:"+r1+"px;border:10px solid rgba("+rcolor1+","+rcolor2+","+rcolor3+","+Math.random()+");position:absolute;border-radius:50%;box-shadow:0px 0px 10px rgb("+rcolor1+","+rcolor2+","+rcolor3+");";
+		div.style.top=cy1+'px';
+		div.style.left=cx1+'px';
+		div.className='box';
+		document.body.appendChild(div);
+		window.setTimeout(function(){
+			div.style.width='0px';
+			div.style.height='0px';
+			div.style.opacity="0";
+			div.style.opacity='none';
+		},0);
+	},10);
+}
+
+
+
+
+</script>
